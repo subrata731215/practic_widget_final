@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:practic/constant.dart';
 import 'package:practic/main.dart';
 
 class TextFieldLearn extends StatefulWidget {
@@ -18,9 +17,14 @@ class _TextFieldLearnState extends State<TextFieldLearn> {
   Widget build(BuildContext context) {
     return (MaterialApp(
       home: Scaffold(
-        appBar: AppBarWidget(context,
-            appBarTitle: 'TextField With ShowButtonSheet',
-            trailingRoutes: Routes.randomNoGenerate),
+        appBar: AppBar(
+          title: Text('TextField'),
+          centerTitle: true,
+          automaticallyImplyLeading: true,
+          actions: [IconButton(onPressed: (){
+            Navigator.pushNamed(context, Routes.randomNoGenerate);
+          }, icon: Icon(Icons.arrow_forward))],
+        ),
         body: SingleChildScrollView(
           child: Column(
             children: listTileList,

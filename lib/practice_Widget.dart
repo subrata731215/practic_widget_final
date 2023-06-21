@@ -3,15 +3,16 @@ import 'package:flutter/material.dart';
 bool checkBoxValue = false;
 
 class PracticeWidget extends StatefulWidget {
+  final String title;
+  final VoidCallback onp;
+  final int slNo;
+
   PracticeWidget({
     Key? key,
     required this.title,
     required this.onp,
     required this.slNo,
   }) : super(key: key);
-  final String title;
-  final VoidCallback onp;
-  final int slNo;
 
   @override
   State<PracticeWidget> createState() => _PracticeWidgetState();

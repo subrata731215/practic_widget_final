@@ -1,7 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:practic/main.dart';
-import 'package:practic/widget_Practic/practice_Widget.dart';
+import 'package:practic/practice_Widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -92,12 +91,27 @@ class _HomePageState extends State<HomePage> {
                   });
                 },
                 slNo: 7),
+            PracticeWidget(title: 'Slider', onp: () {
+              Navigator.pushNamed(context, Routes.slider);
+            }, slNo: 8),
             PracticeWidget(
-                title: 'TabBar',
+                title: 'AddTwoNumber',
                 onp: () {
-                  Navigator.pushNamed(context, Routes.tabBarLearn);
+                  Navigator.pushNamed(context, Routes.addTwoNumber);
                 },
-                slNo: 8)
+                slNo: 9),
+            PracticeWidget(
+                title: 'DataTable',
+                onp: () {
+                  Navigator.pushNamed(context, Routes.dataTable);
+                },
+                slNo: 10),
+            PracticeWidget(
+                title: 'CricketScore',
+                onp: () {
+                  Navigator.pushNamed(context, Routes.scoreBoard);
+                },
+                slNo: 11),
           ],
         ),
       ),

@@ -39,8 +39,7 @@ class _RandomNoGenerateState extends State<RandomNoGenerate> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBarWidget(context,
-            appBarTitle: 'Random No Generate',
-            trailingRoutes: Routes.tabBarLearn),
+            appBarTitle: 'Random No Generate', trailingRoutes: Routes.slider),
         body: Center(
           child: Column(
             children: [

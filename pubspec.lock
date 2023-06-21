@@ -123,6 +123,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.2"
+  reactiv:
+    dependency: "direct main"
+    description:
+      name: reactiv
+      sha256: "82557dd7a570317ef9c9d6387715c577ef9d51592f9cf8fc92c74bf5dc4a9f40"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.2.6"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -186,3 +194,4 @@ packages:
     version: "2.1.4"
 sdks:
   dart: ">=2.19.6 <3.0.0"
+  flutter: ">=1.17.0"
