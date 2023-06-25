@@ -91,9 +91,12 @@ class _HomePageState extends State<HomePage> {
                   });
                 },
                 slNo: 7),
-            PracticeWidget(title: 'Slider', onp: () {
-              Navigator.pushNamed(context, Routes.slider);
-            }, slNo: 8),
+            PracticeWidget(
+                title: 'Slider',
+                onp: () {
+                  Navigator.pushNamed(context, Routes.slider);
+                },
+                slNo: 8),
             PracticeWidget(
                 title: 'AddTwoNumber',
                 onp: () {
@@ -112,6 +115,24 @@ class _HomePageState extends State<HomePage> {
                   Navigator.pushNamed(context, Routes.scoreBoard);
                 },
                 slNo: 11),
+            PracticeWidget(
+                title: 'light',
+                onp: () {
+                  Navigator.pushNamed(context, Routes.light);
+                },
+                slNo: 12),
+            PracticeWidget(
+                title: 'Radio',
+                onp: () {
+                  Navigator.pushNamed(context, Routes.radio);
+                },
+                slNo: 13),
+            PracticeWidget(
+                title: 'MaterialTheme',
+                onp: () {
+                  Navigator.pushNamed(context, Routes.materialTheme);
+                },
+                slNo: 14),
           ],
         ),
       ),

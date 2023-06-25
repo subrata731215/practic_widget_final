@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:practic/reactivePractic/addContainer_One/addContainer.dart';
 import 'package:practic/reactivePractic/addTwoNumber_NiNe/addTwoNumbers.dart';
 import 'package:practic/reactivePractic/dataTable_Ten/DataTable.dart';
 import 'package:practic/reactivePractic/dataTable_Ten/dataTableList.dart';
+import 'package:practic/reactivePractic/light/light.dart';
+import 'package:practic/reactivePractic/materialTheme/materialTheme_Fourteen.dart';
+import 'package:practic/reactivePractic/radio/radioLearn_thirteen.dart';
 import 'package:practic/reactivePractic/scoreBoard_Eleven/cricketScore.dart';
-import 'package:practic/widget_Practic/addContainer_One/addContainer.dart';
 import 'package:practic/widget_Practic/checkBox_Two/checkbox.dart';
 import 'package:practic/widget_Practic/dropDownButton_Three/dropdownButton.dart';
 import 'package:practic/widget_Practic/listTile_Four/listTile_class.dart';
@@ -26,7 +29,7 @@ class MyApp extends StatelessWidget {
       home: const Scaffold(
         body: HomePage(),
       ),
-      initialRoute: Routes.homepage,
+      initialRoute: Routes.materialTheme,
       routes: {
         Routes.homepage: (context) => HomePage(),
         Routes.addContainer: (context) => AddContainer(),
@@ -41,6 +44,12 @@ class MyApp extends StatelessWidget {
         Routes.dataTable: (context) => DataTableLearn(),
         Routes.datableList: (context) => DataTablelist(),
         Routes.scoreBoard: (context) => CricketScore(),
+        Routes.light: (context) => Light(),
+        Routes.radio: (context) => RadioLearn(),
+        Routes.materialTheme: (context) => MaterialTheme(),
+
+
+
       },
     );
   }
@@ -56,9 +65,15 @@ class Routes {
   static const textFieldLearn = 'textFieldLearn';
   static const randomNoGenerate = 'randomNoGenerate';
   static const slider = 'slider';
-
   static const dataTable = 'dataTable';
   static const datableList = 'dataTableList';
   static const scoreBoard = 'scoreBoard';
   static const addTwoNumber = 'addTwoNumber';
+  static const light = 'light';
+  static const radio = 'radio';
+  static const materialTheme = 'materialTheme';
+
+
+
+
 }

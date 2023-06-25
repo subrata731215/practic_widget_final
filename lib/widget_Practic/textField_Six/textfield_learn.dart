@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:practic/main.dart';
 
+GlobalKey<FormState> key = GlobalKey<FormState>();
+
 class TextFieldLearn extends StatefulWidget {
   const TextFieldLearn({Key? key}) : super(key: key);
 
@@ -9,96 +11,115 @@ class TextFieldLearn extends StatefulWidget {
 }
 
 class _TextFieldLearnState extends State<TextFieldLearn> {
-  TextEditingController _controller = TextEditingController();
-
-  final List<Widget> listTileList = [];
+  TextEditingController emailTEC = TextEditingController();
+  TextEditingController passTEC = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return (MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('TextField'),
-          centerTitle: true,
-          automaticallyImplyLeading: true,
-          actions: [IconButton(onPressed: (){
-            Navigator.pushNamed(context, Routes.randomNoGenerate);
-          }, icon: Icon(Icons.arrow_forward))],
-        ),
-        body: SingleChildScrollView(
-          child: Column(
-            children: listTileList,
-          ),
-        ),
-        floatingActionButton: Padding(
-          padding: const EdgeInsets.all(18.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              FloatingActionButton(
-                tooltip: 'Shown Buttton',
+          appBar: AppBar(
+            title: Text('TextField'),
+            centerTitle: true,
+            automaticallyImplyLeading: true,
+            actions: [
+              IconButton(
                 onPressed: () {
-                  setState(() {
-                    showModalBottomSheet(
-                        context: context,
-                        builder: (context) => Container(
-                              child: Column(
-                                children: [
-                                  TextField(
-                                    textAlign: TextAlign.center,
-                                    textInputAction: TextInputAction.next,
-                                    controller: _controller,
-                                    onChanged: (value) {
-                                      value = _controller.text;
-                                    },
-                                  ),
-                                  ElevatedButton(
-                                      onPressed: () {
-                                        setState(() {
-                                          listTileList.add(ListTileFinalData(
-                                              title: _controller.text,
-                                              tralingIcon: Icons.account_box));
-                                        });
-                                      },
-                                      child: Text('ADD')),
-                                ],
-                              ),
-                            ));
-                  });
+                  Navigator.pushNamed(context, Routes.randomNoGenerate);
                 },
-                child: Icon(Icons.add),
-              ),
-              FloatingActionButton(
-                tooltip: 'Add ListileText',
-                onPressed: () {
-                  setState(() {
-                    listTileList.add(ListTile(
-                      title: Text('Kala'),
-                      trailing: Text('25'),
-                    ));
-                  });
-                },
-                child: Icon(Icons.add),
-              ),
+                icon: Icon(Icons.arrow_forward),
+              )
             ],
           ),
-        ),
-      ),
+          body: SingleChildScrollView(
+            child: Form(
+              key: key,
+              child: Center(
+                child: Container(
+                  width: 350,
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: 20,
+                      ),
+                      TextFormField(
+                        validator: (value) {},
+                        controller: emailTEC,
+                        decoration: InputDecoration(
+                          labelText: 'Email',
+                          prefixIcon: Icon(
+                            Icons.email_outlined,
+                            size: 20,
+                            color: Colors.black,
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(22),
+                            borderSide: BorderSide(color: Colors.red, width: 4),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(22),
+                            borderSide:
+                                BorderSide(color: Colors.green, width: 4),
+                          ),
+                          disabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(22),
+                            borderSide:
+                                BorderSide(color: Colors.yellow, width: 4),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      TextFormField(
+                        validator: (value) {
+                          if (passTEC.text.isEmpty) {
+                            return 'Fill in the Blanks';
+                          }
+                        },
+                        controller: passTEC,
+                        obscureText: true,
+                        obscuringCharacter: '#',
+                        decoration: InputDecoration(
+                          labelText: 'Password',
+                          prefixIcon: Icon(
+                            Icons.lock,
+                            size: 20,
+                            color: Colors.black,
+                          ),
+                          suffixIcon: IconButton(
+                            onPressed: () {},
+                            icon: Icon(Icons.visibility),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(22),
+                            borderSide: BorderSide(color: Colors.red, width: 4),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(22),
+                            borderSide:
+                                BorderSide(color: Colors.green, width: 4),
+                          ),
+                          disabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(22),
+                            borderSide:
+                                BorderSide(color: Colors.yellow, width: 4),
+                          ),
+                        ),
+                      ),
+                      ElevatedButton(
+                        onPressed: () {
+                          String emailText = emailTEC.text;
+                          String passText = passTEC.text;
+                        },
+                        child: Text('LogIn'),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          )),
     ));
-  }
-}
-
-class ListTileFinalData extends StatelessWidget {
-  ListTileFinalData({Key? key, required this.title, required this.tralingIcon})
-      : super(key: key);
-  String title;
-  IconData tralingIcon;
-
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      title: Text(title),
-      trailing: Icon(tralingIcon),
-    );
   }
 }

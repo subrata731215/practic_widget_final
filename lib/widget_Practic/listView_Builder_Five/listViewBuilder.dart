@@ -10,14 +10,8 @@ class ListViewBuilderLern extends StatefulWidget {
 }
 
 class _ListViewBuilderLernState extends State<ListViewBuilderLern> {
-  late TextEditingController _controller;
   String? newTaskText;
 
-  @override
-  void initState() {
-    super.initState();
-    _controller = TextEditingController();
-  }
 
   bool isItsChecked = false;
   List<Task> taskList = <Task>[];

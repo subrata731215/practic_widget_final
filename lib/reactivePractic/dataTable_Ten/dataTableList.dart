@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:practic/main.dart';
 import 'package:reactiv/reactiv.dart';
 
@@ -27,6 +28,17 @@ class DataTablelist extends ReactiveStateWidget<DataTableController> {
             itemCount: controller.dataList.length,
             itemBuilder: (context, index) {
               return DataTable(columns: dataColumnList, rows: [
+                DataRow(cells: [
+                  DataCell(
+                    Text(controller.dataList[index].name),
+                  ),
+                  DataCell(
+                    Text(controller.dataList[index].age),
+                  ),
+                  DataCell(
+                    Text(controller.dataList[index].mobNo),
+                  ),
+                ]),
                 DataRow(cells: [
                   DataCell(
                     Text(controller.dataList[index].name),

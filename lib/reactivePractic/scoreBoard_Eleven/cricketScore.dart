@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:reactiv/reactiv.dart';
 import 'package:reactiv/views/reactive_state_widget.dart';
 
 import 'controller/controller.dart';
+import 'package:practic/main.dart';
 
 class CricketScore extends ReactiveStateWidget<ScoreController> {
   @override
@@ -20,75 +22,17 @@ class CricketScore extends ReactiveStateWidget<ScoreController> {
           actions: [
             IconButton(
                 onPressed: () {
-                  // Navigator.pushNamed(context, Routes.addTwoNumber);
+                  Navigator.pushNamed(context, Routes.light);
                 },
                 icon: Icon(Icons.arrow_forward))
           ],
         ),
-        body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              Expanded(
-                child: Container(
-                  color: Colors.white,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Text(
-                            'INDIA   :  ',
-                            textAlign: TextAlign.start,
-                          ),
-                          Text(
-                            '${controller.scoreController.text} /9',
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Text(
-                            'BANGLADESH   :  ',
-                            textAlign: TextAlign.start,
-                          ),
-                          Text(
-                            '0/0',
-                          ),
-                        ],
-                      ),
-                      Text(
-                        'Total Extra Run  :   5',
-                        style: TextStyle(
-                          fontSize: 20,
-                        ),
-                      ),
-                      TextField(
-                        controller: controller.scoreController,
-                        keyboardType: TextInputType.number,
-                        decoration: InputDecoration(
-                            border: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                        )),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Expanded(
-                flex: 2,
-                child: Container(
-                  color: Colors.brown,
-                  child: TextField(
-                    decoration: InputDecoration(),
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
+        body: ListView.builder(itemCount: controller.number.length,
+            itemBuilder: (BuildContext, index){
+          ListTile(
+            title: Text(controller.number[index]),
+          );
+        })
       ),
     );
   }
