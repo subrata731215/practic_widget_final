@@ -56,7 +56,7 @@ class CricketScore extends ReactiveStateWidget<ScoreController> {
                             listener: (context) {
                               return Text(
                                 'Total Score :  ${controller.totalScore()}',
-                                style: TextStyle(fontSize: 30),
+                                style: TextStyle(fontSize: 3),
                               );
                             }),
                       ),
