@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:practic/reactivePractic/light/controller/lightCOntroller_twelve.dart';
 import 'package:reactiv/reactiv.dart';
 
 import '../../main.dart';
+import 'controller/lightCOntroller_twelve.dart';
 
 class Light extends ReactiveStateWidget<LightController> {
   @override

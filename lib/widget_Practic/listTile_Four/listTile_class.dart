@@ -8,10 +8,27 @@ class ListTileClass extends StatelessWidget {
     return Scaffold(
       appBar: AppBarWidget(context,
           appBarTitle: 'ListTile', trailingRoutes: Routes.listViewBuilder),
-      body: Container(
-        height: 200,
-        width: 200,
-        color: Colors.red,
+      body: ListView(
+        children: [
+          ListTile(
+            leading: Container(
+              height: 20,
+              width: 30,
+              color: Colors.red,
+            ),
+            title: Center(child: Text('Container')),
+            subtitle: Center(child: Text('Learn')),
+            trailing: Padding(
+              padding: const EdgeInsets.only(right: 8.0),
+              child: Column(
+                children: [
+                  Icon(Icons.home),
+                  Icon(Icons.place),
+                ],
+              ),
+            ),
+          )
+        ],
       ),
     );
   }

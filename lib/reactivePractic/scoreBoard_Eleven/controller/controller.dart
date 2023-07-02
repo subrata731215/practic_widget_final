@@ -3,15 +3,13 @@ import 'package:reactiv/controllers/reactive_controller.dart';
 import 'package:reactiv/reactiv.dart';
 
 class ScoreController extends ReactiveController {
-  ReactiveList<String> number=ReactiveList([
-    '9',
-    '8',
+  ReactiveList<int> number = ReactiveList([6845, 456984, 238597]);
 
-  ]);
+  ReactiveString presentScore = ReactiveString('0');
 
-  final scoreController = TextEditingController();
+  int totalScore() {
+    int ff = int.parse(presentScore.value);
 
-  void add(){
-    number.add('6');
+    return ff + 6;
   }
 }

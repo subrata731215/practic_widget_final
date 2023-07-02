@@ -133,6 +133,19 @@ class _HomePageState extends State<HomePage> {
                   Navigator.pushNamed(context, Routes.materialTheme);
                 },
                 slNo: 14),
+            PracticeWidget(
+                title: 'Share Preference',
+                onp: () {
+                  Navigator.pushNamed(context, Routes.sharePreference);
+                },
+                slNo: 15),
+            PracticeWidget(
+                title: 'Animation',
+                onp: () {
+                  Navigator.pushNamed(context, Routes.animation);
+                },
+                slNo: 16),
+
           ],
         ),
       ),
