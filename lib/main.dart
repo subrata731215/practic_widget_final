@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:practic/reactivePractic/addContainer_One/addContainer.dart';
 import 'package:practic/reactivePractic/addTwoNumber_NiNe/addTwoNumbers.dart';
+import 'package:practic/reactivePractic/animation_Sixteen/animation_1.dart';
 import 'package:practic/reactivePractic/dataTable_Ten/DataTable.dart';
 import 'package:practic/reactivePractic/dataTable_Ten/dataTableList.dart';
-import 'package:practic/reactivePractic/light/light.dart';
-import 'package:practic/reactivePractic/materialTheme/materialTheme_Fourteen.dart';
-import 'package:practic/reactivePractic/radio/radioLearn_thirteen.dart';
+import 'package:practic/reactivePractic/light_tweleve/light.dart';
+import 'package:practic/reactivePractic/materialTheme_Fourteen/materialTheme_Fourteen.dart';
+import 'package:practic/reactivePractic/radio_thirteen/radioLearn_thirteen.dart';
 import 'package:practic/reactivePractic/scoreBoard_Eleven/cricketScore.dart';
+import 'package:practic/reactivePractic/share_preferences/sharePreferences.dart';
 import 'package:practic/widget_Practic/checkBox_Two/checkbox.dart';
 import 'package:practic/widget_Practic/dropDownButton_Three/dropdownButton.dart';
 import 'package:practic/widget_Practic/listTile_Four/listTile_class.dart';
@@ -29,7 +31,7 @@ class MyApp extends StatelessWidget {
       home: const Scaffold(
         body: HomePage(),
       ),
-      initialRoute: Routes.materialTheme,
+      initialRoute: Routes.homepage,
       routes: {
         Routes.homepage: (context) => HomePage(),
         Routes.addContainer: (context) => AddContainer(),
@@ -47,9 +49,8 @@ class MyApp extends StatelessWidget {
         Routes.light: (context) => Light(),
         Routes.radio: (context) => RadioLearn(),
         Routes.materialTheme: (context) => MaterialTheme(),
-
-
-
+        Routes.sharePreference: (context) => SharePreferencesLearn(),
+        Routes.animation: (context) => AnimationLearn(),
       },
     );
   }
@@ -72,8 +73,6 @@ class Routes {
   static const light = 'light';
   static const radio = 'radio';
   static const materialTheme = 'materialTheme';
-
-
-
-
+  static const sharePreference = 'sharePreference';
+  static const animation = 'animationLearn';
 }

@@ -12,7 +12,6 @@ class DataTableController extends ReactiveController {
 
 
   ReactiveList<DataModel> dataList = ReactiveList([
-    DataModel(name: 'SUBRATA', age: '69', mobNo: '8967332703'),
   ]);
 
   void addDataList() {
