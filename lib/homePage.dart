@@ -29,7 +29,9 @@ class _HomePageState extends State<HomePage> {
                 })
           ],
         ),
-        body: ListView(
+        body:
+
+        ListView(
           children: [
             PracticeWidget(
               title: 'AddContainer',
@@ -145,6 +147,19 @@ class _HomePageState extends State<HomePage> {
                   Navigator.pushNamed(context, Routes.animation);
                 },
                 slNo: 16),
+            PracticeWidget(
+                title: 'Stepper',
+                onp: () {
+                  Navigator.pushNamed(context, Routes.stepper);
+                },
+                slNo: 17),
+            PracticeWidget(
+                title: 'Hero',
+                onp: () {
+                  Navigator.pushNamed(context, Routes.hero);
+                },
+                slNo: 18),
+
 
           ],
         ),

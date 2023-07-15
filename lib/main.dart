@@ -4,11 +4,13 @@ import 'package:practic/reactivePractic/addTwoNumber_NiNe/addTwoNumbers.dart';
 import 'package:practic/reactivePractic/animation_Sixteen/animation_1.dart';
 import 'package:practic/reactivePractic/dataTable_Ten/DataTable.dart';
 import 'package:practic/reactivePractic/dataTable_Ten/dataTableList.dart';
+import 'package:practic/reactivePractic/hero_18/hero_learn.dart';
 import 'package:practic/reactivePractic/light_tweleve/light.dart';
 import 'package:practic/reactivePractic/materialTheme_Fourteen/materialTheme_Fourteen.dart';
 import 'package:practic/reactivePractic/radio_thirteen/radioLearn_thirteen.dart';
 import 'package:practic/reactivePractic/scoreBoard_Eleven/cricketScore.dart';
 import 'package:practic/reactivePractic/share_preferences/sharePreferences.dart';
+import 'package:practic/reactivePractic/stepper_learn_17/stepper_Learn.dart';
 import 'package:practic/widget_Practic/checkBox_Two/checkbox.dart';
 import 'package:practic/widget_Practic/dropDownButton_Three/dropdownButton.dart';
 import 'package:practic/widget_Practic/listTile_Four/listTile_class.dart';
@@ -51,6 +53,8 @@ class MyApp extends StatelessWidget {
         Routes.materialTheme: (context) => MaterialTheme(),
         Routes.sharePreference: (context) => SharePreferencesLearn(),
         Routes.animation: (context) => AnimationLearn(),
+        Routes.stepper: (context) => StepperLearn(),
+        Routes.hero: (context) => HeroLearn(),
       },
     );
   }
@@ -75,4 +79,6 @@ class Routes {
   static const materialTheme = 'materialTheme';
   static const sharePreference = 'sharePreference';
   static const animation = 'animationLearn';
+  static const stepper = 'stepper';
+  static const hero = 'hero';
 }

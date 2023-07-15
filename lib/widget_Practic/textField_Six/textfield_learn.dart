@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:practic/main.dart';
 
+void main(){
+  runApp(TextFieldLearn());
+}
+
 GlobalKey<FormState> key = GlobalKey<FormState>();
 
 class TextFieldLearn extends StatefulWidget {
@@ -107,12 +111,17 @@ class _TextFieldLearnState extends State<TextFieldLearn> {
                           ),
                         ),
                       ),
+
                       ElevatedButton(
                         onPressed: () {
                           String emailText = emailTEC.text;
                           String passText = passTEC.text;
                         },
                         child: Text('LogIn'),
+                      ),
+
+                      TextFormField(
+
                       ),
                     ],
                   ),
