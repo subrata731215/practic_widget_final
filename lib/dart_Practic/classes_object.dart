@@ -177,10 +177,11 @@ class Human {
       print('kena jabe na');
     }
   }
-  void girlFrind(){
-    if(age>30){
+
+  void girlFrind() {
+    if (age > 30) {
       print('Priyanka is my girlFriend');
-    }else{
+    } else {
       print('No GirlFriend');
     }
   }

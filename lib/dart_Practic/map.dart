@@ -1,5 +1,5 @@
 void main() {
-  var map_name = {
+  var mapName = {
     'key1': 'value1',
     'name': 'Subrata',
     'vill': 'Penga',
@@ -7,24 +7,24 @@ void main() {
 
 
   };
-  print(map_name);
-  print(map_name.keys);
-  print(map_name.values);
-  print(map_name['vill']);
+  print(mapName);
+  print(mapName.keys);
+  print(mapName.values);
+  print(mapName['vill']);
 
-  map_name['mob_no'] = '9832377135';   /// update
-  print(map_name['mob_no']);
+  mapName['mob_no'] = '9832377135';   /// update
+  print(mapName['mob_no']);
 
-  map_name['p.s'] = 'nanoor';
-  print(map_name);
+  mapName['p.s'] = 'nanoor';
+  print(mapName);
 
-  map_name.remove('vill');
-  print(map_name);
+  mapName.remove('vill');
+  print(mapName);
 
-  print(map_name.containsKey('p.s'));
-  print(map_name.containsValue(8967332703));
-  print(map_name.containsValue('9832377135'));
-  print(map_name.containsValue('8967332703'));
+  print(mapName.containsKey('p.s'));
+  print(mapName.containsValue(8967332703));
+  print(mapName.containsValue('9832377135'));
+  print(mapName.containsValue('8967332703'));
 
 
 
