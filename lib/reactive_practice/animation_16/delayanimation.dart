@@ -15,7 +15,6 @@ class _DelayAnimationLearnState extends State<DelayAnimationLearn>
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     animationController =
         AnimationController(vsync: this, duration: const Duration(seconds: 5));

@@ -15,7 +15,6 @@ class _AnimationLearnState extends State<AnimationLearn>
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     animationController =
         AnimationController(vsync: this, duration: const Duration(seconds: 2));
