@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:practic/widget_Practic/bool%20Practice_19/bool_practice.dart';
 
 class HeroLearn extends StatefulWidget {
   HeroLearn({Key? key}) : super(key: key);
@@ -26,6 +27,17 @@ class _HeroLearnState extends State<HeroLearn> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        appBar: AppBar(
+          title: Text('Hero And Wrap'),
+          actions: [
+            IconButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => BoolPractice()));
+                },
+                icon: Icon(Icons.arrow_forward)),
+          ],
+        ),
         body: SafeArea(
           child: Center(
             child: Column(

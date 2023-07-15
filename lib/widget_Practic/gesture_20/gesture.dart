@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Gesture extends StatefulWidget {
-  const Gesture({Key? key}) : super(key: key);
+class GestureLearn extends StatefulWidget {
+  const GestureLearn({Key? key}) : super(key: key);
 
   @override
-  State<Gesture> createState() => _GestureState();
+  State<GestureLearn> createState() => _GestureLearnState();
 }
 
-class _GestureState extends State<Gesture> {
+class _GestureLearnState extends State<GestureLearn> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,7 +18,7 @@ class _GestureState extends State<Gesture> {
             IconButton(
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Gesture()));
+                      MaterialPageRoute(builder: (context) => GestureLearn()));
                 },
                 icon: Icon(Icons.arrow_forward)),
           ],

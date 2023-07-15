@@ -11,8 +11,10 @@ import 'package:practic/reactivePractic/radio_thirteen/radioLearn_thirteen.dart'
 import 'package:practic/reactivePractic/scoreBoard_Eleven/cricketScore.dart';
 import 'package:practic/reactivePractic/share_preferences/sharePreferences.dart';
 import 'package:practic/reactivePractic/stepper_learn_17/stepper_Learn.dart';
+import 'package:practic/widget_Practic/bool%20Practice_19/bool_practice.dart';
 import 'package:practic/widget_Practic/checkBox_Two/checkbox.dart';
 import 'package:practic/widget_Practic/dropDownButton_Three/dropdownButton.dart';
+import 'package:practic/widget_Practic/gesture_20/gesture.dart';
 import 'package:practic/widget_Practic/listTile_Four/listTile_class.dart';
 import 'package:practic/widget_Practic/listView_Builder_Five/listViewBuilder.dart';
 import 'package:practic/widget_Practic/randomNumBer_Seven/randomNoGenerate.dart';
@@ -55,6 +57,8 @@ class MyApp extends StatelessWidget {
         Routes.animation: (context) => AnimationLearn(),
         Routes.stepper: (context) => StepperLearn(),
         Routes.hero: (context) => HeroLearn(),
+        Routes.bool: (context) => BoolPractice(),
+        Routes.gesture: (context) => GestureLearn(),
       },
     );
   }
@@ -81,4 +85,6 @@ class Routes {
   static const animation = 'animationLearn';
   static const stepper = 'stepper';
   static const hero = 'hero';
+  static const bool = 'bool';
+  static const gesture = 'gesture';
 }

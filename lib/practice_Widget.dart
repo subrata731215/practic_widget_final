@@ -7,7 +7,7 @@ class PracticeWidget extends StatefulWidget {
   final VoidCallback onp;
   final int slNo;
 
-  PracticeWidget({
+  const PracticeWidget({
     Key? key,
     required this.title,
     required this.onp,

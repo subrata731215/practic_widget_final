@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/animation.dart';
-import 'package:practic/reactivePractic/animation_Sixteen/controller/gesture.dart';
+import 'package:practic/reactivePractic/stepper_learn_17/stepper_Learn.dart';
+import 'package:practic/widget_Practic/gesture_20/gesture.dart';
 
 class DelayAnimationLearn extends StatefulWidget {
   const DelayAnimationLearn({Key? key}) : super(key: key);
@@ -62,7 +63,7 @@ class _DelayAnimationLearnState extends State<DelayAnimationLearn>
                   IconButton(
                       onPressed: () {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Gesture()));
+                            MaterialPageRoute(builder: (context) => StepperLearn()));
                       },
                       icon: Icon(Icons.arrow_forward)),
                 ],

@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:practic/reactivePractic/hero_18/hero_learn.dart';
+
+import '../../main.dart';
 
 class StepperLearn extends StatefulWidget {
   const StepperLearn({Key? key}) : super(key: key);
@@ -15,6 +18,17 @@ class _StepperLearnState extends State<StepperLearn> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        appBar: AppBar(
+          title: Text('Stepper'),
+          actions: [
+            IconButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => HeroLearn()));
+                },
+                icon: Icon(Icons.arrow_forward)),
+          ],
+        ),
         body: Center(
           child: Stepper(
             steps: [

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/animation.dart';
-import 'package:practic/reactivePractic/animation_Sixteen/controller/delayAnimation.dart';
+import 'package:practic/reactivePractic/animation_Sixteen/delayAnimation.dart';
 
 class AnimationLearn extends StatefulWidget {
   const AnimationLearn({Key? key}) : super(key: key);
