@@ -12,8 +12,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return  Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Colors.indigo,
@@ -170,7 +169,7 @@ class _HomePageState extends State<HomePage> {
                 },
                 slNo: 20),
           ],
-        ),
+
       ),
     );
   }
