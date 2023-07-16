@@ -46,7 +46,6 @@ class Light extends ReactiveStateWidget<LightController> {
                               listener: (text) {
                                 return Container(
                                   decoration: BoxDecoration(
-                                    color: Colors.black26,
                                     borderRadius: BorderRadius.circular(40),
                                   ),
                                   child: Padding(
