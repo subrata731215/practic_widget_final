@@ -12,7 +12,7 @@ class RandomNoGenerate extends StatefulWidget {
 
 class _RandomNoGenerateState extends State<RandomNoGenerate> {
   int currentNumber = 0;
-  List<int> myNo = [0, 67, 76, 3554, 45, 400];
+  List<int> myNo = [0, 67, 76,670, 3554, 45, 400];
   int? ranNo;
   String whichNo = '';
   String complete = '';
@@ -21,7 +21,7 @@ class _RandomNoGenerateState extends State<RandomNoGenerate> {
     setState(() {
       currentNumber++;
       if (currentNumber >= myNo.length) {
-        ranNo = Random().nextInt(400) + 1;
+        ranNo = Random().nextInt(40) + 1;
       } else {
         myNo[currentNumber];
       }
