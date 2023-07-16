@@ -168,6 +168,12 @@ class _HomePageState extends State<HomePage> {
                   Navigator.pushNamed(context, Routes.gesture);
                 },
                 slNo: 20),
+            PracticeWidget(
+                title: 'ToDo',
+                onp: () {
+                  Navigator.pushNamed(context, Routes.todo);
+                },
+                slNo: 21),
           ],
 
       ),

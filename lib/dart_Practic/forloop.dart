@@ -25,7 +25,6 @@
 
 //}
 
-
 /// Try Angela Loop Example
 
 // void main() {
@@ -210,14 +209,25 @@
 //   }
 // }
 
-void main(){
-  for(int i =1;i<=5;i++){
-    {
-      for(int j=5;j>=1;j--){
-        print('$j' * i);
-      }
-    }
+// void main(){
+//   for(int i =1;i<=5;i++){
+//     {
+//       for(int j=5;j>=1;j--){
+//         print('$j' * i);
+//       }
+//     }
+//
+//
+//
+// }
+void main() {
+  print(pattern1());
+}
 
-  }
+pattern1() {
+  for (int i = 1; i <= 7; i++) {
+    for(int j=1;j<=i;j++){
+      print('$i $j  ');
+    }}
 
 }

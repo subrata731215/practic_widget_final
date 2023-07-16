@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../hero_18/hero_learn.dart';
+import '../../main.dart';
 
 class StepperLearn extends StatefulWidget {
   const StepperLearn({Key? key}) : super(key: key);
@@ -20,10 +20,7 @@ class _StepperLearnState extends State<StepperLearn> {
           actions: [
             IconButton(
                 onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const HeroLearn()));
+                  Navigator.pushNamed(context, Routes.hero);
                 },
                 icon: const Icon(Icons.arrow_forward)),
           ],

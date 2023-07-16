@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../widget_practice/boolpractice_19/bool_practice.dart';
+import 'package:practic/main.dart';
 
 class HeroLearn extends StatefulWidget {
   const HeroLearn({Key? key}) : super(key: key);
@@ -30,10 +30,7 @@ class _HeroLearnState extends State<HeroLearn> {
           actions: [
             IconButton(
               onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const BoolPractice()));
+                Navigator.pushNamed(context, Routes.bool);
               },
               icon: const Icon(Icons.arrow_forward),
             ),
