@@ -29,7 +29,7 @@ class _RandomNoGenerateState extends State<RandomNoGenerate> {
       }
 
       if (currentNumber == 10) {
-        complete = 'Counselling are Completed';
+        complete = 'Completed';
       }
     });
   }
