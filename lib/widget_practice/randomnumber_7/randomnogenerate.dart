@@ -11,26 +11,25 @@ class RandomNoGenerate extends StatefulWidget {
 }
 
 class _RandomNoGenerateState extends State<RandomNoGenerate> {
-  String randomNumberDescription = '';
-
-  List<int> myChoiceNo = [0, 34, 44, 54, 74];
-  int myNo = 0;
-
   int currentNumber = 0;
+  List<int> myNo = [0, 67, 76,670, 3554, 45, 400];
+  int? ranNo;
+  String whichNo = '';
+  String complete = '';
 
-  void randomNumberGenerateWithTextCondition() {
+  void generateNo() {
     setState(() {
-      if (currentNumber <= myChoiceNo.length) {
-        myNo++;
-        myNo = myChoiceNo[myNo];
+      currentNumber++;
+      if (currentNumber >= myNo.length) {
+        ranNo = Random().nextInt(40) + 1;
+        whichNo = 'Random No';
       } else {
-        currentNumber = Random().nextInt(100) + 1;
+        myNo[currentNumber];
+        whichNo = 'My No';
       }
 
-      if (currentNumber >= 20) {
-        randomNumberDescription = 'More 20';
-      } else {
-        randomNumberDescription = 'Less 20';
+      if (currentNumber == 10) {
+        complete = 'Counselling are Completed';
       }
     });
   }
@@ -40,34 +39,38 @@ class _RandomNoGenerateState extends State<RandomNoGenerate> {
     return Scaffold(
         appBar: appbarWidget(context,
             appBarTitle: 'Random No Generate', trailingRoutes: Routes.slider),
-        body: Center(
+        body: currentNumber == 10
+            ? Center(
+          child: Text(
+            complete,
+            style: const TextStyle(
+                color: Colors.red,
+                fontWeight: FontWeight.bold,
+                fontSize: 50),
+          ),
+        )
+            : Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                height: 600,
-                width: 300,
-                color: Colors.yellow,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      currentNumber.toString(),
-                      style: const TextStyle(fontSize: 100),
-                    ),
-                    Text(
-                      myNo.toString(),
-                      style: const TextStyle(fontSize: 100),
-                    ),
-                    OutlinedButton(
-                        onPressed: randomNumberGenerateWithTextCondition,
-                        child: const Text(
-                          'Random Number Generate',
-                          style: TextStyle(fontSize: 20),
-                        )),
-                    Text(randomNumberDescription),
-                  ],
-                ),
+              Text(
+                whichNo,
+                style: const TextStyle(fontSize: 50),
               ),
+              Text(
+                currentNumber >= myNo.length
+                    ? ranNo.toString()
+                    : myNo[currentNumber].toString(),
+                style: const TextStyle(fontSize: 100),
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    generateNo();
+                  },
+                  child: const Text(
+                    'Random Number Generate',
+                    style: TextStyle(fontSize: 20),
+                  )),
             ],
           ),
         ));
