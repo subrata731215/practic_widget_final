@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:practic/main.dart';
+import 'package:practic/widget_practice/textField_6/test.rahul.dart';
 
 void main() {
   runApp(const TextFieldLearn());
@@ -20,7 +21,7 @@ class _TextFieldLearnState extends State<TextFieldLearn> {
 
   @override
   Widget build(BuildContext context) {
-    return (MaterialApp(
+    return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
             title: const Text('TextField'),
@@ -32,7 +33,7 @@ class _TextFieldLearnState extends State<TextFieldLearn> {
                   Navigator.pushNamed(context, Routes.randomNoGenerate);
                 },
                 icon: const Icon(Icons.arrow_forward),
-              )
+              ),
             ],
           ),
           body: SingleChildScrollView(
@@ -120,13 +121,21 @@ class _TextFieldLearnState extends State<TextFieldLearn> {
                         onPressed: () {},
                         child: const Text('LogIn'),
                       ),
-                      TextFormField(),
+                      ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const MyTest()));
+                        },
+                        child: const Text('Next Test Rahul'),
+                      ),
                     ],
                   ),
                 ),
               ),
             ),
           )),
-    ));
+    );
   }
 }
