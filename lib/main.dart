@@ -12,6 +12,7 @@ import 'package:practic/reactive_practice/scoreBoard_11/cricket.score.dart';
 import 'package:practic/reactive_practice/share_preferences_15/sharepreferences.dart';
 import 'package:practic/reactive_practice/stepper_learn_17/stepper.learn.dart';
 import 'package:practic/widget_practice/boolpractice_19/bool_practice.dart';
+import 'package:practic/widget_practice/call_21/call.dart';
 import 'package:practic/widget_practice/checkBox_2/checkbox.dart';
 import 'package:practic/widget_practice/dropdownbutton_3/dropdownbutton.dart';
 import 'package:practic/widget_practice/gesture_20/gesture.dart';
@@ -60,6 +61,7 @@ class MyApp extends StatelessWidget {
         Routes.hero: (context) => const HeroLearn(),
         Routes.bool: (context) => const BoolPractice(),
         Routes.gesture: (context) => const GestureLearn(),
+        Routes.call:(context)=>const Call(),
       },
     );
   }
@@ -88,4 +90,5 @@ class Routes {
   static const hero = 'hero';
   static const bool = 'bool';
   static const gesture = 'gesture';
+  static const call='call';
 }

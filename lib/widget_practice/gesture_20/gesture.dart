@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../call_21/call.dart';
+
 class GestureLearn extends StatefulWidget {
   const GestureLearn({Key? key}) : super(key: key);
 
@@ -20,7 +22,7 @@ class _GestureLearnState extends State<GestureLearn> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const GestureLearn()));
+                          builder: (context) => const Call()));
                 },
                 icon: const Icon(Icons.arrow_forward)),
           ],
