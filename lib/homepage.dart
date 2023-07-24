@@ -40,6 +40,15 @@ class _HomePageState extends State<HomePage> {
               slNo: 1,
             ),
             PracticeWidget(
+              title: 'AddBox',
+              onp: () {
+                setState(() {
+                  Navigator.pushNamed(context, Routes.addBox);
+                });
+              },
+              slNo: 1.1.toInt(),
+            ),
+            PracticeWidget(
               title: 'CheckBox',
               onp: () {
                 setState(() {

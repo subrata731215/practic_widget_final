@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practic/reactive_practice/addcontainer_1/addbox.dart';
 import 'package:practic/reactive_practice/addcontainer_1/container.dart';
 import 'package:practic/reactive_practice/addtwonumber_9/add.twonumbers.dart';
 import 'package:practic/reactive_practice/animation_16/animation_one.dart';
@@ -37,10 +38,11 @@ class MyApp extends StatelessWidget {
 
         body: HomePage(),
       ),
-      initialRoute: Routes.homepage,
+      initialRoute: Routes.addBox,
       routes: {
         Routes.homepage: (context) => const HomePage(),
         Routes.addContainer: (context) => const AddContainer(),
+        Routes.addBox: (context) => const AddBox(),
         Routes.checkBox: (context) => const CheckBoxTestWithTwoState(),
         Routes.dropDownButton: (context) => const MyDropDownButton(),
         Routes.listTile: (context) => const ListTileClass(),
@@ -70,6 +72,7 @@ class MyApp extends StatelessWidget {
 class Routes {
   static const homepage = 'homePage';
   static const addContainer = 'addContainer';
+  static const addBox = 'addBox';
   static const checkBox = 'checkBox';
   static const dropDownButton = 'dropDownButton';
   static const listTile = 'listTile';

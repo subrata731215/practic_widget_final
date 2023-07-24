@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:reactiv/reactiv.dart';
 
 class AddContainerController extends ReactiveController {
@@ -5,6 +6,38 @@ class AddContainerController extends ReactiveController {
 
   addContainer(ContainerModel containerModel) {
     containerList.add(containerModel);
+  }
+
+  /// addBox controller
+
+  ReactiveList addBoxLIst = ReactiveList([
+    TextFormField(
+      keyboardType: TextInputType.number,
+      decoration: const InputDecoration(
+          hintText: 'Enter Your Mobile No',
+          filled: true,
+          fillColor: Colors.yellow,
+          border: OutlineInputBorder()),
+    ),
+  ]);
+
+
+
+
+  addBox() {
+    addBoxLIst.add(
+      TextFormField(
+        keyboardType: TextInputType.number,
+        decoration: const InputDecoration(
+            hintText: 'Enter Your Mobile No',
+            filled: true,
+            fillColor: Colors.yellow,
+            border: OutlineInputBorder()),
+      ),
+    );
+  }
+  removeBox(giveIndex){
+    addBoxLIst.remove(addBoxLIst[giveIndex]);
   }
 }
 
