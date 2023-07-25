@@ -40,5 +40,22 @@
 //   print(names);
 // }
 
+void main(){
 
 
+print(removeat());
+print(age);
+
+
+
+}
+
+List age=[30,43,54,69];
+remove(){
+
+  // age.remove(age[2]);
+}
+
+removeat(){
+  age.removeAt(2);
+}
