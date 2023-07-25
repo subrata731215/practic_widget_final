@@ -183,6 +183,8 @@ class _HomePageState extends State<HomePage> {
                   Navigator.pushNamed(context, Routes.call);
                 },
                 slNo: 21),
+            PracticeWidget(title: 'Ui1', onp: (){                  Navigator.pushNamed(context, Routes.ui1);
+            }, slNo: 22)
           ],
 
       ),

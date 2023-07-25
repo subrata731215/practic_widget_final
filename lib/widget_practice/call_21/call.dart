@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practic/ui/ui.1.dart';
 
 class Call extends StatelessWidget {
   const Call({Key? key}) : super(key: key);
@@ -9,6 +10,19 @@ class Call extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: SafeArea(
         child: Scaffold(
+         appBar: AppBar(
+            title: const Text('Call'),
+            actions: [
+              IconButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Ui1()));
+                  },
+                  icon: const Icon(Icons.arrow_forward)),
+            ],
+          ),
           backgroundColor: Colors.white10,
           body: Column(
             children: [
