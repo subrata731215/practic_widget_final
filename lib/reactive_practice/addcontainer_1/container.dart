@@ -19,7 +19,7 @@ class AddContainer extends ReactiveStateWidget<AddContainerController> {
         actions: [
           IconButton(
               onPressed: () {
-                Navigator.pushNamed(context, Routes.checkBox);
+                Navigator.pushNamed(context, Routes.addBox);
               },
               icon: const Icon(Icons.arrow_forward))
         ],
@@ -45,6 +45,7 @@ class AddContainer extends ReactiveStateWidget<AddContainerController> {
                     ),
                   );
                 });
+
           }),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
