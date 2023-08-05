@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:practic/ui/ui.1.dart';
+
+import '../../ui1/ui.1.dart';
+
 
 class Call extends StatelessWidget {
   const Call({Key? key}) : super(key: key);

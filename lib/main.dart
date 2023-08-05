@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:practic/allui/audio_Page/audio.page.dart';
+import 'package:practic/allui/login/loginUi.dart';
+import 'package:practic/allui/visva_bharati_ui/visva_bharati.dart';
 import 'package:practic/reactive_practice/addcontainer_1/addbox.dart';
 import 'package:practic/reactive_practice/addcontainer_1/container.dart';
 import 'package:practic/reactive_practice/addtwonumber_9/add.twonumbers.dart';
@@ -12,9 +15,8 @@ import 'package:practic/reactive_practice/radio_13/radio.learn.dart';
 import 'package:practic/reactive_practice/scoreBoard_11/cricket.score.dart';
 import 'package:practic/reactive_practice/share_preferences_15/sharepreferences.dart';
 import 'package:practic/reactive_practice/stepper_learn_17/stepper.learn.dart';
-import 'package:practic/ui/ui.1.dart';
+import 'package:practic/widget_practice/audioplayer/audioplayer.dart';
 import 'package:practic/widget_practice/boolpractice_19/bool_practice.dart';
-import 'package:practic/widget_practice/call_21/call.dart';
 import 'package:practic/widget_practice/checkBox_2/checkbox.dart';
 import 'package:practic/widget_practice/dropdownbutton_3/dropdownbutton.dart';
 import 'package:practic/widget_practice/gesture_20/gesture.dart';
@@ -23,6 +25,9 @@ import 'package:practic/widget_practice/listviewbuilder_5/listview.builder.dart'
 import 'package:practic/widget_practice/randomnumber_7/randomnogenerate.dart';
 import 'package:practic/widget_practice/slider_8/slider.dart';
 import 'package:practic/widget_practice/textField_6/textfield_learn.dart';
+import 'allui/ui1/ui.1.dart';
+import 'allui/ui2/ui2.dart';
+import 'allui/ui3/call_21/call.dart';
 import 'homepage.dart';
 
 void main() {
@@ -35,11 +40,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: const Scaffold(
-
         body: HomePage(),
       ),
-      initialRoute: Routes.homepage,
+      initialRoute: Routes.logInUi,
       routes: {
         Routes.homepage: (context) => const HomePage(),
         Routes.addContainer: (context) => const AddContainer(),
@@ -64,8 +69,13 @@ class MyApp extends StatelessWidget {
         Routes.hero: (context) => const HeroLearn(),
         Routes.bool: (context) => const BoolPractice(),
         Routes.gesture: (context) => const GestureLearn(),
-        Routes.call:(context)=>const Call(),
-        Routes.ui1:(context)=>const Ui1(),
+        Routes.ui1: (context) => const Ui1(),
+        Routes.ui2: (context) => const Ui2(),
+        Routes.ui3: (context) => const Call(),
+        Routes.audioPlayer: (context) => const AudioPlayerLearn(),
+        Routes.visvaBharatiUi: (context) => const VisvaBharati(),
+        Routes.audioPage: (context) => const AudioPage(),
+        Routes.logInUi: (context) => const LogInUi(),
       },
     );
   }
@@ -95,6 +105,11 @@ class Routes {
   static const hero = 'hero';
   static const bool = 'bool';
   static const gesture = 'gesture';
-  static const call='call';
-  static const ui1='ui1';
+  static const ui1 = 'ui1';
+  static const ui2 = 'ui2';
+  static const ui3 = 'ui3';
+  static const audioPlayer = 'audioPlayer';
+  static const visvaBharatiUi = 'visvaBharati';
+  static const audioPage = 'audioPage';
+  static const logInUi = 'logInUi';
 }

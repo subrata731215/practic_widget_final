@@ -178,17 +178,41 @@ class _HomePageState extends State<HomePage> {
               },
               slNo: 20),
           PracticeWidget(
-              title: 'call',
-              onp: () {
-                Navigator.pushNamed(context, Routes.call);
-              },
-              slNo: 21),
-          PracticeWidget(
               title: 'Ui1',
               onp: () {
                 Navigator.pushNamed(context, Routes.ui1);
               },
-              slNo: 22)
+              slNo: 22),
+          PracticeWidget(
+              title: 'Ui2',
+              onp: () {
+                Navigator.pushNamed(context, Routes.ui2);
+              },
+              slNo: 23),
+          PracticeWidget(
+              title: 'Ui3',
+              onp: () {
+                Navigator.pushNamed(context, Routes.ui3);
+              },
+              slNo: 24),
+          PracticeWidget(
+              title: 'Visva-Bharati',
+              onp: () {
+                Navigator.pushNamed(context, Routes.visvaBharatiUi);
+              },
+              slNo: 25),
+          PracticeWidget(
+              title: 'Audio Page',
+              onp: () {
+                Navigator.pushNamed(context, Routes.audioPage);
+              },
+              slNo: 26),
+          PracticeWidget(
+              title: 'Log In Page',
+              onp: () {
+                Navigator.pushNamed(context, Routes.logInUi);
+              },
+              slNo: 27),
         ],
       ),
     );
