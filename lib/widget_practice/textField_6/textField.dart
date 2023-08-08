@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practic/constant.dart';
 import 'package:practic/widget_practice/textField_6/test.rahul.dart';
 import '../../homepage.controller.dart';
 
@@ -6,7 +7,7 @@ void main() {
   runApp(const TextFieldLearn());
 }
 
-GlobalKey<FormState> key = GlobalKey<FormState>();
+// GlobalKey<FormState> key = GlobalKey<FormState>();
 
 class TextFieldLearn extends StatefulWidget {
   const TextFieldLearn({Key? key}) : super(key: key);
@@ -23,22 +24,10 @@ class _TextFieldLearnState extends State<TextFieldLearn> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-          appBar: AppBar(
-            title: const Text('TextField'),
-            centerTitle: true,
-            automaticallyImplyLeading: true,
-            actions: [
-              IconButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, Routes.randomNo);
-                },
-                icon: const Icon(Icons.arrow_forward),
-              ),
-            ],
-          ),
+          appBar: appbarWidget(context,
+              appBarTitle: 'TextField', trailingRoutes: Routes.randomNo),
           body: SingleChildScrollView(
             child: Form(
-              key: key,
               child: Center(
                 child: SizedBox(
                   width: 350,

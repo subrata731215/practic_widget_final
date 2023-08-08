@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practic/constant.dart';
 
 import '../../homepage.controller.dart';
 
@@ -21,18 +22,8 @@ class _SliderLearnState extends State<SliderLearn> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Slider'),
-          centerTitle: true,
-          automaticallyImplyLeading: true,
-          actions: [
-            IconButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, Routes.addTwoNumber);
-                },
-                icon: const Icon(Icons.arrow_forward))
-          ],
-        ),
+        appBar:
+            appbarWidget(context, appBarTitle: 'Slider', trailingRoutes: Routes.addTwoNumber),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

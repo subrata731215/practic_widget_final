@@ -12,7 +12,6 @@ class HomepageController extends ReactiveController {
     HomePageModel(title: 'Slider'),
     HomePageModel(title: 'AddTwoNumber'),
     HomePageModel(title: 'DataTable'),
-    HomePageModel(title: 'DataTableList'),
     HomePageModel(title: 'CricketScore'),
     HomePageModel(title: 'Light'),
     HomePageModel(title: 'Radio'),
@@ -32,6 +31,7 @@ class HomepageController extends ReactiveController {
     HomePageModel(title: 'AudioPlayerUi'),
     HomePageModel(title: 'AddBox'),
     HomePageModel(title: 'PhotoShop'),
+    HomePageModel(title: 'ClassModel'),
   ]);
 
   ReactiveList<String> routes = ReactiveList([
@@ -45,7 +45,6 @@ class HomepageController extends ReactiveController {
     Routes.slider,
     Routes.addTwoNumber,
     Routes.dataTable,
-    Routes.datableList,
     Routes.cricketScore,
     Routes.light,
     Routes.radio,
@@ -65,6 +64,7 @@ class HomepageController extends ReactiveController {
     Routes.audioPlayer,
     Routes.addBox,
     Routes.photoshop,
+    Routes.classModel,
 
   ]);
 }
@@ -88,6 +88,7 @@ class Routes {
   static const materialTheme = 'materialTheme';
   static const sharePreference = 'sharePreference';
   static const animation = 'animationLearn';
+  static const delayAnimation = 'delayAnimation';
   static const stepper = 'stepper';
   static const hero = 'hero';
   static const bool = 'bool';
@@ -101,6 +102,7 @@ class Routes {
   static const audioPlayer = 'audioPlayer';
   static const addBox = 'addBox';
   static const photoshop = 'photoshop';
+  static const classModel = 'classModel';
 }
 
 class HomePageModel {

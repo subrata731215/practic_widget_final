@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:practic/constant.dart';
 import 'package:reactiv/reactiv.dart';
 import '../../homepage.controller.dart';
 import 'controller/controller.dart';
@@ -13,16 +14,7 @@ class AddTwoNumbers extends ReactiveStateWidget<AddTwoNumberController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Hero(tag: 'app', child: Text('AddTwoNumbers')),
-        actions: [
-          IconButton(
-              onPressed: () {
-                Navigator.pushNamed(context, Routes.dataTable);
-              },
-              icon: const Icon(Icons.arrow_forward)),
-        ],
-      ),
+      appBar: appbarWidget(context, appBarTitle: 'AddTwoNumbers', trailingRoutes: Routes.dataTable),
       body: Padding(
         padding: const EdgeInsets.all(18.0),
         child: Column(

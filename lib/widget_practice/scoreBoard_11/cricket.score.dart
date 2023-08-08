@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practic/constant.dart';
 import 'package:reactiv/reactiv.dart';
 import '../../homepage.controller.dart';
 import 'controller/controller.dart';
@@ -14,17 +15,8 @@ class CricketScore extends ReactiveStateWidget<ScoreController> {
     return MaterialApp(
       home: Scaffold(
           resizeToAvoidBottomInset: false,
-          appBar: AppBar(
-            title: const Text('Cricket Score'),
-            centerTitle: true,
-            actions: [
-              IconButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, Routes.light);
-                  },
-                  icon: const Icon(Icons.arrow_forward))
-            ],
-          ),
+          appBar: appbarWidget(context,
+              appBarTitle: 'Cricket Score', trailingRoutes: Routes.light),
           body: Center(
             child: Column(
               children: [

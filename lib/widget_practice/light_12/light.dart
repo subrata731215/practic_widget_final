@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practic/constant.dart';
 import 'package:reactiv/reactiv.dart';
 import '../../homepage.controller.dart';
 import 'controller/lightController.dart';
@@ -13,16 +14,10 @@ class Light extends ReactiveStateWidget<LightController> {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-      appBar: AppBar(
-        title: const Text('Light'),
-        centerTitle: true,
-        actions: [
-          IconButton(
-              onPressed: () {
-                Navigator.pushNamed(context, Routes.radio);
-              },
-              icon: const Icon(Icons.arrow_forward))
-        ],
+      appBar: appbarWidget(
+        context,
+        appBarTitle: 'Light',
+        trailingRoutes: Routes.radio,
       ),
       body: Observer(
           listenable: controller.backColorIndex,

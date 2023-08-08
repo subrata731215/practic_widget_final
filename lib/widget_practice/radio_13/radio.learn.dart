@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practic/constant.dart';
 import '../../homepage.controller.dart';
 
 class RadioLearn extends StatefulWidget {
@@ -16,17 +17,8 @@ class _RadioLearnState extends State<RadioLearn> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('RadioLearn'),
-          centerTitle: true,
-          actions: [
-            IconButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, Routes.materialTheme);
-                },
-                icon: const Icon(Icons.arrow_forward))
-          ],
-        ),
+        appBar: appbarWidget(context,
+            appBarTitle: 'RadioLearn', trailingRoutes: Routes.materialTheme),
         body: Row(
           children: [0, 1, 2, 3, 4, 5, 6, 7]
               .map((int index) => Radio(

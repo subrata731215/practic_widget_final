@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practic/constant.dart';
 import 'package:reactiv/reactiv.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../homepage.controller.dart';
@@ -20,18 +21,8 @@ class SharePreferencesLearn extends ReactiveStateWidget<ShareController> {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-      appBar: AppBar(
-        title: const Text('Share Preference'),
-        centerTitle: true,
-        automaticallyImplyLeading: true,
-        actions: [
-          IconButton(
-              onPressed: () {
-                Navigator.pushNamed(context, Routes.animation);
-              },
-              icon: const Icon(Icons.arrow_forward))
-        ],
-      ),
+      appBar: appbarWidget(context,
+          appBarTitle: 'Share Preference', trailingRoutes: Routes.animation),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 30),
         child: Column(

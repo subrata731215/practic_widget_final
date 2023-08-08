@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practic/constant.dart';
 
 import '../../homepage.controller.dart';
 
@@ -22,17 +23,9 @@ class MaterialTheme extends StatelessWidget {
                 fontSize: 20,
               ))),
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('MaterialTheme'),
-          centerTitle: true,
-          actions: [
-            IconButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, Routes.sharePreference);
-                },
-                icon: const Icon(Icons.arrow_forward))
-          ],
-        ),
+        appBar: appbarWidget(context,
+            appBarTitle: 'MaterialTheme',
+            trailingRoutes: Routes.sharePreference),
         body: NameList(),
       ),
     );

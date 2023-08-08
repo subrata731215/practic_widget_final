@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practic/constant.dart';
 import 'package:reactiv/reactiv.dart';
 import '../../homepage.controller.dart';
 import 'controller/datatablecontroller.dart';
@@ -10,17 +11,10 @@ class DataTableLearn extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('DataTable'),
-          centerTitle: true,
-          automaticallyImplyLeading: true,
-          actions: [
-            IconButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, Routes.datableList);
-                },
-                icon: const Icon(Icons.arrow_forward))
-          ],
+        appBar: appbarWidget(
+          context,
+          appBarTitle: 'DataTable',
+          trailingRoutes: Routes.datableList,
         ),
         body: const Screen1(),
       ),

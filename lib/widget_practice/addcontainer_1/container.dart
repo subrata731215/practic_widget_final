@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practic/constant.dart';
 import 'package:reactiv/reactiv.dart';
 import '../../homepage.controller.dart';
 import 'controller/controller.dart';
@@ -12,18 +13,7 @@ class AddContainer extends ReactiveStateWidget<AddContainerController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('AddContainer'),
-        centerTitle: true,
-        automaticallyImplyLeading: true,
-        actions: [
-          IconButton(
-              onPressed: () {
-                Navigator.pushNamed(context, Routes.checkBox);
-              },
-              icon: const Icon(Icons.arrow_forward))
-        ],
-      ),
+      appBar: appbarWidget(context, appBarTitle: 'AddContainer', trailingRoutes: Routes.checkBox),
       body: Observer(
           listenable: controller.containerList,
           listener: (context) {
