@@ -1,33 +1,35 @@
 import 'package:flutter/material.dart';
-import 'package:practic/allui/audio_Page/audio.page.dart';
-import 'package:practic/allui/login/loginUi.dart';
-import 'package:practic/allui/visva_bharati_ui/visva_bharati.dart';
-import 'package:practic/reactive_practice/addcontainer_1/addbox.dart';
-import 'package:practic/reactive_practice/addcontainer_1/container.dart';
-import 'package:practic/reactive_practice/addtwonumber_9/add.twonumbers.dart';
-import 'package:practic/reactive_practice/animation_16/animation_one.dart';
-import 'package:practic/reactive_practice/datatable_10/datatable.dart';
-import 'package:practic/reactive_practice/datatable_10/datatablelist.dart';
-import 'package:practic/reactive_practice/hero_18/hero_learn.dart';
-import 'package:practic/reactive_practice/light_12/light.dart';
-import 'package:practic/reactive_practice/materialTheme_14/materialtheme.dart';
-import 'package:practic/reactive_practice/radio_13/radio.learn.dart';
-import 'package:practic/reactive_practice/scoreBoard_11/cricket.score.dart';
-import 'package:practic/reactive_practice/share_preferences_15/sharepreferences.dart';
-import 'package:practic/reactive_practice/stepper_learn_17/stepper.learn.dart';
-import 'package:practic/widget_practice/audioplayer/audioplayer.dart';
+import 'package:practic/ui/audio_screen_23/audio.page.dart';
+import 'package:practic/ui/call_21/callsupriyo.dart';
+import 'package:practic/ui/loginui_24/loginui.dart';
+import 'package:practic/ui/message_22/message.dart';
+import 'package:practic/ui/moneyTransferUi_26/moneyTransferUi.dart';
+import 'package:practic/ui/photoshop_30/photoshop.dart';
+import 'package:practic/ui/visva_bharati_ui_25/visva_bharati.dart';
+import 'package:practic/widget_practice/addbox_27/addbox.dart';
+import 'package:practic/widget_practice/addcontainer_1/container.dart';
+import 'package:practic/widget_practice/addtwonumber_9/addTwoNumbers.dart';
+import 'package:practic/widget_practice/animation_16/animation_one.dart';
+import 'package:practic/widget_practice/audioplayer_27/audioPlayer.dart';
 import 'package:practic/widget_practice/boolpractice_19/bool_practice.dart';
 import 'package:practic/widget_practice/checkBox_2/checkbox.dart';
-import 'package:practic/widget_practice/dropdownbutton_3/dropdownbutton.dart';
+import 'package:practic/widget_practice/datatable_10/datatable.dart';
+import 'package:practic/widget_practice/datatable_10/datatablelist.dart';
+import 'package:practic/widget_practice/dropdownbutton_3/dropDownButton.dart';
 import 'package:practic/widget_practice/gesture_20/gesture.dart';
+import 'package:practic/widget_practice/hero_18/hero_learn.dart';
+import 'package:practic/widget_practice/light_12/light.dart';
 import 'package:practic/widget_practice/listtile_4/listtile.class.dart';
 import 'package:practic/widget_practice/listviewbuilder_5/listview.builder.dart';
-import 'package:practic/widget_practice/randomnumber_7/randomnogenerate.dart';
+import 'package:practic/widget_practice/materialTheme_14/materialTheme.dart';
+import 'package:practic/widget_practice/radio_13/radio.learn.dart';
+import 'package:practic/widget_practice/randomnumber_7/randomNoGenerate.dart';
+import 'package:practic/widget_practice/scoreBoard_11/cricket.score.dart';
+import 'package:practic/widget_practice/share_preferences_15/sharePreferences.dart';
 import 'package:practic/widget_practice/slider_8/slider.dart';
-import 'package:practic/widget_practice/textField_6/textfield_learn.dart';
-import 'allui/ui1/ui.1.dart';
-import 'allui/ui2/ui2.dart';
-import 'allui/ui3/call_21/call.dart';
+import 'package:practic/widget_practice/stepper_learn_17/stepper.learn.dart';
+import 'package:practic/widget_practice/textField_6/textField.dart';
+import 'homepage.controller.dart';
 import 'homepage.dart';
 
 void main() {
@@ -44,22 +46,21 @@ class MyApp extends StatelessWidget {
       home: const Scaffold(
         body: HomePage(),
       ),
-      initialRoute: Routes.logInUi,
+      initialRoute: Routes.photoshop,
       routes: {
         Routes.homepage: (context) => const HomePage(),
         Routes.addContainer: (context) => const AddContainer(),
-        Routes.addBox: (context) => const AddBox(),
-        Routes.checkBox: (context) => const CheckBoxTestWithTwoState(),
-        Routes.dropDownButton: (context) => const MyDropDownButton(),
+        Routes.checkBox: (context) => const CheckBox(),
+        Routes.dropDownButton: (context) => const DropDownButton(),
         Routes.listTile: (context) => const ListTileClass(),
-        Routes.listViewBuilder: (context) => const ListViewBuilderLern(),
-        Routes.textFieldLearn: (context) => const TextFieldLearn(),
-        Routes.randomNoGenerate: (context) => const RandomNoGenerate(),
+        Routes.listViewBuilder: (context) => const ListViewBuilder(),
+        Routes.textField: (context) => const TextFieldLearn(),
+        Routes.randomNo: (context) => const RandomNoGenerate(),
         Routes.slider: (context) => const SliderLearn(),
         Routes.addTwoNumber: (context) => const AddTwoNumbers(),
         Routes.dataTable: (context) => const DataTableLearn(),
         Routes.datableList: (context) => const DataTableList(),
-        Routes.scoreBoard: (context) => const CricketScore(),
+        Routes.cricketScore: (context) => const CricketScore(),
         Routes.light: (context) => const Light(),
         Routes.radio: (context) => const RadioLearn(),
         Routes.materialTheme: (context) => const MaterialTheme(),
@@ -69,47 +70,16 @@ class MyApp extends StatelessWidget {
         Routes.hero: (context) => const HeroLearn(),
         Routes.bool: (context) => const BoolPractice(),
         Routes.gesture: (context) => const GestureLearn(),
-        Routes.ui1: (context) => const Ui1(),
-        Routes.ui2: (context) => const Ui2(),
-        Routes.ui3: (context) => const Call(),
-        Routes.audioPlayer: (context) => const AudioPlayerLearn(),
-        Routes.visvaBharatiUi: (context) => const VisvaBharati(),
+        Routes.callScreenSupriyo: (context) => const CallSupriyo(),
+        Routes.messageScreen: (context) => const MessageScreen(),
         Routes.audioPage: (context) => const AudioPage(),
-        Routes.logInUi: (context) => const LogInUi(),
+        Routes.logInUi: (context) => const LoginUi(),
+        Routes.visvaBharatiUi: (context) => const VisvaBharati(),
+        Routes.moneyTransferScreen: (context) => const MoneyTransfer(),
+        Routes.audioPlayer: (context) => const AudioPlayerLearn(),
+        Routes.addBox: (context) => const AddBox(),
+        Routes.photoshop: (context) => const PhotoShop(),
       },
     );
   }
-}
-
-class Routes {
-  static const homepage = 'homePage';
-  static const addContainer = 'addContainer';
-  static const addBox = 'addBox';
-  static const checkBox = 'checkBox';
-  static const dropDownButton = 'dropDownButton';
-  static const listTile = 'listTile';
-  static const listViewBuilder = 'listViewBuilder';
-  static const textFieldLearn = 'textFieldLearn';
-  static const randomNoGenerate = 'randomNoGenerate';
-  static const slider = 'slider';
-  static const dataTable = 'dataTable';
-  static const datableList = 'dataTableList';
-  static const scoreBoard = 'scoreBoard';
-  static const addTwoNumber = 'addTwoNumber';
-  static const light = 'light';
-  static const radio = 'radio';
-  static const materialTheme = 'materialTheme';
-  static const sharePreference = 'sharePreference';
-  static const animation = 'animationLearn';
-  static const stepper = 'stepper';
-  static const hero = 'hero';
-  static const bool = 'bool';
-  static const gesture = 'gesture';
-  static const ui1 = 'ui1';
-  static const ui2 = 'ui2';
-  static const ui3 = 'ui3';
-  static const audioPlayer = 'audioPlayer';
-  static const visvaBharatiUi = 'visvaBharati';
-  static const audioPage = 'audioPage';
-  static const logInUi = 'logInUi';
 }

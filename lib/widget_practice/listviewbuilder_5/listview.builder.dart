@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:practic/constant.dart';
-import 'package:practic/main.dart';
 
-class ListViewBuilderLern extends StatefulWidget {
-  const ListViewBuilderLern({Key? key}) : super(key: key);
+import '../../homepage.controller.dart';
+
+class ListViewBuilder extends StatefulWidget {
+  const ListViewBuilder({Key? key}) : super(key: key);
 
   @override
-  State<ListViewBuilderLern> createState() => _ListViewBuilderLernState();
+  State<ListViewBuilder> createState() => _ListViewBuilderState();
 }
 
-class _ListViewBuilderLernState extends State<ListViewBuilderLern> {
+class _ListViewBuilderState extends State<ListViewBuilder> {
   String? newTaskText;
 
   bool isItsChecked = false;
@@ -21,7 +22,7 @@ class _ListViewBuilderLernState extends State<ListViewBuilderLern> {
       home: Scaffold(
         appBar: appbarWidget(context,
             appBarTitle: 'ListView.Builder',
-            trailingRoutes: Routes.textFieldLearn),
+            trailingRoutes: Routes.textField),
         body: ListView.builder(
             itemCount: taskList.length,
             itemBuilder: (BuildContext context, int index) {
@@ -67,7 +68,7 @@ class _ListViewBuilderLernState extends State<ListViewBuilderLern> {
             );
           },
           backgroundColor: Colors.red,
-          tooltip: 'showModelButtomSheet',
+          tooltip: 'showModelBottomSheet',
         ),
       ),
     );

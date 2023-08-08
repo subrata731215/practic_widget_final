@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../main.dart';
+
+import '../../homepage.controller.dart';
 
 class SliderLearn extends StatefulWidget {
   const SliderLearn({Key? key}) : super(key: key);
@@ -9,10 +10,10 @@ class SliderLearn extends StatefulWidget {
 }
 
 class _SliderLearnState extends State<SliderLearn> {
-  double slidervalu = 120;
+  double sliderValue = 120;
 
   double slid() {
-    double result = slidervalu * 3;
+    double result = sliderValue * 3;
     return result;
   }
 
@@ -36,17 +37,16 @@ class _SliderLearnState extends State<SliderLearn> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              slidervalu.round().toString(),
+              sliderValue.round().toString(),
               style: const TextStyle(fontSize: 60),
             ),
             Slider(
                 min: 100,
                 max: 200,
-                value: slidervalu,
-                onChanged: (onchanged) {
-                  //print(slidervalu.round());
+                value: sliderValue,
+                onChanged: (onChanged) {
                   setState(() {
-                    slidervalu = onchanged;
+                    sliderValue = onChanged;
                   });
                 }),
           ],

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:practic/constant.dart';
-import 'package:practic/main.dart';
 import 'package:reactiv/reactiv.dart';
-import 'listtilecontroller.dart';
+import '../../homepage.controller.dart';
+import 'listtileController.dart';
 
 class ListTileClass extends ReactiveStateWidget<ListTileController> {
   const ListTileClass({super.key});

@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:practic/constant.dart';
-import 'package:practic/main.dart';
+import '../../homepage.controller.dart';
 
-void main() => runApp(const CheckBoxTestWithTwoState()); ////DoubleState
+void main() => runApp(const CheckBox()); ////DoubleState
 
-class CheckBoxTestWithTwoState extends StatefulWidget {
-  const CheckBoxTestWithTwoState({super.key});
+class CheckBox extends StatefulWidget {
+  const CheckBox({super.key});
 
   @override
-  State<CheckBoxTestWithTwoState> createState() =>
-      _CheckBoxTestWithTwoStateState();
+  State<CheckBox> createState() =>
+      _CheckBoxState();
 }
 
-class _CheckBoxTestWithTwoStateState extends State<CheckBoxTestWithTwoState> {
+class _CheckBoxState extends State<CheckBox> {
   TextEditingController _controller = TextEditingController();
 
-  bool ischecked = false;
+  bool isChecked = false;
 
-  void checkBoxCallBack(chekboxstate) {
+  void checkBoxCallBack(checkBoxState) {
     setState(() {
-      ischecked = chekboxstate;
+      isChecked = checkBoxState;
     });
   }
 
@@ -58,11 +58,11 @@ class _CheckBoxTestWithTwoStateState extends State<CheckBoxTestWithTwoState> {
             title: Text(
               'Buy Milk',
               style: TextStyle(
-                decoration: ischecked ? TextDecoration.lineThrough : null,
+                decoration: isChecked ? TextDecoration.lineThrough : null,
               ),
             ),
             trailing: CheckBoxState(
-              checkBoxState: ischecked,
+              checkBoxState: isChecked,
               toggleCheckBoxState: checkBoxCallBack,
             ),
           ),

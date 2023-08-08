@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:practic/main.dart';
-import 'package:practic/practic.widget.dart';
+import 'package:practic/homepage.controller.dart';
+import 'package:reactiv/reactiv.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends ReactiveStateWidget<HomepageController> {
+  @override
+  HomepageController bindController() => HomepageController();
+
   const HomePage({Key? key}) : super(key: key);
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,203 +15,49 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         backgroundColor: Colors.indigo,
         centerTitle: true,
-        title: const Text('Practic'),
-        actions: [
-          Checkbox(
-              value: checkBoxValue,
-              onChanged: (change) {
-                setState(() {
-                  checkBoxValue = change!;
-                });
-              })
-        ],
+        title: const Text('Practice'),
       ),
-      body: ListView(
-        children: [
-          PracticeWidget(
-            title: 'AddContainer',
-            onp: () {
-              setState(() {
-                Navigator.pushNamed(context, Routes.addContainer);
-              });
+      body: ListView.builder(
+        itemCount: controller.widgetList.length,
+        itemBuilder: (context, index) => Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, controller.routes[index]);
             },
-            slNo: 1,
+            child: Container(
+              height: 50,
+              decoration: const BoxDecoration(
+                  color: Colors.orange,
+                  borderRadius: BorderRadius.all(Radius.circular(20))),
+              child: ListTile(
+                leading: Container(
+                  height: 40,
+                  width: 40,
+                  decoration: const BoxDecoration(
+                      shape: BoxShape.circle, color: Colors.white),
+                  child: Center(
+                    child: Text(
+                      (index + 1).toString(),
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 25,
+                      ),
+                    ),
+                  ),
+                ),
+                title: Text(
+                  controller.widgetList[index].title,
+                  style: const TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ),
+            ),
           ),
-          PracticeWidget(
-            title: 'AddBox',
-            onp: () {
-              setState(() {
-                Navigator.pushNamed(context, Routes.addBox);
-              });
-            },
-            slNo: 1.1.toInt(),
-          ),
-          PracticeWidget(
-            title: 'CheckBox',
-            onp: () {
-              setState(() {
-                Navigator.pushNamed(context, Routes.checkBox);
-              });
-            },
-            slNo: 2,
-          ),
-          PracticeWidget(
-            title: 'DropDownButton',
-            onp: () {
-              setState(() {
-                Navigator.pushNamed(context, Routes.dropDownButton);
-              });
-            },
-            slNo: 3,
-          ),
-          PracticeWidget(
-            title: 'ListTile',
-            onp: () {
-              setState(() {
-                Navigator.pushNamed(context, Routes.listTile);
-              });
-            },
-            slNo: 4,
-          ),
-          PracticeWidget(
-              title: 'ListView.Builder',
-              onp: () {
-                setState(() {
-                  Navigator.pushNamed(context, Routes.listViewBuilder);
-                });
-              },
-              slNo: 5),
-          PracticeWidget(
-              title: 'TextField',
-              onp: () {
-                setState(() {
-                  Navigator.pushNamed(context, Routes.textFieldLearn);
-                });
-              },
-              slNo: 6),
-          PracticeWidget(
-              title: 'RandomNumberGenerate',
-              onp: () {
-                setState(() {
-                  Navigator.pushNamed(context, Routes.randomNoGenerate);
-                });
-              },
-              slNo: 7),
-          PracticeWidget(
-              title: 'Slider',
-              onp: () {
-                Navigator.pushNamed(context, Routes.slider);
-              },
-              slNo: 8),
-          PracticeWidget(
-              title: 'AddTwoNumber',
-              onp: () {
-                Navigator.pushNamed(context, Routes.addTwoNumber);
-              },
-              slNo: 9),
-          PracticeWidget(
-              title: 'DataTable',
-              onp: () {
-                Navigator.pushNamed(context, Routes.dataTable);
-              },
-              slNo: 10),
-          PracticeWidget(
-              title: 'CricketScore',
-              onp: () {
-                Navigator.pushNamed(context, Routes.scoreBoard);
-              },
-              slNo: 11),
-          PracticeWidget(
-              title: 'light',
-              onp: () {
-                Navigator.pushNamed(context, Routes.light);
-              },
-              slNo: 12),
-          PracticeWidget(
-              title: 'Radio',
-              onp: () {
-                Navigator.pushNamed(context, Routes.radio);
-              },
-              slNo: 13),
-          PracticeWidget(
-              title: 'MaterialTheme',
-              onp: () {
-                Navigator.pushNamed(context, Routes.materialTheme);
-              },
-              slNo: 14),
-          PracticeWidget(
-              title: 'Share Preference',
-              onp: () {
-                Navigator.pushNamed(context, Routes.sharePreference);
-              },
-              slNo: 15),
-          PracticeWidget(
-              title: 'Animation',
-              onp: () {
-                Navigator.pushNamed(context, Routes.animation);
-              },
-              slNo: 16),
-          PracticeWidget(
-              title: 'Stepper',
-              onp: () {
-                Navigator.pushNamed(context, Routes.stepper);
-              },
-              slNo: 17),
-          PracticeWidget(
-              title: 'Hero',
-              onp: () {
-                Navigator.pushNamed(context, Routes.hero);
-              },
-              slNo: 18),
-          PracticeWidget(
-              title: 'Bool',
-              onp: () {
-                Navigator.pushNamed(context, Routes.bool);
-              },
-              slNo: 19),
-          PracticeWidget(
-              title: 'Gesture',
-              onp: () {
-                Navigator.pushNamed(context, Routes.gesture);
-              },
-              slNo: 20),
-          PracticeWidget(
-              title: 'Ui1',
-              onp: () {
-                Navigator.pushNamed(context, Routes.ui1);
-              },
-              slNo: 22),
-          PracticeWidget(
-              title: 'Ui2',
-              onp: () {
-                Navigator.pushNamed(context, Routes.ui2);
-              },
-              slNo: 23),
-          PracticeWidget(
-              title: 'Ui3',
-              onp: () {
-                Navigator.pushNamed(context, Routes.ui3);
-              },
-              slNo: 24),
-          PracticeWidget(
-              title: 'Visva-Bharati',
-              onp: () {
-                Navigator.pushNamed(context, Routes.visvaBharatiUi);
-              },
-              slNo: 25),
-          PracticeWidget(
-              title: 'Audio Page',
-              onp: () {
-                Navigator.pushNamed(context, Routes.audioPage);
-              },
-              slNo: 26),
-          PracticeWidget(
-              title: 'Log In Page',
-              onp: () {
-                Navigator.pushNamed(context, Routes.logInUi);
-              },
-              slNo: 27),
-        ],
+        ),
       ),
     );
   }

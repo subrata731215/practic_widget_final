@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../allui/ui3/call_21/call.dart';
-
+import '../../ui/call_21/callsupriyo.dart';
 
 class GestureLearn extends StatefulWidget {
   const GestureLearn({Key? key}) : super(key: key);
@@ -23,7 +22,7 @@ class _GestureLearnState extends State<GestureLearn> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const Call()));
+                          builder: (context) => const CallSupriyo()));
                 },
                 icon: const Icon(Icons.arrow_forward)),
           ],
