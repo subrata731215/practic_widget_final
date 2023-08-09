@@ -23,6 +23,7 @@ import 'package:practic/widget_practice/hero_18/hero_learn.dart';
 import 'package:practic/widget_practice/light_12/light.dart';
 import 'package:practic/widget_practice/listtile_4/listtile.class.dart';
 import 'package:practic/widget_practice/listviewbuilder_5/listview.builder.dart';
+import 'package:practic/widget_practice/lottie_31/lottie_learn.dart';
 import 'package:practic/widget_practice/materialTheme_14/materialTheme.dart';
 import 'package:practic/widget_practice/radio_13/radio.learn.dart';
 import 'package:practic/widget_practice/randomnumber_7/randomNoGenerate.dart';
@@ -83,6 +84,7 @@ class MyApp extends StatelessWidget {
         Routes.addBox: (context) => const AddBox(),
         Routes.photoshop: (context) => const PhotoShop(),
         Routes.classModel: (context) => const ClassModelLearn(),
+        Routes.lottie: (context) => const LottieLearn(),
       },
     );
   }
