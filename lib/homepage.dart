@@ -23,7 +23,7 @@ class HomePage extends ReactiveStateWidget<HomepageController> {
           padding: const EdgeInsets.all(8.0),
           child: GestureDetector(
             onTap: () {
-              Navigator.pushNamed(context, controller.routes[index]);
+              Navigator.pushNamed(context, controller.widgetList[index].routes);
             },
             child: Container(
               height: 50,
