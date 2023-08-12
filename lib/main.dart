@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:practic/programming_Language_Learn/class_model_31/class_model.dart';
+import 'package:practic/programming_Language_Learn/contact_add_ui_with_language/contactadd.dart';
 import 'package:practic/ui/audio_screen_23/audio.page.dart';
 import 'package:practic/ui/call_21/callsupriyo.dart';
 import 'package:practic/ui/loginui_24/loginui.dart';
 import 'package:practic/ui/message_22/message.dart';
-import 'package:practic/ui/moneyTransferUi_26/moneyTransferUi.dart';
+import 'package:practic/ui/moneyTransferUi_26/moneytransferui.dart';
 import 'package:practic/ui/photoshop_30/photoshop.dart';
 import 'package:practic/ui/visva_bharati_ui_25/visva_bharati.dart';
 import 'package:practic/widget_practice/addbox_27/addbox.dart';
 import 'package:practic/widget_practice/addcontainer_1/container.dart';
-import 'package:practic/widget_practice/addcontainer_1/containerwithText.dart';
-import 'package:practic/widget_practice/addtwonumber_9/addTwoNumbers.dart';
+import 'package:practic/widget_practice/addcontainer_1/containerwithtext.dart';
+import 'package:practic/widget_practice/addtwonumber_9/addtwonumbers.dart';
 import 'package:practic/widget_practice/animation_16/animation_one.dart';
 import 'package:practic/widget_practice/animation_16/delayanimation.dart';
 import 'package:practic/widget_practice/audioplayer_27/audioPlayer.dart';
@@ -87,6 +88,7 @@ class MyApp extends StatelessWidget {
         Routes.photoshop: (context) => const PhotoShop(),
         Routes.classModel: (context) => const ClassModelLearn(),
         Routes.lottie: (context) => const LottieLearn(),
+        Routes.contactAdd: (context) => const ContactAdd(),
       },
     );
   }
