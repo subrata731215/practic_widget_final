@@ -16,9 +16,9 @@ class ContainerWithText extends StatelessWidget {
             backgroundColor: const Color(0xff181818),
             toolbarHeight: 100,
             title: Container(
-              margin: const EdgeInsets.only(right: 36,top: 12,bottom: 12),
+              margin: const EdgeInsets.only(right: 36, top: 12, bottom: 12),
               child: Row(
-               // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Expanded(
                     child: Container(
@@ -41,13 +41,19 @@ class ContainerWithText extends StatelessWidget {
                   const Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-
                       children: [
                         Text(
                           'Rahul dev Mondal',
-                          maxLines: 2,style: TextStyle(fontWeight: FontWeight.w500,fontSize: 16,letterSpacing: 0.1,color: Color(0xFFECECEC)),
+                          maxLines: 2,
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16,
+                              letterSpacing: 0.1,
+                              color: Color(0xFFECECEC)),
                         ),
-                        SizedBox(height: 6,),
+                        SizedBox(
+                          height: 6,
+                        ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -90,73 +96,118 @@ class ContainerWithText extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(width: 48,),
-                  const Icon(Icons.keyboard_arrow_down,color: Color(0xff707070),)
+                  SizedBox(
+                    width: 48,
+                  ),
+                  const Icon(
+                    Icons.keyboard_arrow_down,
+                    color: Color(0xff707070),
+                  )
                 ],
               ),
             ),
           ),
-          body: ListView(
+          body: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+              Expanded(
+                child: ListView(
                   children: [
-                    Expanded(
-                      child: Container(
-                          color: Colors.red,
-                          padding: EdgeInsets.all(10),
-                          child: const Padding(
-                            padding: EdgeInsets.all(8.0),
-                            child: Column(
-                              children: [
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Flexible(
-                                      child: Text(
-                                        'Subrata Ghosh',
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Expanded(
+                            child: Container(
+                                color: Colors.red,
+                                padding: EdgeInsets.all(10),
+                                child: const Padding(
+                                  padding: EdgeInsets.all(8.0),
+                                  child: Column(
+                                    children: [
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Flexible(
+                                            child: Text(
+                                              'Subrata Ghosh',
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            width: 20,
+                                          ),
+                                          Flexible(child: Text('09/08/2023')),
+                                          Flexible(child: Icon(Icons.add)),
+                                        ],
                                       ),
-                                    ),
-                                    SizedBox(
-                                      width: 20,
-                                    ),
-                                    Flexible(child: Text('09/08/2023')),
-                                    Flexible(child: Icon(Icons.add)),
-                                  ],
-                                ),
-                                SizedBox(
-                                  height: 20,
-                                ),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Expanded(
-                                      child: Text(
-                                        'Joydeb',
-                                        textAlign: TextAlign.justify,
+                                      SizedBox(
+                                        height: 20,
                                       ),
-                                    ),
-                                    Flexible(child: Icon(Icons.add)),
-                                    Flexible(child: Icon(Icons.add)),
-                                    Flexible(child: Icon(Icons.add)),
-                                    Flexible(child: Icon(Icons.add)),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          )),
-                    ),
-                    Image.asset(
-                      'assets/bisu.jpg',
-                      scale: 6,
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Expanded(
+                                            child: Text(
+                                              'Joydeb',
+                                              textAlign: TextAlign.justify,
+                                            ),
+                                          ),
+                                          Flexible(child: Icon(Icons.add)),
+                                          Flexible(child: Icon(Icons.add)),
+                                          Flexible(child: Icon(Icons.add)),
+                                          Flexible(child: Icon(Icons.add)),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                )),
+                          ),
+                          Image.asset(
+                            'assets/bisu.jpg',
+                            scale: 6,
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
               ),
+              Expanded(
+                child: Container(
+                  margin: EdgeInsets.all(20),
+                  height: MediaQuery.of(context).size.height,
+                  width: MediaQuery.of(context).size.width,
+                  color: Colors.red,
+                  child: Column(
+                    children: [
+                      Flexible(
+                        child: Container(
+                          padding: EdgeInsets.all(20),
+                          margin: EdgeInsets.all(10),
+                          // height: MediaQuery.of(context).size.height / 4,
+                          // width: MediaQuery.of(context).size.width / 2,
+                          color: Colors.blue,
+                          child: Text('Subrata '),
+                        ),
+                      ),
+                      Expanded(
+                        flex: 2,
+                        child: Container(
+                          padding: EdgeInsets.all(20),
+                          margin: EdgeInsets.all(10),
+                          // height: MediaQuery.of(context).size.height / 4,
+                          // width: MediaQuery.of(context).size.width / 2,
+                          color: Colors.grey,
+                          child: Text(
+                              'Sumanta PalPalPalPalPalPPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalalPalPalPalPalPalPalPalPalPalPalPalPal'),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              )
             ],
           )),
     );
