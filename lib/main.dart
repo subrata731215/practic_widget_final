@@ -9,6 +9,7 @@ import 'package:practic/ui/photoshop_30/photoshop.dart';
 import 'package:practic/ui/visva_bharati_ui_25/visva_bharati.dart';
 import 'package:practic/widget_practice/addbox_27/addbox.dart';
 import 'package:practic/widget_practice/addcontainer_1/container.dart';
+import 'package:practic/widget_practice/addcontainer_1/containerwithText.dart';
 import 'package:practic/widget_practice/addtwonumber_9/addTwoNumbers.dart';
 import 'package:practic/widget_practice/animation_16/animation_one.dart';
 import 'package:practic/widget_practice/animation_16/delayanimation.dart';
@@ -53,6 +54,7 @@ class MyApp extends StatelessWidget {
       routes: {
         Routes.homepage: (context) => const HomePage(),
         Routes.addContainer: (context) => const AddContainer(),
+        Routes.containerWithText: (context) => const ContainerWithText(),
         Routes.checkBox: (context) => const CheckBox(),
         Routes.dropDownButton: (context) => const DropDownButton(),
         Routes.listTile: (context) => const ListTileClass(),

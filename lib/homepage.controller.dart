@@ -3,6 +3,7 @@ import 'package:reactiv/reactiv.dart';
 class HomepageController extends ReactiveController {
   ReactiveList<HomePageModel> widgetList = ReactiveList([
     HomePageModel(title: 'AddContainer', routes: Routes.addContainer),
+    HomePageModel(title: 'ContainerWithText', routes: Routes.containerWithText),
     HomePageModel(title: 'CheckBox', routes: Routes.checkBox),
     HomePageModel(title: 'DropDownButton', routes: Routes.dropDownButton),
     HomePageModel(title: 'ListTile', routes: Routes.listTile),
@@ -39,6 +40,7 @@ class HomepageController extends ReactiveController {
 class Routes {
   static const homepage = 'homePage';
   static const addContainer = 'addContainer';
+  static const containerWithText = 'containerWithText';
   static const checkBox = 'checkBox';
   static const dropDownButton = 'dropDownButton';
   static const listTile = 'listTile';
