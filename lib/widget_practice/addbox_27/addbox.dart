@@ -18,7 +18,7 @@ class AddBox extends ReactiveStateWidget<AddContainerController> {
           actions: [
             IconButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, Routes.addBox);
+                  Navigator.pushNamed(context, Routes.photoshop);
                 },
                 icon: const Icon(Icons.arrow_forward))
           ],

@@ -285,7 +285,7 @@ class PhotoShop extends StatelessWidget {
             child: Container(
               height: 120,
               width: 220,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.black,
               ),
             ),

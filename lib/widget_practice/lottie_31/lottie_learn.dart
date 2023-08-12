@@ -10,7 +10,7 @@ class LottieLearn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appbarWidget(context,
-          appBarTitle: 'Lottie', trailingRoutes: Routes.lottie),
+          appBarTitle: 'Lottie', trailingRoutes: Routes.contactAdd),
       body: ListView(
         scrollDirection: Axis.horizontal,
         children: [

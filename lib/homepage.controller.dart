@@ -34,6 +34,7 @@ class HomepageController extends ReactiveController {
     HomePageModel(title: 'PhotoShop', routes: Routes.photoshop),
     HomePageModel(title: 'ClassModel', routes: Routes.classModel),
     HomePageModel(title: 'Lottie', routes: Routes.lottie),
+    HomePageModel(title: 'ContactAdd', routes: Routes.contactAdd),
   ]);
 }
 
@@ -73,6 +74,7 @@ class Routes {
   static const photoshop = 'photoshop';
   static const classModel = 'classModel';
   static const lottie = 'lottie';
+  static const contactAdd = 'contactAdd';
 }
 
 class HomePageModel {

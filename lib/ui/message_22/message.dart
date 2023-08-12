@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:practic/ui/audio_screen_23/audio.page.dart';
 import 'package:reactiv/reactiv.dart';
-import '../../homepage.controller.dart';
 import 'constants.dart';
 import 'controller.dart';
 
@@ -29,7 +29,7 @@ class MessageScreen extends ReactiveStateWidget<Ui2Controller> {
           ),
           IconButton(
               onPressed: () {
-                Navigator.pushNamed(context, Routes.audioPage);
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>const AudioPage()));
               },
               icon: const Icon(Icons.arrow_forward))
         ],

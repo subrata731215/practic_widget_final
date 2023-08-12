@@ -13,7 +13,7 @@ class AddContainer extends ReactiveStateWidget<AddContainerController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appbarWidget(context, appBarTitle: 'AddContainer', trailingRoutes: Routes.checkBox),
+      appBar: appbarWidget(context, appBarTitle: 'AddContainer', trailingRoutes: Routes.containerWithText),
       body: Observer(
           listenable: controller.containerList,
           listener: (context) {

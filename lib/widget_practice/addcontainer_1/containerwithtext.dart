@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import '../../homepage.controller.dart';
 
 void main() {
   runApp(const ContainerWithText());
@@ -15,6 +15,13 @@ class ContainerWithText extends StatelessWidget {
           appBar: AppBar(
             backgroundColor: const Color(0xff181818),
             toolbarHeight: 100,
+            actions: [
+              GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, Routes.checkBox);
+                  },
+                  child: const Icon(Icons.arrow_forward))
+            ],
             title: Container(
               margin: const EdgeInsets.only(right: 36, top: 12, bottom: 12),
               child: Row(
@@ -96,7 +103,7 @@ class ContainerWithText extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 48,
                   ),
                   const Icon(
@@ -120,7 +127,7 @@ class ContainerWithText extends StatelessWidget {
                           Expanded(
                             child: Container(
                                 color: Colors.red,
-                                padding: EdgeInsets.all(10),
+                                padding: const EdgeInsets.all(10),
                                 child: const Padding(
                                   padding: EdgeInsets.all(8.0),
                                   child: Column(
@@ -176,7 +183,7 @@ class ContainerWithText extends StatelessWidget {
               ),
               Expanded(
                 child: Container(
-                  margin: EdgeInsets.all(20),
+                  margin: const EdgeInsets.all(20),
                   height: MediaQuery.of(context).size.height,
                   width: MediaQuery.of(context).size.width,
                   color: Colors.red,
@@ -184,23 +191,23 @@ class ContainerWithText extends StatelessWidget {
                     children: [
                       Flexible(
                         child: Container(
-                          padding: EdgeInsets.all(20),
-                          margin: EdgeInsets.all(10),
+                          padding: const EdgeInsets.all(20),
+                          margin: const EdgeInsets.all(10),
                           // height: MediaQuery.of(context).size.height / 4,
                           // width: MediaQuery.of(context).size.width / 2,
                           color: Colors.blue,
-                          child: Text('Subrata '),
+                          child: const Text('Subrata '),
                         ),
                       ),
                       Expanded(
                         flex: 2,
                         child: Container(
-                          padding: EdgeInsets.all(20),
-                          margin: EdgeInsets.all(10),
+                          padding: const EdgeInsets.all(20),
+                          margin: const EdgeInsets.all(10),
                           // height: MediaQuery.of(context).size.height / 4,
                           // width: MediaQuery.of(context).size.width / 2,
                           color: Colors.grey,
-                          child: Text(
+                          child: const Text(
                               'Sumanta PalPalPalPalPalPPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalalPalPalPalPalPalPalPalPalPalPalPalPal'),
                         ),
                       ),
