@@ -3,15 +3,12 @@ import 'package:reactiv/reactiv.dart';
 import 'model.dart';
 
 class AllDataController extends ReactiveController {
-  final ReactiveBool switchvalue = ReactiveBool(false);
+  final ReactiveBool switchValue = ReactiveBool(false);
   final ReactiveList<Contact> contactList = ReactiveList([]);
   final nameController = TextEditingController();
   final phController = TextEditingController();
 
-// toggle(){    //// short form of use switch Value Onchanged
-//   switchvalue.value=!switchvalue.value;
-//
-// }
+
   void add({required Contact contact}) {
     contactList.add(contact);
   }
