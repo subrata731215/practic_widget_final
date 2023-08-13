@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:reactiv/reactiv.dart';
-
 import '../../homepage.controller.dart';
-import 'controller';
+import 'controller.dart';
 import 'model.dart';
 
 class ContactAdd extends ReactiveStateWidget<AllDataController> {
@@ -16,7 +15,7 @@ class ContactAdd extends ReactiveStateWidget<AllDataController> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Observer(
-          listenable: controller.switchvalue,
+          listenable: controller.switchValue,
           listener: (value) {
             return Scaffold(
                 backgroundColor: Colors.brown,
@@ -41,13 +40,13 @@ class ContactAdd extends ReactiveStateWidget<AllDataController> {
                                 );
                               }),
                           Observer(
-                              listenable: controller.switchvalue,
+                              listenable: controller.switchValue,
                               listener: (switchvalue) {
                                 return Switch(
                                     value: switchvalue,
                                     onChanged: (changed) {
-                                      controller.switchvalue.value =
-                                          !controller.switchvalue.value;
+                                      // controller.switchValue.value =
+                                      //     !controller..value;
                                       //controller.toggle();
                                     });
                               }),
@@ -94,7 +93,7 @@ class ContactAdd extends ReactiveStateWidget<AllDataController> {
                   padding: const EdgeInsets.all(18.0),
                   child: Container(
                     decoration: BoxDecoration(
-                        color: controller.switchvalue.value
+                        color: controller.switchValue.value
                             ? Colors.white
                             : Colors.white24,
                         borderRadius: BorderRadius.circular(20)),

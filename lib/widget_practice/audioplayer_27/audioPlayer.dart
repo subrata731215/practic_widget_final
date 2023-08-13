@@ -14,7 +14,7 @@ class _AudioPlayerLearnState extends State<AudioPlayerLearn> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appbarWidget(context,
-          appBarTitle: 'AudioPlayer', trailingRoutes: Routes.addBox),
+          appBarTitle: 'AudioPlayer', trailingRoutes: Routes.schoolUi),
       body: Center(
         child: ElevatedButton(
           onPressed: () {

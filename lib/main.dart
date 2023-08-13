@@ -7,6 +7,7 @@ import 'package:practic/ui/loginui_24/loginui.dart';
 import 'package:practic/ui/message_22/message.dart';
 import 'package:practic/ui/moneyTransferUi_26/moneytransferui.dart';
 import 'package:practic/ui/photoshop_30/photoshop.dart';
+import 'package:practic/ui/school_ui/school.ui.dart';
 import 'package:practic/ui/visva_bharati_ui_25/visva_bharati.dart';
 import 'package:practic/widget_practice/addbox_27/addbox.dart';
 import 'package:practic/widget_practice/addcontainer_1/container.dart';
@@ -84,6 +85,7 @@ class MyApp extends StatelessWidget {
         Routes.visvaBharatiUi: (context) => const VisvaBharati(),
         Routes.moneyTransferScreen: (context) => const MoneyTransfer(),
         Routes.audioPlayer: (context) => const AudioPlayerLearn(),
+        Routes.schoolUi: (context) => const SchoolUi(),
         Routes.addBox: (context) => const AddBox(),
         Routes.photoshop: (context) => const PhotoShop(),
         Routes.classModel: (context) => const ClassModelLearn(),

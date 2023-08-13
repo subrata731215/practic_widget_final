@@ -30,6 +30,7 @@ class HomepageController extends ReactiveController {
     HomePageModel(title: 'Visva_Bharati Ui', routes: Routes.visvaBharatiUi),
     HomePageModel(title: 'MoneyTransferUi', routes: Routes.moneyTransferScreen),
     HomePageModel(title: 'AudioPlayerUi', routes: Routes.audioPlayer),
+    HomePageModel(title: 'schoolUi', routes: Routes.schoolUi),
     HomePageModel(title: 'AddBox', routes: Routes.addBox),
     HomePageModel(title: 'PhotoShop', routes: Routes.photoshop),
     HomePageModel(title: 'ClassModel', routes: Routes.classModel),
@@ -70,6 +71,7 @@ class Routes {
   static const visvaBharatiUi = 'visvaBharati';
   static const moneyTransferScreen = 'moneyTransferScreen';
   static const audioPlayer = 'audioPlayer';
+  static const schoolUi = 'schoolUi';
   static const addBox = 'addBox';
   static const photoshop = 'photoshop';
   static const classModel = 'classModel';
