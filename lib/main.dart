@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:practic/programming_Language_Learn/class_model_31/class_model.dart';
 import 'package:practic/programming_Language_Learn/contact_add_ui_with_language/contactadd.dart';
+import 'package:practic/programming_Language_Learn/otp_input_field/otpinputfield.dart';
 import 'package:practic/ui/audio_screen_23/audio.page.dart';
 import 'package:practic/ui/call_21/callsupriyo.dart';
 import 'package:practic/ui/loginui_24/loginui.dart';
@@ -48,11 +49,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+          elevatedButtonTheme: const ElevatedButtonThemeData(
+              style: ButtonStyle(
+                  alignment: Alignment.center,
+                  backgroundColor: MaterialStatePropertyAll(Colors.white)))),
       debugShowCheckedModeBanner: false,
       home: const Scaffold(
         body: HomePage(),
       ),
-      initialRoute: Routes.homepage,
+      initialRoute: Routes.addBox,
       routes: {
         Routes.homepage: (context) => const HomePage(),
         Routes.addContainer: (context) => const AddContainer(),
@@ -91,6 +97,7 @@ class MyApp extends StatelessWidget {
         Routes.classModel: (context) => const ClassModelLearn(),
         Routes.lottie: (context) => const LottieLearn(),
         Routes.contactAdd: (context) => const ContactAdd(),
+        Routes.otpInputField: (context) => const OtpInputField(),
       },
     );
   }

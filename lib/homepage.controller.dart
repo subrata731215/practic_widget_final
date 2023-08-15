@@ -36,6 +36,7 @@ class HomepageController extends ReactiveController {
     HomePageModel(title: 'ClassModel', routes: Routes.classModel),
     HomePageModel(title: 'Lottie', routes: Routes.lottie),
     HomePageModel(title: 'ContactAdd', routes: Routes.contactAdd),
+    HomePageModel(title: 'OtpInputField', routes: Routes.otpInputField),
   ]);
 }
 
@@ -77,6 +78,7 @@ class Routes {
   static const classModel = 'classModel';
   static const lottie = 'lottie';
   static const contactAdd = 'contactAdd';
+  static const otpInputField = 'otpInputField';
 }
 
 class HomePageModel {

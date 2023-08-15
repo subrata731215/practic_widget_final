@@ -81,7 +81,7 @@ class ContactAdd extends ReactiveStateWidget<AllDataController> {
                               ),
                               ElevatedButton(
                                   onPressed: () {
-                                    Navigator.pushNamed(context, Routes.contactAdd);
+                                    Navigator.pushNamed(context, Routes.otpInputField);
                                   },
                                   child: const Icon(Icons.navigate_next)),
                             ],

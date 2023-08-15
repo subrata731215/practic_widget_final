@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:practic/constant.dart';
+import 'package:practic/ui/school_ui/utills.dart';
 import '../../homepage.controller.dart';
 
-class SchoolUi extends StatelessWidget {
+class SchoolUi extends StatefulWidget {
   const SchoolUi({Key? key}) : super(key: key);
+
+  @override
+  State<SchoolUi> createState() => _SchoolUiState();
+}
+
+class _SchoolUiState extends State<SchoolUi> {
+  int currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +31,7 @@ class SchoolUi extends StatelessWidget {
                     Text(
                       'Home Page',
                       style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 28,
                           fontWeight: FontWeight.w900,
                           letterSpacing: 1),
                     ),
@@ -41,6 +49,7 @@ class SchoolUi extends StatelessWidget {
             TextField(
               style: const TextStyle(fontStyle: FontStyle.italic),
               decoration: InputDecoration(
+
                 /// contentPadding not working
                 contentPadding: const EdgeInsets.symmetric(horizontal: 0),
                 filled: true,
@@ -99,15 +108,22 @@ class SchoolUi extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 42),
-            const Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  'Recommended course',
-                  style:
-                      TextStyle(fontWeight: FontWeight.w900, letterSpacing: 1),
+                Container(
+                  color: Colors.grey.shade200,
+                  padding:
+                  const EdgeInsets.symmetric(horizontal: 3, vertical: 05),
+                  child: const Text(
+                    'Recommended course',
+                    style: TextStyle(
+                        fontWeight: FontWeight.w900,
+                        letterSpacing: 1,
+                        fontSize: 20),
+                  ),
                 ),
-                Text('More'),
+                const Text('More'),
               ],
             ),
             const SizedBox(height: 20),
@@ -132,8 +148,19 @@ class SchoolUi extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.white,
+        fixedColor: Colors.green,
         type: BottomNavigationBarType.fixed,
-        currentIndex: 0,
+        currentIndex: currentIndex,
+        onTap: (newIndex) {
+          setState(() {
+            currentIndex = newIndex;
+            // showDialog(context: context, builder: (context) =>
+            //     const AlertDialog(
+            //       title: Text('Subrata Ghosh'),
+            //     ));
+          });
+        },
         iconSize: 32,
         elevation: 700,
         items: const <BottomNavigationBarItem>[
@@ -154,65 +181,6 @@ class SchoolUi extends StatelessWidget {
             label: 'Profile',
           ),
         ],
-      ),
-    );
-  }
-}
-
-class CircleAvatarWidget extends StatelessWidget {
-  const CircleAvatarWidget(
-      {Key? key,
-      required this.color,
-      required this.icon,
-      required this.downText})
-      : super(key: key);
-
-  final Color color;
-  final IconData icon;
-  final String downText;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        CircleAvatar(
-          radius: 40,
-          backgroundColor: color,
-          child: Icon(
-            icon,
-            color: Colors.white,
-            size: 45,
-          ),
-        ),
-        const SizedBox(height: 12),
-        Text(
-          downText,
-          style: const TextStyle(fontWeight: FontWeight.w700),
-        ),
-      ],
-    );
-  }
-}
-
-class RecommendedCourseWidget extends StatelessWidget {
-  const RecommendedCourseWidget({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.all(10),
-      height: 140,
-      width: 120,
-      decoration: BoxDecoration(
-        border: Border.all(color: Colors.black12, width: 4),
-        borderRadius: BorderRadius.circular(10),
-        image: const DecorationImage(
-          fit: BoxFit.fitHeight,
-          alignment: Alignment.center,
-          image: AssetImage('assets/cartoon.png'),
-        ),
       ),
     );
   }
