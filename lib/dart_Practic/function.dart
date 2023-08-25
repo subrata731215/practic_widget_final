@@ -47,87 +47,83 @@
 //   print(multiply);
 // }
 
+// void main() {
+// for(int i = 20; i>0 ; i--){
+//
+//   print('You Must Buy $i Bottles Milk now Left ${i - 1} bottles Milk  ');
+// }
 
-void main() {
-  // for(int i = 20; i>0 ; i--){
-  //
-  //   print('You Must Buy $i Bottles Milk now Left ${i - 1} bottles Milk  ');
-  // }
+//getMilk(10);
 
-  getMilk(10);
+// greeting(name: 'Subrata', age: 54);
 
-  // greeting(name: 'Subrata', age: 54);
+// double result = myFunction();
+// print(result);
 
-  // double result = myFunction();
-  // print(result);
+// int result= getMilkChange(money: 200, bottles: 2);
+// print(result);
 
-  // int result= getMilkChange(money: 200, bottles: 2);
-  // print(result);
+// int result= calculator(10, 20, subtract);
+// print(result);
 
-  // int result= calculator(10, 20, subtract);
-  // print(result);
+// Car myCar = Car(drive: fastDrive);
+// myCar.drive();
+//}
 
-  // Car myCar = Car(drive: fastDrive);
-  // myCar.drive();
-}
+// getMilk(int bottles) {
+//   for (int i = 10; i > 0; i--) {
+//     double cost = 20;
+//     String r = i <= 1 ? 'Bottle' : 'Bottles';
+//
+//     print(
+//         'Your Stock $i $r Milk now Pass 1 Bottle. Left ${i - 1} $r  Milk Which Price is ${(i - 1) * cost}');
+//   }
+// }
 
-getMilk(int bottles) {
-  for (int i = 10; i > 0; i--) {
-    double cost = 20;
-    String r = i <= 1 ? 'Bottle' : 'Bottles';
+// void greeting({required String name, required int age}) {
+//   print('hello $name  you age is $age');
+// }
+//
+// double myFunction() {
+//   double pi = 3.14289;
+//   return pi * 2;
+// }
+//
+// int getMilkChange({required int money, required int bottles}) {
+//   int cost = bottles * 30;
+//   int change = money - cost;
+//   return change;
+// }
 
-    print(
-        'Your Stock $i $r Milk now Pass 1 Bottle. Left ${i - 1} $r  Milk Which Price is ${(i - 1) * cost}');
-  }
-}
+// int add(int n1, int n2) {
+//   return n1 + n2;
+// }
 
-void greeting({required String name, required int age}) {
-  print('hello $name  you age is $age');
-}
+// int multiply(int n1, int n2) {
+//   return n1 * n2;
+// }
+//
+// int subtract(int n1, int n2) {
+//   return n2 - n1;
+// }
+//
+// int calculator(int n1, int n2, Function calCulte) {
+//   return calCulte(n1, n2);
+// }
+//
+// class Car {
+//   Car({required this.drive});
+//
+//   Function drive;
+// }
 
-double myFunction() {
-  double pi = 3.14289;
-  return pi * 2;
-}
-
-int getMilkChange({required int money, required int bottles}) {
-  int cost = bottles * 30;
-  int change = money - cost;
-  return change;
-}
-
-int add(int n1, int n2) {
-  return n1 + n2;
-}
-
-int multiply(int n1, int n2) {
-  return n1 * n2;
-}
-
-int subtract(int n1, int n2) {
-  return n2 - n1;
-}
-
-int calculator(int n1, int n2, Function calCulte) {
-  return calCulte(n1, n2);
-}
-
-class Car {
-  Car({required this.drive});
-
-  Function drive;
-}
-
-void slowDrive() {
-  print('Drive Slowly');
-}
-
-void fastDrive() {
-  print('Drive Fast');
-}
-
-
-
+// void slowDrive() {
+//   print('Drive Slowly');
+// }
+//
+// void fastDrive() {
+//   print('Drive Fast');
+// }
 
 // void main() {
 //   print('Welcome To Dart');
@@ -188,3 +184,34 @@ void fastDrive() {
 //   }
 //
 // }
+
+/// interview
+// void main(){
+//
+//   int result=factorial(4);
+//   print(result);
+//
+// }
+//
+// int factorial(int n){
+//   return n=n*3;
+// }
+
+//
+// void main(){
+//
+//   for(int i=0;i<=10;i++){
+//     print(i);
+//   }
+//}
+
+void main() {
+  List<int> numbers = [30, 50, 60, 120, 40, 80];
+
+
+  int sum = 0;
+  for (int i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  print(sum);
+}
