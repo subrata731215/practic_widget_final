@@ -30,38 +30,38 @@ class ClassModelLearn extends StatelessWidget {
             rows: [
               DataRow(
                 cells: [
-                  DataCell(Text(studentData[0].name)),
+                  DataCell(Text(studentData[0].name!)),
                   DataCell(Text(studentData[0].marks.toString())),
                   DataCell(Text(studentData[0].rollNo.toString())),
                 ],
               ),
               DataRow(cells: [
-                DataCell(Text(studentData[1].name)),
+                DataCell(Text(studentData[1].name!)),
                 DataCell(Text(studentData[1].marks.toString())),
                 DataCell(Text(studentData[1].rollNo.toString())),
               ]),
               DataRow(cells: [
-                DataCell(Text(studentData[2].name)),
+                DataCell(Text(studentData[2].name!)),
                 DataCell(Text(studentData[2].marks.toString())),
                 DataCell(Text(studentData[2].rollNo.toString())),
               ]),
               DataRow(cells: [
-                DataCell(Text(studentData[2].name)),
+                DataCell(Text(studentData[2].name!)),
                 DataCell(Text(studentData[2].marks.toString())),
                 DataCell(Text(studentData[2].rollNo.toString())),
               ]),
               DataRow(cells: [
-                DataCell(Text(studentData[3].name)),
+                DataCell(Text(studentData[3].name!)),
                 DataCell(Text(studentData[3].marks.toString())),
                 DataCell(Text(studentData[3].rollNo.toString())),
               ]),
               DataRow(cells: [
-                DataCell(Text(studentData[4].name)),
+                DataCell(Text(studentData[4].name!)),
                 DataCell(Text(studentData[4].marks.toString())),
                 DataCell(Text(studentData[4].rollNo.toString())),
               ]),
               DataRow(cells: [
-                DataCell(Text(studentData[5].name)),
+                DataCell(Text(studentData[5].name!)),
                 DataCell(Text(studentData[5].marks.toString())),
                 DataCell(Text(studentData[5].rollNo.toString())),
               ]),
@@ -74,11 +74,11 @@ class ClassModelLearn extends StatelessWidget {
 }
 
 class Student {
-  int rollNo;
-  String name;
-  int marks;
+  int? rollNo;
+  String? name;
+  int? marks;
 
-  Student({required this.rollNo, required this.name, required this.marks});
+  Student({this.rollNo, this.name, this.marks});
 }
 
 List<Student> studentData = [

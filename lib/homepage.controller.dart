@@ -19,6 +19,8 @@ class HomepageController extends ReactiveController {
     HomePageModel(title: 'MaterialTheme', routes: Routes.materialTheme),
     HomePageModel(title: 'SharePreference', routes: Routes.sharePreference),
     HomePageModel(title: 'Animation', routes: Routes.animation),
+    HomePageModel(title: 'DelayAnimation', routes: Routes.delayAnimation),
+    HomePageModel(title: 'FlutterAnimation', routes: Routes.flutterAnimation),
     HomePageModel(title: 'Stepper', routes: Routes.stepper),
     HomePageModel(title: 'Hero', routes: Routes.hero),
     HomePageModel(title: 'Bool', routes: Routes.bool),
@@ -32,6 +34,7 @@ class HomepageController extends ReactiveController {
     HomePageModel(title: 'AudioPlayerUi', routes: Routes.audioPlayer),
     HomePageModel(title: 'schoolUi', routes: Routes.schoolUi),
     HomePageModel(title: 'AddBox', routes: Routes.addBox),
+    HomePageModel(title: 'ExtraPractice', routes: Routes.extraPractice),
     HomePageModel(title: 'PhotoShop', routes: Routes.photoshop),
     HomePageModel(title: 'ClassModel', routes: Routes.classModel),
     HomePageModel(title: 'Lottie', routes: Routes.lottie),
@@ -61,6 +64,7 @@ class Routes {
   static const sharePreference = 'sharePreference';
   static const animation = 'animationLearn';
   static const delayAnimation = 'delayAnimation';
+  static const flutterAnimation = 'flutterAnimation';
   static const stepper = 'stepper';
   static const hero = 'hero';
   static const bool = 'bool';
@@ -79,6 +83,7 @@ class Routes {
   static const lottie = 'lottie';
   static const contactAdd = 'contactAdd';
   static const otpInputField = 'otpInputField';
+  static const extraPractice = 'extraPractice';
 }
 
 class HomePageModel {
