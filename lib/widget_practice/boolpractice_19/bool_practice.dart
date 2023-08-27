@@ -14,6 +14,7 @@ class BoolPractice extends StatefulWidget {
 
 class _BoolPracticeState extends State<BoolPractice> {
   bool isChecked = false;
+  bool downContainer = false;
   String myName = 'Subrata';
 
   @override
@@ -57,6 +58,24 @@ class _BoolPracticeState extends State<BoolPractice> {
                   width: 30,
                   color: Colors.red,
                 ),
+              const SizedBox(height: 30),
+              GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      downContainer = !downContainer;
+                    });
+                  },
+                  child: Container(
+                    height: 60,
+                    width: 90,
+                    color: downContainer ? Colors.green : Colors.blue,
+                    child: const Center(
+                      child: Text(
+                        'Click',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ))
             ],
           ),
         ),
