@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practic/widget_practice/animation_16/flutter_animation.dart';
 import '../stepper_learn_17/stepper.learn.dart';
 
 class DelayAnimationLearn extends StatefulWidget {
@@ -62,7 +63,7 @@ class _DelayAnimationLearnState extends State<DelayAnimationLearn>
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const StepperLearn()));
+                                builder: (context) => const FlutterAnimation()));
                       },
                       icon: const Icon(Icons.arrow_forward)),
                 ],
