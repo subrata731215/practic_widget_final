@@ -146,7 +146,7 @@
 //   print('Drive Super Fast');
 // }
 
-void main() {
+/* void main() {
   //  Human subrata = Human(height: 150, age: 20, gender: Gender.female);
   // // print(subrata.age);
   //  subrata.whatToSay(whattosay: 'Sumanta is a good Boy');
@@ -190,4 +190,39 @@ class Human {
 enum Gender {
   male,
   female,
+}*/
+
+/*void main() {
+  studentData.add(Student(rollNo: 40, name: 'samrat', marks: 208));
+  print(studentData.length);
+  print(studentData.last.name);
 }
+
+class Student {
+  int? rollNo;
+  String? name;
+  int? marks;
+
+  Student({this.rollNo, this.name, this.marks});
+}
+
+List<Student> studentData = [
+  Student(rollNo: 1, name: 'Subrata', marks: 400),
+  Student(rollNo: 2, name: 'Kala', marks: 700),
+  Student(rollNo: 3, name: 'Mukto', marks: 450),
+  Student(rollNo: 4, name: 'Bisu', marks: 380),
+  Student(rollNo: 5, name: 'Sumanta', marks: 650),
+  Student(rollNo: 6, name: 'Joydeb', marks: 590),
+];
+*/
+
+/*void main() {
+  for (int i = 0; i < myNumbers.length; i++) {
+    print(myNumbers[i]);
+  }
+}
+
+List<int> myNumbers = [56, 78, 23, 56, 98, 1094, 4535, 453, 1314, 13134, 5465];*/
+
+
+

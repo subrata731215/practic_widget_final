@@ -25,6 +25,7 @@
 
 //}
 
+import 'dart:io';
 
 /// Try Angela Loop Example
 
@@ -210,14 +211,40 @@
 //   }
 // }
 
-void main(){
-  for(int i =1;i<=5;i++){
-    {
-      for(int j=5;j>=1;j--){
-        print('$j' * i);
+/// 1
+/// 22
+/// 333
+/// 4444
+/// 55555
+// void main() {
+//   for (int i = 0; i <= 5; i++) {
+//     print('$i' * i);
+//   }
+// }
+
+///      55555
+///      4444
+///      333
+///      22
+///      1
+// void main() {
+//   for (int i = 5; i > 0; i--) {
+//     print('$i' * i);
+//   }
+// }
+
+///       1 2 3 4 5
+///       2 3 4 5
+///       3 4 5
+///       4 5
+///       5
+
+void main() {
+  for (int i = 1; i <= 5; i++) {
+    for (int j = i; j <= i; j++) {
+      for (int k = j; k <= j; k++) {
+        print('i : $i  j : ${j+1}  k : ${k+1}');
       }
     }
-
   }
-
 }
