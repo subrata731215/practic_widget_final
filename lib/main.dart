@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:practic/programming_Language_Learn/class_model_31/class_model.dart';
 import 'package:practic/programming_Language_Learn/contact_add_ui_with_language/contactadd.dart';
+import 'package:practic/programming_Language_Learn/extra.dart';
 import 'package:practic/programming_Language_Learn/otp_input_field/otpinputfield.dart';
 import 'package:practic/ui/audio_screen_23/audio.page.dart';
 import 'package:practic/ui/call_21/callsupriyo.dart';
@@ -8,6 +9,7 @@ import 'package:practic/ui/loginui_24/loginui.dart';
 import 'package:practic/ui/message_22/message.dart';
 import 'package:practic/ui/moneyTransferUi_26/moneytransferui.dart';
 import 'package:practic/ui/photoshop_30/photoshop.dart';
+import 'package:practic/ui/price_range_ui/prrice.range.dart';
 import 'package:practic/ui/school_ui/school.ui.dart';
 import 'package:practic/ui/visva_bharati_ui_25/visva_bharati.dart';
 import 'package:practic/widget_practice/addbox_27/addbox.dart';
@@ -16,6 +18,8 @@ import 'package:practic/widget_practice/addcontainer_1/containerwithtext.dart';
 import 'package:practic/widget_practice/addtwonumber_9/addtwonumbers.dart';
 import 'package:practic/widget_practice/animation_16/animation_one.dart';
 import 'package:practic/widget_practice/animation_16/delayanimation.dart';
+import 'package:practic/widget_practice/animation_16/flutter_animation.dart';
+import 'package:practic/widget_practice/animation_one_tap/1.only.ontap.animation.dart';
 import 'package:practic/widget_practice/audioplayer_27/audioPlayer.dart';
 import 'package:practic/widget_practice/boolpractice_19/bool_practice.dart';
 import 'package:practic/widget_practice/checkBox_2/checkbox.dart';
@@ -58,7 +62,7 @@ class MyApp extends StatelessWidget {
       home: const Scaffold(
         body: HomePage(),
       ),
-      initialRoute: Routes.addBox,
+      initialRoute: Routes.homepage,
       routes: {
         Routes.homepage: (context) => const HomePage(),
         Routes.addContainer: (context) => const AddContainer(),
@@ -80,6 +84,8 @@ class MyApp extends StatelessWidget {
         Routes.sharePreference: (context) => const SharePreferencesLearn(),
         Routes.animation: (context) => const AnimationLearn(),
         Routes.delayAnimation: (context) => const DelayAnimationLearn(),
+        Routes.flutterAnimation: (context) => const FlutterAnimation(),
+        Routes.oneTapAnimation: (context) => const OneTapAnimation(),
         Routes.stepper: (context) => const StepperLearn(),
         Routes.hero: (context) => const HeroLearn(),
         Routes.bool: (context) => const BoolPractice(),
@@ -93,7 +99,9 @@ class MyApp extends StatelessWidget {
         Routes.audioPlayer: (context) => const AudioPlayerLearn(),
         Routes.schoolUi: (context) => const SchoolUi(),
         Routes.addBox: (context) => const AddBox(),
+        Routes.extraPractice: (context) => const ExtraPractice(),
         Routes.photoshop: (context) => const PhotoShop(),
+        Routes.priceRange: (context) => const PriceRange(),
         Routes.classModel: (context) => const ClassModelLearn(),
         Routes.lottie: (context) => const LottieLearn(),
         Routes.contactAdd: (context) => const ContactAdd(),

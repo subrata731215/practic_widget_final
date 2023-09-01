@@ -21,6 +21,7 @@ class HomepageController extends ReactiveController {
     HomePageModel(title: 'Animation', routes: Routes.animation),
     HomePageModel(title: 'DelayAnimation', routes: Routes.delayAnimation),
     HomePageModel(title: 'FlutterAnimation', routes: Routes.flutterAnimation),
+    HomePageModel(title: 'OneTapAnimation', routes: Routes.oneTapAnimation),
     HomePageModel(title: 'Stepper', routes: Routes.stepper),
     HomePageModel(title: 'Hero', routes: Routes.hero),
     HomePageModel(title: 'Bool', routes: Routes.bool),
@@ -36,6 +37,7 @@ class HomepageController extends ReactiveController {
     HomePageModel(title: 'AddBox', routes: Routes.addBox),
     HomePageModel(title: 'ExtraPractice', routes: Routes.extraPractice),
     HomePageModel(title: 'PhotoShop', routes: Routes.photoshop),
+    HomePageModel(title: 'priceRange', routes: Routes.priceRange),
     HomePageModel(title: 'ClassModel', routes: Routes.classModel),
     HomePageModel(title: 'Lottie', routes: Routes.lottie),
     HomePageModel(title: 'ContactAdd', routes: Routes.contactAdd),
@@ -65,6 +67,7 @@ class Routes {
   static const animation = 'animationLearn';
   static const delayAnimation = 'delayAnimation';
   static const flutterAnimation = 'flutterAnimation';
+  static const oneTapAnimation = 'oneTapAnimation';
   static const stepper = 'stepper';
   static const hero = 'hero';
   static const bool = 'bool';
@@ -79,6 +82,7 @@ class Routes {
   static const schoolUi = 'schoolUi';
   static const addBox = 'addBox';
   static const photoshop = 'photoshop';
+  static const priceRange = 'priceRange';
   static const classModel = 'classModel';
   static const lottie = 'lottie';
   static const contactAdd = 'contactAdd';

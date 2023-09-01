@@ -3,6 +3,16 @@ import 'package:reactiv/reactiv.dart';
 
 class AddContainerController extends ReactiveController {
   final ReactiveList<ContainerModel> containerList = ReactiveList([]);
+  ReactiveBool isSelected = ReactiveBool(false);
+
+
+  changeContainerSize(){
+    isSelected.value=!isSelected.value;
+  }
+
+
+
+
 
   addContainer(ContainerModel containerModel) {
     containerList.add(containerModel);

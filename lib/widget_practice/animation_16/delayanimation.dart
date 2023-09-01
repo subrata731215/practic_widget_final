@@ -34,6 +34,7 @@ class _DelayAnimationLearnState extends State<DelayAnimationLearn>
     animationController.forward();
   }
 
+
   @override
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;

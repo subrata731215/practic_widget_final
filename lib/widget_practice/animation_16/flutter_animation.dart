@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:practic/constant.dart';
 import 'package:practic/widget_practice/animation_16/fadetransition.dart';
+import 'package:practic/widget_practice/animation_one_tap/1.only.ontap.animation.dart';
 import '../../homepage.controller.dart';
 
 class FlutterAnimation extends StatefulWidget {
@@ -38,10 +39,16 @@ class _FlutterAnimationState extends State<FlutterAnimation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appbarWidget(
-        context,
-        appBarTitle: 'FlutterAnimation',
-        trailingRoutes: Routes.stepper,
+      appBar: AppBar(
+        title: Text('FlutterAnimation'),
+        actions: [
+          IconButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => OneTapAnimation()));
+              },
+              icon: Icon(Icons.arrow_forward)),
+        ],
       ),
       body: ListView(
         padding:
@@ -107,9 +114,15 @@ class _FlutterAnimationState extends State<FlutterAnimation> {
                 child: AnimatedSize(
                   curve: Curves.decelerate,
                   duration: const Duration(seconds: 5),
-                  child: Text(
-                    'AnimatedAlign',
-                    style: TextStyle(fontSize: isAnimatedAlign ? 20 : 40),
+                  child: AnimatedOpacity(
+                    duration: Duration(seconds: 3),
+                    opacity: isAnimatedAlign ? 0.0 : 1.0,
+                    child: Text(
+                      'AnimatedAlign',
+                      style: TextStyle(
+                          fontSize: isAnimatedAlign ? 20 : 40,
+                          color: isAnimatedAlign ? Colors.red : Colors.blue),
+                    ),
                   ),
                 ),
               ),
@@ -123,7 +136,8 @@ class _FlutterAnimationState extends State<FlutterAnimation> {
                   animatedContainer();
                 },
                 child: AnimatedContainer(
-                  duration: Duration(seconds: 2),
+                  duration: const Duration(seconds: 2),
+                  // curve: Curves.fastEaseInToSlowEaseOut,
                   height: isAnimatedContainer ? 100 : 200,
                   width: isAnimatedContainer ? 100 : 300,
                   color: Colors.lightGreenAccent,

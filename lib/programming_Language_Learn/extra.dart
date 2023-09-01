@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:practic/constant.dart';
-
 import '../homepage.controller.dart';
 
 class ExtraPractice extends StatefulWidget {
@@ -14,10 +13,12 @@ class ExtraPractice extends StatefulWidget {
 class _ExtraPracticeState extends State<ExtraPractice> {
   bool myValue = false;
   String containerText = '';
-  double _height = 60;
-  double _width = 60;
+  final double _height = 60;
+  final double _width = 60;
 
   bool sizedValue = false;
+  bool opacityChange = false;
+  bool textFieldOntap = false;
 
   void updateSize() {
     setState(() {
@@ -28,6 +29,7 @@ class _ExtraPracticeState extends State<ExtraPractice> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: myValue ? Colors.orangeAccent : Colors.white,
       appBar: appbarWidget(context,
           appBarTitle: 'Extra', trailingRoutes: Routes.photoshop),
@@ -64,6 +66,24 @@ class _ExtraPracticeState extends State<ExtraPractice> {
                   : Colors.yellow,
               child: Center(child: Text(containerText)),
             ),
+            const SizedBox(height: 20),
+            // TextField(
+            //   style: const TextStyle(fontSize: 30),
+            //   onTap: () {
+            //     setState(() {
+            //       textFieldOntap = !textFieldOntap;
+            //     });
+            //   },
+            //   decoration: InputDecoration(
+            //       prefixIcon: AnimatedCrossFade(
+            //         firstChild: const Icon(Icons.arrow_back),
+            //         secondChild: const Icon(Icons.search, size: 40),
+            //         crossFadeState: te,
+            //         duration: Duration(milliseconds: 500),
+            //       ),
+            //       border: OutlineInputBorder(
+            //           borderRadius: BorderRadius.circular(15))),
+            // ),
             const SizedBox(height: 20),
             TextField(
               onChanged: (newText) {
@@ -117,6 +137,41 @@ class _ExtraPracticeState extends State<ExtraPractice> {
                   updateSize();
                 },
                 child: const Text('Change')),
+            AnimatedOpacity(
+              duration: const Duration(seconds: 3),
+              opacity: sizedValue ? 1.0 : 0.3,
+              child: Container(
+                padding: const EdgeInsets.all(10),
+                height: 80,
+                width: 90,
+                color: Colors.green,
+                child: const Center(
+                  child: Text(
+                    'Color Opacity Change',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.black),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: 20),
+            GestureDetector(
+              onTap: () {
+                setState(() {
+                  opacityChange = !opacityChange;
+                });
+              },
+              child: AnimatedOpacity(
+                opacity: opacityChange ? 1.0 : 0.1,
+                duration: Duration(seconds: 4),
+                child: Text(
+                  'Color Animation',
+                  style: TextStyle(
+                      color: opacityChange ? Colors.black : Colors.orange,
+                      fontWeight: FontWeight.w700),
+                ),
+              ),
+            ),
           ],
         ),
       ),

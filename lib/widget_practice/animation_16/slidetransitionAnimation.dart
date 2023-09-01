@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practic/widget_practice/animation_16/animatedRotation.dart';
 
 class SlideTransitionAnimation extends StatefulWidget {
   const SlideTransitionAnimation({Key? key}) : super(key: key);
@@ -42,9 +43,15 @@ class _SlideTransitionAnimationState extends State<SlideTransitionAnimation>
                     )),
               ],
             ),
-
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => AnimatedRotationAnimation()));
+        },
+        label: Text('To See AnimatedRotation'),
       ),
     );
   }

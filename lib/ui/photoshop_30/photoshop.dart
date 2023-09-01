@@ -12,7 +12,7 @@ class PhotoShop extends StatelessWidget {
 
     return Scaffold(
       appBar: appbarWidget(context,
-          appBarTitle: 'PhotoShop', trailingRoutes: Routes.classModel),
+          appBarTitle: 'PhotoShop', trailingRoutes: Routes.priceRange),
       body: Stack(
         children: [
           Positioned(

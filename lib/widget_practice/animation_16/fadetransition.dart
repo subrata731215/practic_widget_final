@@ -10,10 +10,10 @@ class FadeTransitionAnimation extends StatefulWidget {
 }
 
 class _FadeTransitionAnimationState extends State<FadeTransitionAnimation>
-    with TickerProviderStateMixin {
+    with SingleTickerProviderStateMixin {
   late final AnimationController _animationController = AnimationController(
     vsync: this,
-    duration: const Duration(seconds: 5),
+    duration: const Duration(milliseconds: 200),
   )..repeat(reverse: true);
 
   late final Animation<double> _animation = CurvedAnimation(
