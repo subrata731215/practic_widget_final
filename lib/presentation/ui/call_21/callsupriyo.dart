@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../message_22/message.dart';
+import 'package:practic/presentation/ui/loginui_24/loginui.dart';
 
 class CallSupriyo extends StatelessWidget {
   const CallSupriyo({Key? key}) : super(key: key);
@@ -18,7 +18,7 @@ class CallSupriyo extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const MessageScreen()));
+                            builder: (context) => const LoginUi()));
                   },
                   icon: const Icon(Icons.arrow_forward)),
             ],

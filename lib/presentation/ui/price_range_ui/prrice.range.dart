@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:practic/widget_practice/slider_8/slider.dart';
-
-import '../../constant.dart';
-import '../../homepage.controller.dart';
+import '../../../constant.dart';
+import '../../../homepage/homepage.controller.dart';
 
 class PriceRange extends StatelessWidget {
   const PriceRange({Key? key}) : super(key: key);
@@ -11,7 +10,7 @@ class PriceRange extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appbarWidget(context,
-          appBarTitle: 'Price Range', trailingRoutes: Routes.classModel),
+          appBarTitle: 'Price Range', trailingRoutes: Routes.schoolUi),
       body: Center(
         child: Container(
           margin: const EdgeInsets.all(40),

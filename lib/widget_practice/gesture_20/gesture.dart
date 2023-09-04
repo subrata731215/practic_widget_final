@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../ui/call_21/callsupriyo.dart';
+import '../../presentation/ui/call_21/callsupriyo.dart';
 
 class GestureLearn extends StatefulWidget {
   const GestureLearn({Key? key}) : super(key: key);

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:practic/constant.dart';
 import 'package:reactiv/reactiv.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../../homepage.controller.dart';
+import '../../homepage/homepage.controller.dart';
 import 'controller/controller.dart';
 
 class SharePreferencesLearn extends ReactiveStateWidget<ShareController> {

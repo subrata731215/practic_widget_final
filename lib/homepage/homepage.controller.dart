@@ -26,18 +26,9 @@ class HomepageController extends ReactiveController {
     HomePageModel(title: 'Hero', routes: Routes.hero),
     HomePageModel(title: 'Bool', routes: Routes.bool),
     HomePageModel(title: 'Gesture', routes: Routes.gesture),
-    HomePageModel(title: 'CallUi', routes: Routes.callScreenSupriyo),
-    HomePageModel(title: 'MessageUi', routes: Routes.messageScreen),
-    HomePageModel(title: 'AudioPageUi', routes: Routes.audioPage),
-    HomePageModel(title: 'LogInPageUi', routes: Routes.logInUi),
-    HomePageModel(title: 'Visva_Bharati Ui', routes: Routes.visvaBharatiUi),
-    HomePageModel(title: 'MoneyTransferUi', routes: Routes.moneyTransferScreen),
     HomePageModel(title: 'AudioPlayerUi', routes: Routes.audioPlayer),
-    HomePageModel(title: 'schoolUi', routes: Routes.schoolUi),
     HomePageModel(title: 'AddBox', routes: Routes.addBox),
     HomePageModel(title: 'ExtraPractice', routes: Routes.extraPractice),
-    HomePageModel(title: 'PhotoShop', routes: Routes.photoshop),
-    HomePageModel(title: 'priceRange', routes: Routes.priceRange),
     HomePageModel(title: 'ClassModel', routes: Routes.classModel),
     HomePageModel(title: 'Lottie', routes: Routes.lottie),
     HomePageModel(title: 'ContactAdd', routes: Routes.contactAdd),
@@ -46,6 +37,8 @@ class HomepageController extends ReactiveController {
 }
 
 class Routes {
+  static const mainHomepage = 'mainHomePage';
+  static const uiHomePage = 'homePageUI';
   static const homepage = 'homePage';
   static const addContainer = 'addContainer';
   static const containerWithText = 'containerWithText';

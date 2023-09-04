@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:practic/constant.dart';
 
-import '../../homepage.controller.dart';
+import '../../../homepage/homepage.controller.dart';
 
 class LoginUi extends StatelessWidget {
   const LoginUi({Key? key}) : super(key: key);
@@ -14,7 +14,7 @@ class LoginUi extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: appbarWidget(context,
-            appBarTitle: 'LogInUi', trailingRoutes: Routes.visvaBharatiUi),
+            appBarTitle: 'LogInUi', trailingRoutes: Routes.messageScreen),
         backgroundColor: const Color(0xff333333),
         body: Stack(
           clipBehavior: Clip.none,

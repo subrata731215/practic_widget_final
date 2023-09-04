@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:practic/constant.dart';
 import 'package:practic/widget_practice/animation_16/fadetransition.dart';
 import 'package:practic/widget_practice/animation_one_tap/1.only.ontap.animation.dart';
-import '../../homepage.controller.dart';
 
 class FlutterAnimation extends StatefulWidget {
   const FlutterAnimation({Key? key}) : super(key: key);

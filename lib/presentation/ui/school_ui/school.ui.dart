@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:practic/constant.dart';
-import 'package:practic/ui/school_ui/utills.dart';
-import '../../homepage.controller.dart';
+import 'package:practic/presentation/ui/school_ui/utills.dart';
+
+import '../../../homepage/homepage.controller.dart';
+
 
 class SchoolUi extends StatefulWidget {
   const SchoolUi({Key? key}) : super(key: key);
@@ -17,7 +19,7 @@ class _SchoolUiState extends State<SchoolUi> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appbarWidget(context,
-          appBarTitle: 'SchoolUi', trailingRoutes: Routes.addBox),
+          appBarTitle: 'SchoolUi', trailingRoutes: Routes.visvaBharatiUi),
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
         child: Column(
@@ -66,7 +68,7 @@ class _SchoolUiState extends State<SchoolUi> {
               ),
             ),
             const SizedBox(height: 30),
-            const Column(
+             const Column(
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

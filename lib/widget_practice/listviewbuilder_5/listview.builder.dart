@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:practic/constant.dart';
 
-import '../../homepage.controller.dart';
+import '../../homepage/homepage.controller.dart';
 
 class ListViewBuilder extends StatefulWidget {
   const ListViewBuilder({Key? key}) : super(key: key);

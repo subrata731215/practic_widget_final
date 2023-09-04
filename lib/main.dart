@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:practic/homepage/main_homepage.dart';
+import 'package:practic/presentation/ui/audio_screen_23/audio.page.dart';
+import 'package:practic/presentation/ui/call_21/callsupriyo.dart';
+import 'package:practic/presentation/ui/ui_homepage.dart';
+import 'package:practic/presentation/ui/loginui_24/loginui.dart';
+import 'package:practic/presentation/ui/message_22/message.dart';
+import 'package:practic/presentation/ui/moneyTransferUi_26/moneytransferui.dart';
+import 'package:practic/presentation/ui/photoshop_30/photoshop.dart';
+import 'package:practic/presentation/ui/price_range_ui/prrice.range.dart';
+import 'package:practic/presentation/ui/school_ui/school.ui.dart';
+import 'package:practic/presentation/ui/visva_bharati_ui_25/visva_bharati.dart';
 import 'package:practic/programming_Language_Learn/class_model_31/class_model.dart';
 import 'package:practic/programming_Language_Learn/contact_add_ui_with_language/contactadd.dart';
 import 'package:practic/programming_Language_Learn/extra/extrapractice.dart';
 import 'package:practic/programming_Language_Learn/otp_input_field/otpinputfield.dart';
-import 'package:practic/ui/audio_screen_23/audio.page.dart';
-import 'package:practic/ui/call_21/callsupriyo.dart';
-import 'package:practic/ui/loginui_24/loginui.dart';
-import 'package:practic/ui/message_22/message.dart';
-import 'package:practic/ui/moneyTransferUi_26/moneytransferui.dart';
-import 'package:practic/ui/photoshop_30/photoshop.dart';
-import 'package:practic/ui/price_range_ui/prrice.range.dart';
-import 'package:practic/ui/school_ui/school.ui.dart';
-import 'package:practic/ui/visva_bharati_ui_25/visva_bharati.dart';
 import 'package:practic/widget_practice/addbox_27/addbox.dart';
 import 'package:practic/widget_practice/addcontainer_1/container.dart';
 import 'package:practic/widget_practice/addcontainer_1/containerwithtext.dart';
@@ -40,8 +42,8 @@ import 'package:practic/widget_practice/share_preferences_15/sharePreferences.da
 import 'package:practic/widget_practice/slider_8/slider.dart';
 import 'package:practic/widget_practice/stepper_learn_17/stepper.learn.dart';
 import 'package:practic/widget_practice/textField_6/textField.dart';
-import 'homepage.controller.dart';
-import 'homepage.dart';
+import 'homepage/homepage.controller.dart';
+import 'homepage/homepage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -60,10 +62,12 @@ class MyApp extends StatelessWidget {
                   backgroundColor: MaterialStatePropertyAll(Colors.white)))),
       debugShowCheckedModeBanner: false,
       home: const Scaffold(
-        body: HomePage(),
+        body: MainHomePage(),
       ),
-      initialRoute: Routes.homepage,
+      initialRoute: Routes.mainHomepage,
       routes: {
+        Routes.mainHomepage: (context) => const MainHomePage(),
+        Routes.uiHomePage: (context) => const UiHomePage(),
         Routes.homepage: (context) => const HomePage(),
         Routes.addContainer: (context) => const AddContainer(),
         Routes.containerWithText: (context) => const ContainerWithText(),

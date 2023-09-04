@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:practic/constant.dart';
-import '../../homepage.controller.dart';
+import '../../homepage/homepage.controller.dart';
 
 class LottieLearn extends StatelessWidget {
   const LottieLearn({Key? key}) : super(key: key);

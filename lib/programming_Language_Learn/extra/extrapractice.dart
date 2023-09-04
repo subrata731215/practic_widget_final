@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:practic/programming_Language_Learn/extra/agecheck.dart';
-import 'package:practic/ui/photoshop_30/photoshop.dart';
+
+import '../../presentation/ui/photoshop_30/photoshop.dart';
 
 class ExtraPractice extends StatelessWidget {
   const ExtraPractice({Key? key}) : super(key: key);

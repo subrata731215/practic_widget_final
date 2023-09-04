@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practic/ui/audio_screen_23/audio.page.dart';
+import 'package:practic/presentation/ui/moneyTransferUi_26/moneytransferui.dart';
 import 'package:reactiv/reactiv.dart';
 import 'constants.dart';
 import 'controller.dart';
@@ -29,7 +29,7 @@ class MessageScreen extends ReactiveStateWidget<Ui2Controller> {
           ),
           IconButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>const AudioPage()));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>const MoneyTransfer()));
               },
               icon: const Icon(Icons.arrow_forward))
         ],

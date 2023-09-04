@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:practic/constant.dart';
-import '../../homepage.controller.dart';
+
+import '../../../homepage/homepage.controller.dart';
 
 class AudioPage extends StatefulWidget {
   const AudioPage({Key? key}) : super(key: key);
@@ -18,7 +19,8 @@ class _AudioPageState extends State<AudioPage> {
     return SafeArea(
       child: Scaffold(
         appBar: appbarWidget(context,
-            appBarTitle: 'AudioPageScreen', trailingRoutes: Routes.logInUi),
+            appBarTitle: 'AudioPageScreen',
+            trailingRoutes: Routes.callScreenSupriyo),
         backgroundColor: const Color(0xffdee7fa),
         body: Stack(
           children: [
@@ -42,13 +44,8 @@ class _AudioPageState extends State<AudioPage> {
                   onPressed: () {},
                   icon: const Icon(Icons.arrow_back_ios),
                 ),
-                actions: [
-                  IconButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, Routes.logInUi);
-                    },
-                    icon: const Icon(Icons.arrow_forward),
-                  ),
+                actions: const [
+                  Icon(Icons.arrow_forward),
                 ],
               ),
             ),

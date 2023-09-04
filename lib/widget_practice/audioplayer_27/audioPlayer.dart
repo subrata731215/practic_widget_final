@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practic/ui/school_ui/school.ui.dart';
+import '../../presentation/ui/school_ui/school.ui.dart';
 
 class AudioPlayerLearn extends StatefulWidget {
   const AudioPlayerLearn({Key? key}) : super(key: key);

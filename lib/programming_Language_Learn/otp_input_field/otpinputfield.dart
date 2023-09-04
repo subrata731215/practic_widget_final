@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:practic/constant.dart';
-import 'package:practic/homepage.controller.dart';
+import 'package:practic/homepage/homepage.controller.dart';
 
 class OtpInputField extends StatelessWidget {
   const OtpInputField({Key? key}) : super(key: key);

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:reactiv/reactiv.dart';
-import '../../homepage.controller.dart';
+import '../../homepage/homepage.controller.dart';
 import 'controller.dart';
 import 'model.dart';
 

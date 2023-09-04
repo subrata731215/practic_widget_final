@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practic/homepage.controller.dart';
+import 'package:practic/homepage/homepage.controller.dart';
 import 'package:reactiv/reactiv.dart';
 
 class HomePage extends ReactiveStateWidget<HomepageController> {

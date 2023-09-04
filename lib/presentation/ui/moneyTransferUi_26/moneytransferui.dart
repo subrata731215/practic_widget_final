@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../homepage.controller.dart';
+
+import '../../../homepage/homepage.controller.dart';
 
 class MoneyTransfer extends StatelessWidget {
   const MoneyTransfer({Key? key}) : super(key: key);
@@ -49,7 +50,7 @@ class MoneyTransfer extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, Routes.audioPlayer);
+                      Navigator.pushNamed(context, Routes.photoshop);
                     },
                     child: const Icon(
                       Icons.arrow_forward,
