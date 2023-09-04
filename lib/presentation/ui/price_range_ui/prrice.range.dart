@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:practic/widget_practice/slider_8/slider.dart';
 import '../../../constant.dart';
-import '../../../homepage/homepage.controller.dart';
+import '../../homepage/homepage.controller.dart';
+import '../../widget/slider_8/slider.dart';
 
 class PriceRange extends StatelessWidget {
   const PriceRange({Key? key}) : super(key: key);

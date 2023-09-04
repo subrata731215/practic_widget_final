@@ -1,20 +1,20 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
-import 'package:practic/presentation/ui/controller.dart';
+import 'package:practic/presentation/widget/controller.dart';
 import 'package:reactiv/reactiv.dart';
 
-class UiHomePage extends ReactiveStateWidget<UiController> {
+class WidgetHomePage extends ReactiveStateWidget<WidgetController> {
   @override
-  UiController bindController() => UiController();
+  WidgetController bindController() => WidgetController();
 
-  const UiHomePage({Key? key}) : super(key: key);
+  const WidgetHomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         body: ListView.builder(
-            itemCount: controller.uiList.length,
+            itemCount: controller.newWidgetList.length,
             itemBuilder: (context, index) => Container(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
@@ -33,19 +33,19 @@ class UiHomePage extends ReactiveStateWidget<UiController> {
                             fontWeight: FontWeight.w700, fontSize: 20),
                       ),
                       Text(
-                        controller.uiList[index].title,
+                        controller.newWidgetList[index].title,
+                        textAlign: TextAlign.left,
                         style: const TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.w700,
                             letterSpacing: 3),
                       ),
-                      InkWell(
-                        onTap: () {
-                          Navigator.pushNamed(
-                              context, controller.uiList[index].routesName);
+                      IconButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context,
+                              controller.newWidgetList[index].routesName);
                         },
-                        child: Lottie.asset('assets/lottie/next.json',
-                            height: 40, width: 40),
+                        icon: const Icon(Icons.arrow_forward),
                       ),
                     ],
                   ),

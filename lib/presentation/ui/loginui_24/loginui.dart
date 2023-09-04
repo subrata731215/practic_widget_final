@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:practic/constant.dart';
 
-import '../../../homepage/homepage.controller.dart';
+import '../../homepage/homepage.controller.dart';
 
 class LoginUi extends StatelessWidget {
   const LoginUi({Key? key}) : super(key: key);

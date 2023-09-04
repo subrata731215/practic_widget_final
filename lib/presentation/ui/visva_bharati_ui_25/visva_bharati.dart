@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:practic/constant.dart';
-import '../../../homepage/homepage.controller.dart';
+import '../../homepage/homepage.controller.dart';
 import 'constatns.dart';
 
 class VisvaBharati extends StatelessWidget {
@@ -12,7 +12,7 @@ class VisvaBharati extends StatelessWidget {
       child: Scaffold(
         appBar: appbarWidget(context,
             appBarTitle: 'Visva Bharati Ui',
-            trailingRoutes: Routes.uiHomePage),
+            trailingRoutes: Routes.mainHomepage),
         backgroundColor: Colors.white,
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),

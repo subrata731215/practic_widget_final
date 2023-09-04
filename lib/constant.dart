@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'homepage/homepage.controller.dart';
+import 'presentation/homepage/homepage.controller.dart';
 
 PreferredSizeWidget appbarWidget(
   BuildContext context, {
@@ -11,7 +11,7 @@ PreferredSizeWidget appbarWidget(
     centerTitle: true,
     leading: IconButton(
       onPressed: () {
-        Navigator.pushNamed(context, Routes.homepage);
+        Navigator.pushNamed(context, Routes.mainHomepage);
       },
       icon: const Icon(Icons.arrow_back),
     ),

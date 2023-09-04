@@ -1,12 +1,12 @@
 import 'package:reactiv/reactiv.dart';
-import '../../homepage/homepage.controller.dart';
+import '../homepage/homepage.controller.dart';
 
 class UiController extends ReactiveController {
   List<UiModel> uiList = ReactiveList([
     UiModel(title: 'AudioUi', routesName: Routes.audioPage),
-    UiModel(title: 'callUi', routesName: Routes.callScreenSupriyo),
+    UiModel(title: 'CallUi', routesName: Routes.callScreenSupriyo),
     UiModel(title: 'LoginUi', routesName: Routes.logInUi),
-    UiModel(title: 'messageUi', routesName: Routes.messageScreen),
+    UiModel(title: 'MessageUi', routesName: Routes.messageScreen),
     UiModel(title: 'MoneyTransferUi', routesName: Routes.moneyTransferScreen),
     UiModel(title: 'PhotoShopUi', routesName: Routes.photoshop),
     UiModel(title: 'PriceRangeUi', routesName: Routes.priceRange),

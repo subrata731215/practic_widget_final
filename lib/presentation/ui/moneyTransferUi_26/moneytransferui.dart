@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../homepage/homepage.controller.dart';
+import '../../homepage/homepage.controller.dart';
 
 class MoneyTransfer extends StatelessWidget {
   const MoneyTransfer({Key? key}) : super(key: key);

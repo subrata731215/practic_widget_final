@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:practic/constant.dart';
-import '../../homepage/homepage.controller.dart';
+import '../../presentation/homepage/homepage.controller.dart';
 
 class ClassModelLearn extends StatelessWidget {
   const ClassModelLearn({Key? key}) : super(key: key);
