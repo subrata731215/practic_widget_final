@@ -37,6 +37,7 @@ class _RandomNoGenerateState extends State<RandomNoGenerate> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
           appBar: appbarWidget(context,
               appBarTitle: 'Random No Generate',
