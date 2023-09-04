@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../routes/routes.dart';
 
 class NewAnimation extends StatefulWidget {
   const NewAnimation({Key? key}) : super(key: key);
@@ -33,6 +34,12 @@ class _NewAnimationState extends State<NewAnimation> {
                     borderRadius: BorderRadius.circular(59)),
           ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushNamed(context, Routes.flutterAnimation);
+        },
+        child: Icon(Icons.home),
       ),
     );
   }

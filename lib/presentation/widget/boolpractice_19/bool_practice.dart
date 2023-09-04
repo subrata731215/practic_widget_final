@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:practic/presentation/widget/checkBox_2/checkbox.dart';
+import 'package:practic/constant.dart';
+import '../../../routes/routes.dart';
 
 void main() {
   runApp(const BoolPractice());
@@ -19,21 +20,8 @@ class _BoolPracticeState extends State<BoolPractice> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Bool'),
-          actions: [
-            IconButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const CheckBox()));
-                },
-                icon: const Icon(Icons.arrow_forward)),
-          ],
-        ),
+    return  Scaffold(
+        appBar: appbarWidget(context, appBarTitle: 'Bool', trailingRoutes: Routes.checkBox),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -78,7 +66,7 @@ class _BoolPracticeState extends State<BoolPractice> {
                   ))
             ],
           ),
-        ),
+
       ),
     );
   }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../constant.dart';
-import '../../homepage/homepage.controller.dart';
+import '../../../routes/routes.dart';
 import '../../widget/slider_8/slider.dart';
 
 class PriceRange extends StatelessWidget {

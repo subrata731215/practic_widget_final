@@ -15,11 +15,10 @@ class MainHomePage extends ReactiveStateWidget<HomepageController> {
       child: Scaffold(
         backgroundColor: Colors.purple,
         body: GridView.builder(
-          padding: const EdgeInsets.only(top: 20, left: 10,right: 10),
+          padding: const EdgeInsets.only(top: 20, left: 10, right: 10),
           scrollDirection: Axis.vertical,
-          gridDelegate:  const SliverGridDelegateWithMaxCrossAxisExtent(
+          gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
               maxCrossAxisExtent: 200,
-              //childAspectRatio: 3 / 2,
               crossAxisSpacing: 10,
               mainAxisSpacing: 10),
           itemCount: controller.contentList.length,
@@ -34,14 +33,19 @@ class MainHomePage extends ReactiveStateWidget<HomepageController> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
-                      controller.contentList[index].title,
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(
-                          color: Colors.greenAccent,
-                          fontSize: 24,
-                          fontWeight: FontWeight.w900,
-                          fontStyle: FontStyle.italic),
+                    Transform(
+                      transform: Matrix4.identity()
+                        ..rotateZ(20 * 3.1415927 / 180),
+                      child: Text(
+                        controller.contentList[index].title.toUpperCase(),
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(
+                            letterSpacing: 3,
+                            color: Colors.greenAccent,
+                            fontSize: 24,
+                            fontWeight: FontWeight.w900,
+                            fontStyle: FontStyle.italic),
+                      ),
                     ),
                     const SizedBox(height: 30),
                     InkWell(

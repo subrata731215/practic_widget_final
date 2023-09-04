@@ -1,6 +1,5 @@
 import 'package:reactiv/reactiv.dart';
-
-import '../homepage/homepage.controller.dart';
+import '../../routes/routes.dart';
 
 class WidgetController extends ReactiveController {
 
@@ -8,7 +7,6 @@ class WidgetController extends ReactiveController {
     WidgetModel(title: 'AddBox', routesName: Routes.addBox),
     WidgetModel(title: 'AddContainer', routesName: Routes.addContainer),
     WidgetModel(title: 'AddTwoNumber', routesName: Routes.addTwoNumber),
-    WidgetModel(title: 'Animation', routesName: Routes.animation),
     WidgetModel(title: 'AnimationOneTap', routesName: Routes.oneTapAnimation),
     WidgetModel(title: 'AudioPlayer', routesName: Routes.audioPlayer),
     WidgetModel(title: 'BoolPractice', routesName: Routes.bool),

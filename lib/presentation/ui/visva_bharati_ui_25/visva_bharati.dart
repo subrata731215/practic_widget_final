@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:practic/constant.dart';
-import '../../homepage/homepage.controller.dart';
+import '../../../routes/routes.dart';
 import 'constatns.dart';
 
 class VisvaBharati extends StatelessWidget {

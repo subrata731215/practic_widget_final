@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:practic/presentation/widget/audioplayer_27/audioPlayer.dart';
+import 'package:practic/constant.dart';
+import '../../../routes/routes.dart';
 
 class OneTapAnimation extends StatefulWidget {
   const OneTapAnimation({Key? key}) : super(key: key);
@@ -19,21 +20,8 @@ bool selectedDefaultTextStyle = false;
 class _OneTapAnimationState extends State<OneTapAnimation> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('OneTapAnimation'),
-          actions: [
-            IconButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const AudioPlayerLearn()));
-                },
-                icon: const Icon(Icons.arrow_forward)),
-          ],
-        ),
+    return  Scaffold(
+        appBar: appbarWidget(context, appBarTitle: 'OneTap Animation', trailingRoutes: Routes.audioPlayer),
         body: ListView(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
           children: [
@@ -193,7 +181,7 @@ class _OneTapAnimationState extends State<OneTapAnimation> {
                   child: const Text('Tap And See')),
             ),
           ],
-        ),
+
       ),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:practic/presentation/ui/loginui_24/loginui.dart';
+import 'package:practic/constant.dart';
+import '../../../routes/routes.dart';
 
 class CallSupriyo extends StatelessWidget {
   const CallSupriyo({Key? key}) : super(key: key);
@@ -10,19 +11,8 @@ class CallSupriyo extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: SafeArea(
         child: Scaffold(
-          appBar: AppBar(
-            title: const Text('Call'),
-            actions: [
-              IconButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const LoginUi()));
-                  },
-                  icon: const Icon(Icons.arrow_forward)),
-            ],
-          ),
+          appBar: appbarWidget(context,
+              appBarTitle: 'call', trailingRoutes: Routes.logInUi),
           backgroundColor: Colors.white10,
           body: Column(
             children: [
@@ -30,30 +20,22 @@ class CallSupriyo extends StatelessWidget {
                 flex: 2,
                 child: Column(
                   children: [
-                    SizedBox(
-                      height: 20,
-                    ),
+                    SizedBox(height: 20),
                     CircleAvatar(
                       radius: 50,
                       backgroundImage: AssetImage('assets/supriyo.jpg'),
                     ),
-                    SizedBox(
-                      height: 10,
-                    ),
+                    SizedBox(height: 10),
                     Text(
                       'Vi India',
                       style: TextStyle(color: Colors.green, fontSize: 20),
                     ),
-                    SizedBox(
-                      height: 10,
-                    ),
+                    SizedBox(height: 10),
                     Text(
                       'Supriyo',
                       style: TextStyle(fontSize: 50, color: Colors.white),
                     ),
-                    SizedBox(
-                      height: 10,
-                    ),
+                    SizedBox(height: 10),
                     Text(
                       'Call ended',
                       style: TextStyle(fontSize: 20, color: Colors.white),
@@ -80,25 +62,19 @@ class CallSupriyo extends StatelessWidget {
                               icons: Icons.pause,
                               downText: 'Hold',
                             ),
-                            SizedBox(
-                              width: 50,
-                            ),
+                            SizedBox(width: 50),
                             BuildCircleAvatar(
                               icons: Icons.video_call,
                               downText: 'Video call',
                             ),
-                            SizedBox(
-                              width: 55,
-                            ),
+                            SizedBox(width: 55),
                             BuildCircleAvatar(
                               icons: Icons.add_call,
                               downText: 'add call',
                             ),
                           ],
                         ),
-                        SizedBox(
-                          height: 30,
-                        ),
+                        SizedBox(height: 30),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -116,9 +92,7 @@ class CallSupriyo extends StatelessWidget {
                                 downText: 'More'),
                           ],
                         ),
-                        SizedBox(
-                          height: 20,
-                        ),
+                        SizedBox(height: 20),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [

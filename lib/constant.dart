@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'presentation/homepage/homepage.controller.dart';
+import 'package:practic/routes/routes.dart';
 
 PreferredSizeWidget appbarWidget(
   BuildContext context, {
@@ -7,6 +7,7 @@ PreferredSizeWidget appbarWidget(
   required String trailingRoutes,
 }) {
   return AppBar(
+    backgroundColor: Colors.brown,
     title: Text(appBarTitle),
     centerTitle: true,
     leading: IconButton(
@@ -17,10 +18,11 @@ PreferredSizeWidget appbarWidget(
     ),
     actions: [
       IconButton(
-          onPressed: () {
-            Navigator.pushNamed(context, trailingRoutes);
-          },
-          icon: const Icon(Icons.arrow_forward))
+        onPressed: () {
+          Navigator.pushNamed(context, trailingRoutes);
+        },
+        icon: const Icon(Icons.arrow_forward),
+      )
     ],
   );
 }

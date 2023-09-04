@@ -14,15 +14,12 @@ import 'package:practic/presentation/widget/addbox_27/addbox.dart';
 import 'package:practic/presentation/widget/addcontainer_1/container.dart';
 import 'package:practic/presentation/widget/addcontainer_1/containerwithtext.dart';
 import 'package:practic/presentation/widget/addtwonumber_9/addtwonumbers.dart';
-import 'package:practic/presentation/widget/animation_16/animation_one.dart';
-import 'package:practic/presentation/widget/animation_16/delayanimation.dart';
-import 'package:practic/presentation/widget/animation_16/flutter_animation.dart';
+import 'package:practic/presentation/widget/animation_16/mainpage/flutter_animation.dart';
 import 'package:practic/presentation/widget/animation_one_tap/1.only.ontap.animation.dart';
 import 'package:practic/presentation/widget/audioplayer_27/audioPlayer.dart';
 import 'package:practic/presentation/widget/boolpractice_19/bool_practice.dart';
 import 'package:practic/presentation/widget/checkBox_2/checkbox.dart';
 import 'package:practic/presentation/widget/datatable_10/datatable.dart';
-import 'package:practic/presentation/widget/datatable_10/datatablelist.dart';
 import 'package:practic/presentation/widget/dropdownbutton_3/dropDownButton.dart';
 import 'package:practic/presentation/widget/gesture_20/gesture.dart';
 import 'package:practic/presentation/widget/hero_18/hero_learn.dart';
@@ -41,7 +38,7 @@ import 'package:practic/programming_Language_Learn/class_model_31/class_model.da
 import 'package:practic/programming_Language_Learn/contact_add_ui_with_language/contactadd.dart';
 import 'package:practic/programming_Language_Learn/extra/extrapractice.dart';
 import 'package:practic/programming_Language_Learn/otp_input_field/otpinputfield.dart';
-import 'presentation/homepage/homepage.controller.dart';
+import 'package:practic/routes/routes.dart';
 import 'presentation/widget/listviewbuilder_5/listview.builder.dart';
 import 'presentation/widget/textField_6/textField.dart';
 
@@ -86,15 +83,12 @@ class MyApp extends StatelessWidget {
         Routes.addBox: (context) => const AddBox(),
         Routes.addContainer: (context) => const AddContainer(),
         Routes.addTwoNumber: (context) => const AddTwoNumbers(),
-        Routes.animation: (context) => const AnimationLearn(),
-        Routes.delayAnimation: (context) => const DelayAnimationLearn(),
         Routes.flutterAnimation: (context) => const FlutterAnimation(),
         Routes.oneTapAnimation: (context) => const OneTapAnimation(),
         Routes.audioPlayer: (context) => const AudioPlayerLearn(),
         Routes.bool: (context) => const BoolPractice(),
         Routes.checkBox: (context) => const CheckBox(),
         Routes.dataTable: (context) => const DataTableLearn(),
-        Routes.datableList: (context) => const DataTableList(),
         Routes.dropDownButton: (context) => const DropDownButtonLearn(),
         Routes.gesture: (context) => const GestureLearn(),
         Routes.hero: (context) => const HeroLearn(),

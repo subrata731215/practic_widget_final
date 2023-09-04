@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'NewAnimation.dart';
+import 'sizewithcolor.dart';
 
 class AnimatedRotationAnimation extends StatefulWidget {
   const AnimatedRotationAnimation({Key? key}) : super(key: key);
@@ -70,7 +70,7 @@ class _AnimatedRotationAnimationState extends State<AnimatedRotationAnimation> {
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => NewAnimation()));
         },
-        label: const Text('To see '),
+        label: const Text('To see Size with Color Animation '),
       ),
     );
   }

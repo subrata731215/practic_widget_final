@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-
-import '../animation_one_tap/1.only.ontap.animation.dart';
-import 'fadetransition.dart';
+import 'package:practic/constant.dart';
+import '../../../../routes/routes.dart';
+import '../fadetransition.dart';
 
 class FlutterAnimation extends StatefulWidget {
   const FlutterAnimation({Key? key}) : super(key: key);
@@ -38,17 +38,7 @@ class _FlutterAnimationState extends State<FlutterAnimation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('FlutterAnimation'),
-        actions: [
-          IconButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => OneTapAnimation()));
-              },
-              icon: Icon(Icons.arrow_forward)),
-        ],
-      ),
+      appBar: appbarWidget(context, appBarTitle: 'FlutterAnimation', trailingRoutes: Routes.oneTapAnimation),
       body: ListView(
         padding:
             const EdgeInsets.only(top: 20, bottom: 10, left: 10, right: 10),

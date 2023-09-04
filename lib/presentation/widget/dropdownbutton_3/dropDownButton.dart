@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:practic/presentation/widget/gesture_20/gesture.dart';
+import 'package:practic/constant.dart';
+import '../../../routes/routes.dart';
 
 class DropDownButtonLearn extends StatefulWidget {
   const DropDownButtonLearn({Key? key}) : super(key: key);
@@ -31,21 +32,8 @@ class _DropDownButtonLearnState extends State<DropDownButtonLearn> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Dropdown'),
-          actions: [
-            IconButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => GestureLearn()));
-                },
-                icon: Icon(Icons.arrow_forward))
-          ],
-        ),
+    return  Scaffold(
+        appBar: appbarWidget(context, appBarTitle: 'Dropdown', trailingRoutes: Routes.gesture),
         backgroundColor: Colors.white,
         body: Center(
           child: Column(
@@ -101,7 +89,7 @@ class _DropDownButtonLearnState extends State<DropDownButtonLearn> {
               ),
             ],
           ),
-        ),
+
       ),
     );
   }

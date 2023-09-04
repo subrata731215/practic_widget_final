@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:practic/presentation/widget/hero_18/hero_learn.dart';
+import 'package:practic/constant.dart';
+import '../../../routes/routes.dart';
 
 class GestureLearn extends StatefulWidget {
   const GestureLearn({Key? key}) : super(key: key);
@@ -13,19 +14,7 @@ class _GestureLearnState extends State<GestureLearn> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Gesture'),
-          actions: [
-            IconButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const HeroLearn()));
-                },
-                icon: const Icon(Icons.arrow_forward)),
-          ],
-        ),
+        appBar: appbarWidget(context, appBarTitle: 'Gesture', trailingRoutes: Routes.hero),
         body: Center(
           child: GestureDetector(
             onTap: () {},

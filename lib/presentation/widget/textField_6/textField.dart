@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:practic/constant.dart';
 import 'package:practic/presentation/widget/textField_6/test.rahul.dart';
-
-import '../../homepage/homepage.controller.dart';
+import '../../../routes/routes.dart';
 
 void main() {
   runApp(const TextFieldLearn());
@@ -24,6 +23,7 @@ class _TextFieldLearnState extends State<TextFieldLearn> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
           appBar: appbarWidget(context,
               appBarTitle: 'TextField', trailingRoutes: Routes.mainHomepage),

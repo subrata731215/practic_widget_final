@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:practic/presentation/widget/controller.dart';
 import 'package:reactiv/reactiv.dart';

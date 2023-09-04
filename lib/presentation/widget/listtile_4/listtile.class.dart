@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:practic/presentation/widget/listviewbuilder_5/listview.builder.dart';
+import 'package:practic/constant.dart';
 import 'package:reactiv/reactiv.dart';
+import '../../../routes/routes.dart';
 import 'listtileController.dart';
 
 class ListTileClass extends ReactiveStateWidget<ListTileController> {
@@ -12,19 +13,8 @@ class ListTileClass extends ReactiveStateWidget<ListTileController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Listtile'),
-        actions: [
-          IconButton(
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => ListViewBuilderLearn()));
-              },
-              icon: Icon(Icons.arrow_forward))
-        ],
-      ),
+      appBar: appbarWidget(context,
+          appBarTitle: 'ListTile', trailingRoutes: Routes.listViewBuilder),
       body: Observer(
           listenable: controller.listtile,
           listener: (context) {

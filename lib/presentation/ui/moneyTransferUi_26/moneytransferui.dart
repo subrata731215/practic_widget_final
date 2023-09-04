@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../homepage/homepage.controller.dart';
+import '../../../routes/routes.dart';
 
 class MoneyTransfer extends StatelessWidget {
   const MoneyTransfer({Key? key}) : super(key: key);
@@ -8,6 +7,7 @@ class MoneyTransfer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
           elevation: 0,

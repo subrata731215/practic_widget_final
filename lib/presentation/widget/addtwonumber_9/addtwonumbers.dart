@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:practic/constant.dart';
 import 'package:reactiv/reactiv.dart';
-import '../../homepage/homepage.controller.dart';
+import '../../../routes/routes.dart';
 import 'controller/controller.dart';
 
 class AddTwoNumbers extends ReactiveStateWidget<AddTwoNumberController> {
@@ -15,7 +15,7 @@ class AddTwoNumbers extends ReactiveStateWidget<AddTwoNumberController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appbarWidget(context,
-          appBarTitle: 'AddTwoNumbers', trailingRoutes: Routes.animation),
+          appBarTitle: 'AddTwoNumbers', trailingRoutes: Routes.flutterAnimation),
       body: Padding(
         padding: const EdgeInsets.all(18.0),
         child: Column(

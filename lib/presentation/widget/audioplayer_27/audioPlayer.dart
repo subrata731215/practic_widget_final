@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:practic/presentation/widget/boolpractice_19/bool_practice.dart';
+import 'package:practic/constant.dart';
+import '../../../routes/routes.dart';
 
 class AudioPlayerLearn extends StatefulWidget {
   const AudioPlayerLearn({Key? key}) : super(key: key);
@@ -12,17 +13,7 @@ class _AudioPlayerLearnState extends State<AudioPlayerLearn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('AudioPlayer'),
-        actions: [
-          IconButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const BoolPractice()));
-              },
-              icon: const Icon(Icons.arrow_forward))
-        ],
-      ),
+      appBar: appbarWidget(context, appBarTitle: 'AudioPlayer', trailingRoutes: Routes.bool),
       body: Center(
         child: ElevatedButton(
           onPressed: () {

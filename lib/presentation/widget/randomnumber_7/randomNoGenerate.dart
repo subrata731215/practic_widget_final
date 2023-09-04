@@ -1,8 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:practic/constant.dart';
-
-import '../../homepage/homepage.controller.dart';
+import '../../../routes/routes.dart';
 
 class RandomNoGenerate extends StatefulWidget {
   const RandomNoGenerate({Key? key}) : super(key: key);
@@ -29,7 +28,7 @@ class _RandomNoGenerateState extends State<RandomNoGenerate> {
         whichNo = 'My No';
       }
 
-      if (currentNumber == 10) {
+      if (currentNumber == 100) {
         complete = 'Completed';
       }
     });
@@ -37,43 +36,50 @@ class _RandomNoGenerateState extends State<RandomNoGenerate> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: appbarWidget(context,
-            appBarTitle: 'Random No Generate', trailingRoutes: Routes.cricketScore),
-        body: currentNumber == 10
-            ? Center(
-                child: Text(
-                  complete,
-                  style: const TextStyle(
-                      color: Colors.red,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 50),
-                ),
-              )
-            : Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      whichNo,
-                      style: const TextStyle(fontSize: 50),
-                    ),
-                    Text(
-                      currentNumber >= myNo.length
-                          ? ranNo.toString()
-                          : myNo[currentNumber].toString(),
-                      style: const TextStyle(fontSize: 100),
-                    ),
-                    ElevatedButton(
-                        onPressed: () {
-                          generateNo();
-                        },
-                        child: const Text(
-                          'Random Number Generate',
-                          style: TextStyle(fontSize: 20),
-                        )),
-                  ],
-                ),
-              ));
+    return MaterialApp(
+      home: Scaffold(
+          appBar: appbarWidget(context,
+              appBarTitle: 'Random No Generate',
+              trailingRoutes: Routes.cricketScore),
+          body: currentNumber == 100
+              ? Center(
+                  child: Text(
+                    complete,
+                    style: const TextStyle(
+                        color: Colors.red,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 50),
+                  ),
+                )
+              : Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        whichNo,
+                        style: const TextStyle(fontSize: 50),
+                      ),
+                      Text(
+                        currentNumber >= myNo.length
+                            ? ranNo.toString()
+                            : myNo[currentNumber].toString(),
+                        style: const TextStyle(fontSize: 100),
+                      ),
+                      ElevatedButton(
+                          onPressed: () {
+                            generateNo();
+                          },
+                          child: const Text(
+                            'Random Number Generate',
+                            style: TextStyle(fontSize: 20),
+                          )),
+                      Text(
+                        'You Click $currentNumber times',
+                        style: const TextStyle(fontSize: 30),
+                      ),
+                    ],
+                  ),
+                )),
+    );
   }
 }

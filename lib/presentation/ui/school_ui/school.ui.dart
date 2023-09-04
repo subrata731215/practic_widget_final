@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:practic/constant.dart';
 import 'package:practic/presentation/ui/school_ui/utills.dart';
 
-import '../../homepage/homepage.controller.dart';
-
+import '../../../routes/routes.dart';
 
 class SchoolUi extends StatefulWidget {
   const SchoolUi({Key? key}) : super(key: key);
