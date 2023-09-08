@@ -12,6 +12,7 @@ class Routes {
   static const randomNo = 'randomNo';
   static const slider = 'slider';
   static const addTwoNumber = 'addTwoNumber';
+  static const ageCheck = 'ageCheck';
   static const dataTable = 'dataTable';
   static const cricketScore = 'scoreBoard';
   static const light = 'light';
@@ -29,6 +30,7 @@ class Routes {
   static const audioPage = 'audioPage';
   static const logInUi = 'logInUi';
   static const visvaBharatiUi = 'visvaBharati';
+  static const whatsApp = 'whatsApp';
   static const moneyTransferScreen = 'moneyTransferScreen';
   static const audioPlayer = 'audioPlayer';
   static const schoolUi = 'schoolUi';

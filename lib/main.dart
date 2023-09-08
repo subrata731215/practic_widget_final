@@ -10,23 +10,29 @@ import 'package:practic/presentation/ui/photoshop_30/photoshop.dart';
 import 'package:practic/presentation/ui/price_range_ui/prrice.range.dart';
 import 'package:practic/presentation/ui/school_ui/school.ui.dart';
 import 'package:practic/presentation/ui/visva_bharati_ui_25/visva_bharati.dart';
+import 'package:practic/presentation/ui/whatsapp/whatsapp.dart';
 import 'package:practic/presentation/widget/addbox_27/addbox.dart';
 import 'package:practic/presentation/widget/addcontainer_1/container.dart';
 import 'package:practic/presentation/widget/addcontainer_1/containerwithtext.dart';
 import 'package:practic/presentation/widget/addtwonumber_9/addtwonumbers.dart';
+import 'package:practic/presentation/widget/ageCheck/agecheck.dart';
 import 'package:practic/presentation/widget/animation_16/mainpage/flutter_animation.dart';
 import 'package:practic/presentation/widget/animation_one_tap/1.only.ontap.animation.dart';
 import 'package:practic/presentation/widget/audioplayer_27/audioPlayer.dart';
 import 'package:practic/presentation/widget/boolpractice_19/bool_practice.dart';
 import 'package:practic/presentation/widget/checkBox_2/checkbox.dart';
+import 'package:practic/presentation/widget/class_model_31/class_model.dart';
+import 'package:practic/presentation/widget/contact_add_ui_with_language/contactadd.dart';
 import 'package:practic/presentation/widget/datatable_10/datatable.dart';
 import 'package:practic/presentation/widget/dropdownbutton_3/dropDownButton.dart';
+import 'package:practic/presentation/widget/extra/extrapractice.dart';
 import 'package:practic/presentation/widget/gesture_20/gesture.dart';
 import 'package:practic/presentation/widget/hero_18/hero_learn.dart';
 import 'package:practic/presentation/widget/light_12/light.dart';
 import 'package:practic/presentation/widget/listtile_4/listtile.class.dart';
 import 'package:practic/presentation/widget/lottie_31/lottie_learn.dart';
 import 'package:practic/presentation/widget/materialTheme_14/materialTheme.dart';
+import 'package:practic/presentation/widget/otp_input_field/otpinputfield.dart';
 import 'package:practic/presentation/widget/radio_13/radio.learn.dart';
 import 'package:practic/presentation/widget/randomnumber_7/randomNoGenerate.dart';
 import 'package:practic/presentation/widget/scoreBoard_11/cricket.score.dart';
@@ -34,10 +40,6 @@ import 'package:practic/presentation/widget/share_preferences_15/sharePreference
 import 'package:practic/presentation/widget/slider_8/slider.dart';
 import 'package:practic/presentation/widget/stepper_learn_17/stepper.learn.dart';
 import 'package:practic/presentation/widget/widget_homepage.dart';
-import 'package:practic/programming_Language_Learn/class_model_31/class_model.dart';
-import 'package:practic/programming_Language_Learn/contact_add_ui_with_language/contactadd.dart';
-import 'package:practic/programming_Language_Learn/extra/extrapractice.dart';
-import 'package:practic/programming_Language_Learn/otp_input_field/otpinputfield.dart';
 import 'package:practic/routes/routes.dart';
 import 'presentation/widget/listviewbuilder_5/listview.builder.dart';
 import 'presentation/widget/textField_6/textField.dart';
@@ -61,7 +63,7 @@ class MyApp extends StatelessWidget {
       home: const Scaffold(
         body: MainHomePage(),
       ),
-      initialRoute: Routes.mainHomepage,
+      initialRoute: Routes.ageCheck,
       routes: {
         /// Main PageRoutes
         Routes.mainHomepage: (context) => const MainHomePage(),
@@ -77,19 +79,25 @@ class MyApp extends StatelessWidget {
         Routes.priceRange: (context) => const PriceRange(),
         Routes.schoolUi: (context) => const SchoolUi(),
         Routes.visvaBharatiUi: (context) => const VisvaBharati(),
+        Routes.whatsApp: (context) => const WhatsAppUi(),
 
         /// Widget PageRoutes
         Routes.widgetHomePage: (context) => const WidgetHomePage(),
         Routes.addBox: (context) => const AddBox(),
         Routes.addContainer: (context) => const AddContainer(),
         Routes.addTwoNumber: (context) => const AddTwoNumbers(),
+        Routes.ageCheck: (context) => const AgeCheckk(),
         Routes.flutterAnimation: (context) => const FlutterAnimation(),
         Routes.oneTapAnimation: (context) => const OneTapAnimation(),
         Routes.audioPlayer: (context) => const AudioPlayerLearn(),
         Routes.bool: (context) => const BoolPractice(),
         Routes.checkBox: (context) => const CheckBox(),
+        Routes.classModel: (context) => const ClassModelLearn(),
+        Routes.contactAdd: (context) => const ContactAdd(),
         Routes.dataTable: (context) => const DataTableLearn(),
         Routes.dropDownButton: (context) => const DropDownButtonLearn(),
+        Routes.extraPractice: (context) => const ExtraPractice(),
+
         Routes.gesture: (context) => const GestureLearn(),
         Routes.hero: (context) => const HeroLearn(),
         Routes.light: (context) => const Light(),
@@ -97,6 +105,7 @@ class MyApp extends StatelessWidget {
         Routes.listViewBuilder: (context) => const ListViewBuilderLearn(),
         Routes.lottie: (context) => const LottieLearn(),
         Routes.materialTheme: (context) => const MaterialTheme(),
+        Routes.otpInputField: (context) => const OtpInputField(),
         Routes.radio: (context) => const RadioLearn(),
         Routes.randomNo: (context) => const RandomNoGenerate(),
         Routes.cricketScore: (context) => const CricketScore(),
@@ -107,10 +116,6 @@ class MyApp extends StatelessWidget {
 
         /// Programming Routes
         Routes.containerWithText: (context) => const ContainerWithText(),
-        Routes.extraPractice: (context) => const ExtraPractice(),
-        Routes.classModel: (context) => const ClassModelLearn(),
-        Routes.contactAdd: (context) => const ContactAdd(),
-        Routes.otpInputField: (context) => const OtpInputField(),
       },
     );
   }

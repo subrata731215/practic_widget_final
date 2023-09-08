@@ -50,7 +50,7 @@ class _CheckBoxState extends State<CheckBox> {
         },
       ),
       appBar: appbarWidget(context,
-          appBarTitle: 'CheckBox', trailingRoutes: Routes.dataTable),
+          appBarTitle: 'CheckBox', trailingRoutes: Routes.classModel),
       body: Center(
         child: ListTile(
           title: Text(

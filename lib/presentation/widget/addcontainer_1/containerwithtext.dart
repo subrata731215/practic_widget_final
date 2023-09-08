@@ -108,6 +108,22 @@ class ContainerWithText extends StatelessWidget {
               ],
             ),
           ),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+            color: Colors.yellow,
+            child: const Row(
+              children: [
+                Flexible(
+                  child: Text(
+                      'vsd'),
+                ),
+                Flexible(
+                  child: Text(
+                      'fdnjnbdfkdfjflksoflkfdnjnbdfkdfjflksoflkfdnjnbdfkdfjflksoflk'),
+                ),
+              ],
+            ),
+          ),
           Expanded(
             child: ListView(
               children: [
@@ -199,8 +215,7 @@ class ContainerWithText extends StatelessWidget {
                       // height: MediaQuery.of(context).size.height / 4,
                       // width: MediaQuery.of(context).size.width / 2,
                       color: Colors.grey,
-                      child: const Text(
-                          'Sumanta PalPalPalPalPalPPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalPalalPalPalPalPalPalPalPalPalPalPalPalPal'),
+                      child: const Text('Sumanta '),
                     ),
                   ),
                 ],

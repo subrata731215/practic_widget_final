@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:practic/constant.dart';
 
-import '../../routes/routes.dart';
+import '../../../routes/routes.dart';
 
 class OtpInputField extends StatelessWidget {
   const OtpInputField({Key? key}) : super(key: key);
@@ -13,7 +13,7 @@ class OtpInputField extends StatelessWidget {
       appBar: appbarWidget(
         context,
         appBarTitle: 'OtpInputField',
-        trailingRoutes: Routes.otpInputField,
+        trailingRoutes: Routes.radio,
       ),
       body: Padding(
         padding:

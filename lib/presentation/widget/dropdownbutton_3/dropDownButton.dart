@@ -33,7 +33,7 @@ class _DropDownButtonLearnState extends State<DropDownButtonLearn> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-        appBar: appbarWidget(context, appBarTitle: 'Dropdown', trailingRoutes: Routes.gesture),
+        appBar: appbarWidget(context, appBarTitle: 'Dropdown', trailingRoutes: Routes.extraPractice),
         backgroundColor: Colors.white,
         body: Center(
           child: Column(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:reactiv/reactiv.dart';
-import '../../routes/routes.dart';
+import '../../../routes/routes.dart';
 import 'controller.dart';
 import 'model.dart';
 
@@ -82,7 +82,7 @@ class ContactAdd extends ReactiveStateWidget<AllDataController> {
                               ElevatedButton(
                                   onPressed: () {
                                     Navigator.pushNamed(
-                                        context, Routes.otpInputField);
+                                        context, Routes.dataTable);
                                   },
                                   child: const Icon(Icons.navigate_next)),
                             ],

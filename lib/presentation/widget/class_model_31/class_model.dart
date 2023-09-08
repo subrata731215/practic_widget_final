@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:practic/constant.dart';
-import '../../routes/routes.dart';
+
+import '../../../routes/routes.dart';
 
 class ClassModelLearn extends StatelessWidget {
   const ClassModelLearn({Key? key}) : super(key: key);
@@ -9,7 +10,7 @@ class ClassModelLearn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appbarWidget(context,
-          appBarTitle: 'ClassModel', trailingRoutes: Routes.lottie),
+          appBarTitle: 'ClassModel', trailingRoutes: Routes.contactAdd),
       body: Column(
         children: [
           DataTable(

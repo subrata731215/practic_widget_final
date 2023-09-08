@@ -13,6 +13,7 @@ class UiController extends ReactiveController {
     UiModel(title: 'PriceRangeUi', routesName: Routes.priceRange),
     UiModel(title: 'SchoolUi', routesName: Routes.schoolUi),
     UiModel(title: 'Visva Bharati Ui', routesName: Routes.visvaBharatiUi),
+    UiModel(title: 'WhatsApp Ui', routesName: Routes.whatsApp),
   ]);
 }
 

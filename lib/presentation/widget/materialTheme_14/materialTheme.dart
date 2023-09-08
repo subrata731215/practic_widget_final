@@ -24,7 +24,7 @@ class MaterialTheme extends StatelessWidget {
       home: Scaffold(
         appBar: appbarWidget(context,
             appBarTitle: 'MaterialTheme',
-            trailingRoutes: Routes.radio),
+            trailingRoutes: Routes.otpInputField),
         body: NameList(),
       ),
     );

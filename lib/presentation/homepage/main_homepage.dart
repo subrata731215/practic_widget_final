@@ -48,13 +48,15 @@ class MainHomePage extends ReactiveStateWidget<HomepageController> {
                       ),
                     ),
                     const SizedBox(height: 30),
-                    InkWell(
-                      onTap: () {
-                        Navigator.pushNamed(
-                            context, controller.contentList[index].routes);
-                      },
-                      child: Lottie.asset('assets/lottie/next.json',
-                          height: 50, width: 50),
+                    Flexible(
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.pushNamed(
+                              context, controller.contentList[index].routes);
+                        },
+                        child: Lottie.asset('assets/lottie/right-arrow.json',
+                            height: 100, width: 100),
+                      ),
                     ),
                   ],
                 ),

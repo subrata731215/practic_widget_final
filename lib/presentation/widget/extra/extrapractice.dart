@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practic/programming_Language_Learn/extra/agecheck.dart';
-
-import '../../presentation/ui/photoshop_30/photoshop.dart';
+import '../gesture_20/gesture.dart';
 
 class ExtraPractice extends StatelessWidget {
   const ExtraPractice({Key? key}) : super(key: key);
@@ -15,8 +13,10 @@ class ExtraPractice extends StatelessWidget {
           actions: [
             IconButton(
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const PhotoShop()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const GestureLearn()));
                 },
                 icon: const Icon(Icons.arrow_forward))
           ],
@@ -33,14 +33,6 @@ class ExtraPractice extends StatelessWidget {
               ],
             ),
           ),
-        ),
-        floatingActionButton: FloatingActionButton(
-          // tooltip: 'ageCheck',
-          onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => const AgeCheckk()));
-          },
-          child: const Icon(Icons.arrow_forward),
         ),
       ),
     );

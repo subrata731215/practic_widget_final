@@ -7,15 +7,9 @@ class HomepageController extends ReactiveController {
     [
       MainHomePageModel(title: 'Ui', routes: Routes.uiHomePage),
       MainHomePageModel(title: 'Widget', routes: Routes.widgetHomePage),
-
     ],
   );
-
-
-
-
 }
-
 
 class HomePageModel {
   final String title;

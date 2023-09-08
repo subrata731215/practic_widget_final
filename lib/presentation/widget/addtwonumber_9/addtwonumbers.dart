@@ -15,7 +15,7 @@ class AddTwoNumbers extends ReactiveStateWidget<AddTwoNumberController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appbarWidget(context,
-          appBarTitle: 'AddTwoNumbers', trailingRoutes: Routes.flutterAnimation),
+          appBarTitle: 'AddTwoNumbers', trailingRoutes: Routes.ageCheck),
       body: Padding(
         padding: const EdgeInsets.all(18.0),
         child: Column(
