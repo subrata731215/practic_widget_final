@@ -45,9 +45,7 @@ class ContactAdd extends ReactiveStateWidget<AllDataController> {
                                 return Switch(
                                     value: switchvalue,
                                     onChanged: (changed) {
-                                      // controller.switchValue.value =
-                                      //     !controller..value;
-                                      //controller.toggle();
+                                      controller.switchValue.value=changed;
                                     });
                               }),
                           Row(
@@ -70,9 +68,10 @@ class ContactAdd extends ReactiveStateWidget<AllDataController> {
                                   listener: (list) {
                                     return ElevatedButton(
                                         onPressed: () {
+                                          if(controller.contactList.isNotEmpty){
                                           controller.remove(
                                               contact:
-                                                  controller.contactList.last);
+                                                  controller.contactList.last);}
                                         },
                                         child: const Icon(Icons.delete));
                                   }),

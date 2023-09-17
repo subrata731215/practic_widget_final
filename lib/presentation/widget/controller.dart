@@ -9,6 +9,8 @@ class WidgetController extends ReactiveController {
     WidgetModel(title: 'AddTwoNumber', routesName: Routes.addTwoNumber),
     WidgetModel(title: 'AgeCheck', routesName: Routes.ageCheck),
     WidgetModel(title: 'AnimationOneTap', routesName: Routes.oneTapAnimation),
+    WidgetModel(title: 'Api', routesName: Routes.api),
+    WidgetModel(title: 'Async await, Timer and DateTime', routesName: Routes.asyncAwait),
     WidgetModel(title: 'AudioPlayer', routesName: Routes.audioPlayer),
     WidgetModel(title: 'BoolPractice', routesName: Routes.bool),
     WidgetModel(title: 'CheckBox', routesName: Routes.checkBox),

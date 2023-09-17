@@ -8,7 +8,7 @@ PreferredSizeWidget appbarWidget(
 }) {
   return AppBar(
     backgroundColor: Colors.brown,
-    title: Text(appBarTitle),
+    title: Text(appBarTitle,textAlign: TextAlign.center,textScaleFactor: 0.9,),
     centerTitle: true,
     leading: IconButton(
       onPressed: () {

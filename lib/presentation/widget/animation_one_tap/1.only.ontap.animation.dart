@@ -21,7 +21,7 @@ class _OneTapAnimationState extends State<OneTapAnimation> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-        appBar: appbarWidget(context, appBarTitle: 'OneTap Animation', trailingRoutes: Routes.audioPlayer),
+        appBar: appbarWidget(context, appBarTitle: 'OneTap Animation', trailingRoutes: Routes.api),
         body: ListView(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
           children: [

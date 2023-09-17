@@ -205,13 +205,41 @@
 //   }
 //}
 
-void main() {
-  List<int> numbers = [30, 50, 60, 120, 40, 80];
+// void main() {
+//   List<int> numbers = [30, 50, 60, 120, 40, 80];
+//
+//
+//   int sum = 0;
+//   for (int i = 0; i < numbers.length; i++) {
+//     sum += numbers[i];
+//   }
+//   print(sum);
+// }
+
+/*void main() {
+  MyClass myC = MyClass();
+  myC.printname('Subrata');
+  myC.printname('kala');
+
+  print(myC.add(60, 09));
 
 
-  int sum = 0;
-  for (int i = 0; i < numbers.length; i++) {
-    sum += numbers[i];
-  }
-  print(sum);
+  print(myC.minus(400, 190));
 }
+
+class MyClass {
+  void printname(name) {
+    print(name);
+  }
+
+  int add(int a, int b) {
+    return a + b;
+  }
+
+  String minus(int no1, int no2){
+
+    return 'Minus : ${no1-no2}';
+
+  }
+
+}*/

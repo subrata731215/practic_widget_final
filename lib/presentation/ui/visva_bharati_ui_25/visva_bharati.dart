@@ -12,7 +12,7 @@ class VisvaBharati extends StatelessWidget {
       child: Scaffold(
         appBar: appbarWidget(context,
             appBarTitle: 'Visva Bharati Ui',
-            trailingRoutes: Routes.mainHomepage),
+            trailingRoutes: Routes.whatsApp),
         backgroundColor: Colors.white,
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),

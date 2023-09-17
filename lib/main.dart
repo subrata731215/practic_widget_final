@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:practic/presentation/homepage/main_homepage.dart';
-import 'package:practic/presentation/ui/audio_screen_23/audio.page.dart';
+import 'package:practic/presentation/ui/addfriendui/addfriendScreen.dart';
+import 'package:practic/presentation/ui/audio_screen_23/audio.screen.dart';
 import 'package:practic/presentation/ui/call_21/callsupriyo.dart';
+import 'package:practic/presentation/ui/stopWatch/stopwatch.dart';
 import 'package:practic/presentation/ui/ui_homepage.dart';
 import 'package:practic/presentation/ui/loginui_24/loginui.dart';
 import 'package:practic/presentation/ui/message_22/message.dart';
@@ -18,6 +21,8 @@ import 'package:practic/presentation/widget/addtwonumber_9/addtwonumbers.dart';
 import 'package:practic/presentation/widget/ageCheck/agecheck.dart';
 import 'package:practic/presentation/widget/animation_16/mainpage/flutter_animation.dart';
 import 'package:practic/presentation/widget/animation_one_tap/1.only.ontap.animation.dart';
+import 'package:practic/presentation/widget/api/api.learn.dart';
+import 'package:practic/presentation/widget/async_await/async.await.dart';
 import 'package:practic/presentation/widget/audioplayer_27/audioPlayer.dart';
 import 'package:practic/presentation/widget/boolpractice_19/bool_practice.dart';
 import 'package:practic/presentation/widget/checkBox_2/checkbox.dart';
@@ -45,6 +50,9 @@ import 'presentation/widget/listviewbuilder_5/listview.builder.dart';
 import 'presentation/widget/textField_6/textField.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      systemNavigationBarColor: Colors.pink));
   runApp(const MyApp());
 }
 
@@ -63,14 +71,15 @@ class MyApp extends StatelessWidget {
       home: const Scaffold(
         body: MainHomePage(),
       ),
-      initialRoute: Routes.ageCheck,
+      initialRoute: Routes.mainHomepage,
       routes: {
         /// Main PageRoutes
         Routes.mainHomepage: (context) => const MainHomePage(),
 
         /// UI PageRoutes
         Routes.uiHomePage: (context) => const UiHomePage(),
-        Routes.audioPage: (context) => const AudioPage(),
+        Routes.addFriendUi: (context) => const AddFriendScreen(),
+        Routes.audioScreen: (context) => const AudioPage(),
         Routes.callScreenSupriyo: (context) => const CallSupriyo(),
         Routes.logInUi: (context) => const LoginUi(),
         Routes.messageScreen: (context) => const MessageScreen(),
@@ -78,6 +87,7 @@ class MyApp extends StatelessWidget {
         Routes.photoshop: (context) => const PhotoShop(),
         Routes.priceRange: (context) => const PriceRange(),
         Routes.schoolUi: (context) => const SchoolUi(),
+        Routes.stopwatch: (context) => const StopWatchLearn(),
         Routes.visvaBharatiUi: (context) => const VisvaBharati(),
         Routes.whatsApp: (context) => const WhatsAppUi(),
 
@@ -89,6 +99,8 @@ class MyApp extends StatelessWidget {
         Routes.ageCheck: (context) => const AgeCheckk(),
         Routes.flutterAnimation: (context) => const FlutterAnimation(),
         Routes.oneTapAnimation: (context) => const OneTapAnimation(),
+        Routes.api: (context) => const ApiLearn(),
+        Routes.asyncAwait: (context) => AsyncAwait(),
         Routes.audioPlayer: (context) => const AudioPlayerLearn(),
         Routes.bool: (context) => const BoolPractice(),
         Routes.checkBox: (context) => const CheckBox(),

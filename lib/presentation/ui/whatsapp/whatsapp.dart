@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../routes/routes.dart';
+
 class WhatsAppUi extends StatelessWidget {
   const WhatsAppUi({Key? key}) : super(key: key);
 
@@ -14,7 +16,9 @@ class WhatsAppUi extends StatelessWidget {
             title: const Text('WhatApps'),
             actions: [
               IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+
+                  },
                   icon: const Icon(Icons.photo_camera_outlined)),
               IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
               PopupMenuButton(
@@ -84,7 +88,9 @@ class WhatsAppUi extends StatelessWidget {
             ],
           ),
           floatingActionButton: FloatingActionButton.extended(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, Routes.uiHomePage);
+            },
             label: const Text('NextPage', textAlign: TextAlign.center),
           ),
         ),

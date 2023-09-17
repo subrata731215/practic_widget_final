@@ -4,7 +4,8 @@ import '../../routes/routes.dart';
 
 class UiController extends ReactiveController {
   List<UiModel> uiList = ReactiveList([
-    UiModel(title: 'AudioUi', routesName: Routes.audioPage),
+    UiModel(title: 'AddFriendUi', routesName: Routes.addFriendUi),
+    UiModel(title: 'AudioUi', routesName: Routes.audioScreen),
     UiModel(title: 'CallUi', routesName: Routes.callScreenSupriyo),
     UiModel(title: 'LoginUi', routesName: Routes.logInUi),
     UiModel(title: 'MessageUi', routesName: Routes.messageScreen),
@@ -12,6 +13,7 @@ class UiController extends ReactiveController {
     UiModel(title: 'PhotoShopUi', routesName: Routes.photoshop),
     UiModel(title: 'PriceRangeUi', routesName: Routes.priceRange),
     UiModel(title: 'SchoolUi', routesName: Routes.schoolUi),
+    UiModel(title: 'StopWatch', routesName: Routes.stopwatch),
     UiModel(title: 'Visva Bharati Ui', routesName: Routes.visvaBharatiUi),
     UiModel(title: 'WhatsApp Ui', routesName: Routes.whatsApp),
   ]);

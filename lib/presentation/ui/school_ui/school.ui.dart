@@ -18,7 +18,7 @@ class _SchoolUiState extends State<SchoolUi> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appbarWidget(context,
-          appBarTitle: 'SchoolUi', trailingRoutes: Routes.visvaBharatiUi),
+          appBarTitle: 'SchoolUi', trailingRoutes: Routes.stopwatch),
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
         child: Column(
