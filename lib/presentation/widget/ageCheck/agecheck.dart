@@ -14,7 +14,7 @@ class AgeCheckk extends ReactiveStateWidget<ExtraController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appbarWidget(context,
-          appBarTitle: 'ageCheck', trailingRoutes: Routes.flutterAnimation),
+          appBarTitle: 'ageCheck', trailingRoutes: Routes.animatedContainer),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

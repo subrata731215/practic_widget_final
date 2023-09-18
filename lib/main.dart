@@ -19,6 +19,7 @@ import 'package:practic/presentation/widget/addcontainer_1/container.dart';
 import 'package:practic/presentation/widget/addcontainer_1/containerwithtext.dart';
 import 'package:practic/presentation/widget/addtwonumber_9/addtwonumbers.dart';
 import 'package:practic/presentation/widget/ageCheck/agecheck.dart';
+import 'package:practic/presentation/widget/animatedContainer/animation.container.dart';
 import 'package:practic/presentation/widget/animation_16/mainpage/flutter_animation.dart';
 import 'package:practic/presentation/widget/animation_one_tap/1.only.ontap.animation.dart';
 import 'package:practic/presentation/widget/api/api.learn.dart';
@@ -40,7 +41,8 @@ import 'package:practic/presentation/widget/materialTheme_14/materialTheme.dart'
 import 'package:practic/presentation/widget/otp_input_field/otpinputfield.dart';
 import 'package:practic/presentation/widget/radio_13/radio.learn.dart';
 import 'package:practic/presentation/widget/randomnumber_7/randomNoGenerate.dart';
-import 'package:practic/presentation/widget/scoreBoard_11/cricket.score.dart';
+import 'package:practic/presentation/widget/scoreBoard_11/scoreBoard.dart';
+import 'package:practic/presentation/widget/searchboxanimation/searchboxAnimation.dart';
 import 'package:practic/presentation/widget/share_preferences_15/sharePreferences.dart';
 import 'package:practic/presentation/widget/slider_8/slider.dart';
 import 'package:practic/presentation/widget/stepper_learn_17/stepper.learn.dart';
@@ -51,8 +53,9 @@ import 'presentation/widget/textField_6/textField.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-      statusBarColor: Colors.transparent,
-      systemNavigationBarColor: Colors.pink));
+    statusBarColor: Colors.transparent,
+    systemNavigationBarColor: Colors.pink,
+  ));
   runApp(const MyApp());
 }
 
@@ -75,9 +78,10 @@ class MyApp extends StatelessWidget {
       routes: {
         /// Main PageRoutes
         Routes.mainHomepage: (context) => const MainHomePage(),
+        Routes.uiHomePage: (context) => const UiHomePage(),
+        Routes.widgetHomePage: (context) => const WidgetHomePage(),
 
         /// UI PageRoutes
-        Routes.uiHomePage: (context) => const UiHomePage(),
         Routes.addFriendUi: (context) => const AddFriendScreen(),
         Routes.audioScreen: (context) => const AudioPage(),
         Routes.callScreenSupriyo: (context) => const CallSupriyo(),
@@ -92,15 +96,16 @@ class MyApp extends StatelessWidget {
         Routes.whatsApp: (context) => const WhatsAppUi(),
 
         /// Widget PageRoutes
-        Routes.widgetHomePage: (context) => const WidgetHomePage(),
         Routes.addBox: (context) => const AddBox(),
         Routes.addContainer: (context) => const AddContainer(),
+        Routes.containerWithText: (context) => const ContainerWithText(),
         Routes.addTwoNumber: (context) => const AddTwoNumbers(),
         Routes.ageCheck: (context) => const AgeCheckk(),
+        Routes.animatedContainer: (context) => const AnimatedContainerLearn(),
         Routes.flutterAnimation: (context) => const FlutterAnimation(),
         Routes.oneTapAnimation: (context) => const OneTapAnimation(),
         Routes.api: (context) => const ApiLearn(),
-        Routes.asyncAwait: (context) => AsyncAwait(),
+        Routes.asyncAwait: (context) => const AsyncAwait(),
         Routes.audioPlayer: (context) => const AudioPlayerLearn(),
         Routes.bool: (context) => const BoolPractice(),
         Routes.checkBox: (context) => const CheckBox(),
@@ -109,7 +114,6 @@ class MyApp extends StatelessWidget {
         Routes.dataTable: (context) => const DataTableLearn(),
         Routes.dropDownButton: (context) => const DropDownButtonLearn(),
         Routes.extraPractice: (context) => const ExtraPractice(),
-
         Routes.gesture: (context) => const GestureLearn(),
         Routes.hero: (context) => const HeroLearn(),
         Routes.light: (context) => const Light(),
@@ -120,14 +124,12 @@ class MyApp extends StatelessWidget {
         Routes.otpInputField: (context) => const OtpInputField(),
         Routes.radio: (context) => const RadioLearn(),
         Routes.randomNo: (context) => const RandomNoGenerate(),
-        Routes.cricketScore: (context) => const CricketScore(),
+        Routes.scoreBoard: (context) => const ScoreBoardLearn(),
+        Routes.searchBoxAnimation: (context) => const SearchBoxAnimationLearn(),
         Routes.sharePreference: (context) => const SharePreferencesLearn(),
         Routes.slider: (context) => const SliderLearn(),
         Routes.stepper: (context) => const StepperLearn(),
         Routes.textField: (context) => const TextFieldLearn(),
-
-        /// Programming Routes
-        Routes.containerWithText: (context) => const ContainerWithText(),
       },
     );
   }

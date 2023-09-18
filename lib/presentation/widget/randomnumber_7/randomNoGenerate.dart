@@ -41,7 +41,7 @@ class _RandomNoGenerateState extends State<RandomNoGenerate> {
       home: Scaffold(
           appBar: appbarWidget(context,
               appBarTitle: 'Random No Generate',
-              trailingRoutes: Routes.cricketScore),
+              trailingRoutes: Routes.scoreBoard),
           body: currentNumber == 100
               ? Center(
                   child: Text(

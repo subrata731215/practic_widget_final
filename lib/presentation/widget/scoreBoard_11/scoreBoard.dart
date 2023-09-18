@@ -4,11 +4,11 @@ import 'package:reactiv/reactiv.dart';
 import '../../../routes/routes.dart';
 import 'controller/controller.dart';
 
-class CricketScore extends ReactiveStateWidget<ScoreController> {
+class ScoreBoardLearn extends ReactiveStateWidget<ScoreController> {
   @override
   ScoreController bindController() => ScoreController();
 
-  const CricketScore({Key? key}) : super(key: key);
+  const ScoreBoardLearn({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class CricketScore extends ReactiveStateWidget<ScoreController> {
       home: Scaffold(
           resizeToAvoidBottomInset: false,
           appBar: appbarWidget(context,
-              appBarTitle: 'Cricket Score', trailingRoutes: Routes.sharePreference),
+              appBarTitle: 'Cricket Score', trailingRoutes: Routes.searchBoxAnimation),
           body: Center(
             child: Column(
               children: [

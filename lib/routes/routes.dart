@@ -1,49 +1,56 @@
 class Routes {
+  ///Main Routes
   static const mainHomepage = 'mainHomePage';
   static const uiHomePage = 'uiHomePage';
   static const widgetHomePage = 'widgetHomePage';
+
+  ///Widget Routes
+  static const addBox = 'addBox';
   static const addContainer = 'addContainer';
   static const containerWithText = 'containerWithText';
-  static const checkBox = 'checkBox';
-  static const dropDownButton = 'dropDownButton';
-  static const listTile = 'listTile';
-  static const listViewBuilder = 'listViewBuilder';
-  static const textField = 'textField';
-  static const randomNo = 'randomNo';
-  static const slider = 'slider';
   static const addTwoNumber = 'addTwoNumber';
   static const ageCheck = 'ageCheck';
-  static const dataTable = 'dataTable';
-  static const cricketScore = 'scoreBoard';
-  static const light = 'light';
-  static const radio = 'radio';
-  static const materialTheme = 'materialTheme';
-  static const sharePreference = 'sharePreference';
+  static const animatedContainer = 'animatedContainer';
   static const flutterAnimation = 'flutterAnimation';
   static const oneTapAnimation = 'oneTapAnimation';
   static const api = 'api';
   static const asyncAwait = 'asyncAwait';
-  static const stepper = 'stepper';
-  static const hero = 'hero';
-  static const bool = 'bool';
-  static const gesture = 'gesture';
-  static const callScreenSupriyo = 'callScreenSupriyo';
-  static const messageScreen = 'messageScreen';
   static const audioPlayer = 'audioPlayer';
-  static const logInUi = 'logInUi';
-  static const visvaBharatiUi = 'visvaBharati';
-  static const whatsApp = 'whatsApp';
-  static const moneyTransferScreen = 'moneyTransferScreen';
+  static const bool = 'bool';
+  static const checkBox = 'checkBox';
+  static const classModel = 'classModel';
+  static const contactAdd = 'contactAdd';
+  static const dataTable = 'dataTable';
+  static const dropDownButton = 'dropDownButton';
+  static const extraPractice = 'extraPractice';
+  static const gesture = 'gesture';
+  static const hero = 'hero';
+  static const light = 'light';
+  static const listTile = 'listTile';
+  static const listViewBuilder = 'listViewBuilder';
+  static const lottie = 'lottie';
+  static const materialTheme = 'materialTheme';
+  static const otpInputField = 'otpInputField';
+  static const radio = 'radio';
+  static const randomNo = 'randomNo';
+  static const scoreBoard = 'scoreBoard';
+  static const searchBoxAnimation = 'searchBoxAnimation';
+  static const sharePreference = 'sharePreference';
+  static const slider = 'slider';
+  static const stepper = 'stepper';
+  static const textField = 'textField';
+
+  ///Ui Routes
   static const addFriendUi = 'addFriendUi';
   static const audioScreen = 'audioScreen';
-  static const schoolUi = 'schoolUi';
-  static const stopwatch = 'stopwatch';
-  static const addBox = 'addBox';
+  static const callScreenSupriyo = 'callScreenSupriyo';
+  static const logInUi = 'logInUi';
+  static const messageScreen = 'messageScreen';
+  static const moneyTransferScreen = 'moneyTransferScreen';
   static const photoshop = 'photoshop';
   static const priceRange = 'priceRange';
-  static const classModel = 'classModel';
-  static const lottie = 'lottie';
-  static const contactAdd = 'contactAdd';
-  static const otpInputField = 'otpInputField';
-  static const extraPractice = 'extraPractice';
+  static const schoolUi = 'schoolUi';
+  static const stopwatch = 'stopwatch';
+  static const visvaBharatiUi = 'visvaBharati';
+  static const whatsApp = 'whatsApp';
 }

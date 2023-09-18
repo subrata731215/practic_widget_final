@@ -12,14 +12,6 @@ class HeroLearn extends StatefulWidget {
 class _HeroLearnState extends State<HeroLearn> {
   bool isSelected = false;
 
-  Widget wrapImage = Padding(
-    padding: const EdgeInsets.all(20),
-    child: Image.asset(
-      'assets/face.jpeg',
-      scale: 6,
-    ),
-  );
-
   List<Widget> imageList = [];
 
   @override
@@ -41,17 +33,10 @@ class _HeroLearnState extends State<HeroLearn> {
                 },
                 child: ClipRRect(
                   child: Hero(
-                    tag: 'tag',
-                    child: Container(
-                      height: 100,
-                      width: 200,
-                      decoration: const BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage('assets/face.jpeg'),
-                        ),
-                      ),
-                    ),
-                  ),
+                      tag: 'tag',
+                      child: FlutterLogo(
+                        size: 50,
+                      )),
                 ),
               ),
               const SizedBox(
@@ -70,42 +55,14 @@ class _HeroLearnState extends State<HeroLearn> {
               ),
               Expanded(
                   child: Wrap(
-                direction: Axis.vertical,
-                children: [
-                  Image.asset('assets/face.jpeg', scale: 9),
-                  const SizedBox(width: 10),
-                  Image.asset('assets/face.jpeg', scale: 9),
-                  const SizedBox(width: 10),
-                  Image.asset('assets/face.jpeg', scale: 9),
-                  const SizedBox(width: 10),
-                  Image.asset('assets/face.jpeg', scale: 9),
-                  const SizedBox(width: 10),
-                  Image.asset('assets/face.jpeg', scale: 9),
-                  const SizedBox(width: 10),
-                  Image.asset('assets/face.jpeg', scale: 9),
-                  const SizedBox(width: 10),
-                  Image.asset('assets/face.jpeg', scale: 9),
-                  const SizedBox(width: 10),
-                  Image.asset('assets/face.jpeg', scale: 9),
-                  const SizedBox(width: 10),
-                  Image.asset('assets/face.jpeg', scale: 9),
-                  const SizedBox(width: 10),
-                  Image.asset('assets/face.jpeg', scale: 9),
-                  const SizedBox(width: 10),
-                  Image.asset('assets/face.jpeg', scale: 9),
-                  const SizedBox(width: 10),
-                  Image.asset('assets/face.jpeg', scale: 9),
-                  const SizedBox(width: 10),
-                  Image.asset('assets/face.jpeg', scale: 9),
-                  const SizedBox(width: 10),
-                  Image.asset('assets/face.jpeg', scale: 9),
-                  const SizedBox(width: 10),
-                  Image.asset('assets/face.jpeg', scale: 9),
-                  const SizedBox(width: 10),
-                  Image.asset('assets/face.jpeg', scale: 9),
-                  const SizedBox(width: 10),
-                  Image.asset('assets/face.jpeg', scale: 9),
-                ],
+                direction: Axis.horizontal,
+                children: List.generate(
+                  50,
+                  (index) => Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Image.asset('assets/face.jpeg', scale: 9),
+                  ),
+                ),
               ))
             ],
           ),
@@ -127,13 +84,13 @@ class HeroImageLearn extends StatelessWidget {
         body: Center(
           child: Hero(
             tag: 'tag',
-            child: Container(
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/face.jpeg'),
-                ),
-              ),
-            ),
+            child: GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: FlutterLogo(
+                  size: 300,
+                )),
           ),
         ),
       ),
