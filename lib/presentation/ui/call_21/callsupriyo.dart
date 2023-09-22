@@ -2,8 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:practic/constant.dart';
 import '../../../routes/routes.dart';
 
-class CallSupriyo extends StatelessWidget {
+class CallSupriyo extends StatefulWidget {
   const CallSupriyo({Key? key}) : super(key: key);
+
+  @override
+  State<CallSupriyo> createState() => _CallSupriyoState();
+}
+
+class _CallSupriyoState extends State<CallSupriyo> {
+  bool isTap=false;
 
   @override
   Widget build(BuildContext context) {
@@ -46,16 +53,16 @@ class CallSupriyo extends StatelessWidget {
               Expanded(
                 flex: 2,
                 child: Container(
-                  decoration: const BoxDecoration(
-                      color: Colors.white12,
-                      borderRadius: BorderRadius.only(
+                  decoration:  BoxDecoration(
+                      color: Colors.grey.shade200,
+                      borderRadius: const BorderRadius.only(
                           topRight: Radius.circular(30),
                           topLeft: Radius.circular(30))),
-                  child: const Padding(
-                    padding: EdgeInsets.all(20.0),
+                  child:  Padding(
+                    padding: const EdgeInsets.all(20.0),
                     child: Column(
                       children: [
-                        Row(
+                        const Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             BuildCircleAvatar(
@@ -78,22 +85,29 @@ class CallSupriyo extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            BuildCircleAvatar(
+                            const BuildCircleAvatar(
                               icons: Icons.keyboard,
                               downText: 'Keypad',
                             ),
                             BuildCircleAvatar(
+                              ontap: (){
+                                setState(() {
+                                  isTap=!isTap;
+                                });
+                              },
+                                backgroundColor:isTap?Colors.black:Colors.white ,
+                                iconColor: isTap?Colors.white:Colors.black,
                                 icons: Icons.mic_off_outlined,
                                 downText: 'Mute'),
-                            BuildCircleAvatar(
+                            const BuildCircleAvatar(
                                 icons: Icons.volume_up, downText: 'Speaker'),
-                            BuildCircleAvatar(
+                            const BuildCircleAvatar(
                                 icons: Icons.more_vert_outlined,
                                 downText: 'More'),
                           ],
                         ),
-                        SizedBox(height: 20),
-                        Row(
+                        const SizedBox(height: 20),
+                        const Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             CircleAvatar(
@@ -123,24 +137,33 @@ class CallSupriyo extends StatelessWidget {
 class BuildCircleAvatar extends StatelessWidget {
   const BuildCircleAvatar({
     super.key,
+    this.ontap,
     required this.icons,
     required this.downText,
+    this.backgroundColor = Colors.white,
+    this.iconColor = Colors.black,
   });
 
   final IconData icons;
   final String downText;
+  final Color? backgroundColor;
+  final Color? iconColor;
+  final GestureTapCallback ?ontap;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        CircleAvatar(
-          radius: 25,
-          backgroundColor: Colors.black,
-          child: Icon(
-            icons,
-            size: 30,
-            color: Colors.white,
+        GestureDetector(
+          onTap:ontap ,
+          child: CircleAvatar(
+            radius: 30,
+            backgroundColor: backgroundColor,
+            child: Icon(
+              icons,
+              size: 30,
+              color: iconColor,
+            ),
           ),
         ),
         const SizedBox(
@@ -148,7 +171,7 @@ class BuildCircleAvatar extends StatelessWidget {
         ),
         Text(
           downText,
-          style: const TextStyle(color: Colors.white),
+          style:  TextStyle(color: Colors.grey.shade800),
         ),
       ],
     );

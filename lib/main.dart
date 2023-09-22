@@ -32,6 +32,7 @@ import 'package:practic/presentation/widget/contact_add_ui_with_language/contact
 import 'package:practic/presentation/widget/datatable_10/datatable.dart';
 import 'package:practic/presentation/widget/dropdownbutton_3/dropDownButton.dart';
 import 'package:practic/presentation/widget/extra/extrapractice.dart';
+import 'package:practic/presentation/widget/finance_margin_calculator/finance.calculator.dart';
 import 'package:practic/presentation/widget/gesture_20/gesture.dart';
 import 'package:practic/presentation/widget/hero_18/hero_learn.dart';
 import 'package:practic/presentation/widget/light_12/light.dart';
@@ -114,6 +115,7 @@ class MyApp extends StatelessWidget {
         Routes.dataTable: (context) => const DataTableLearn(),
         Routes.dropDownButton: (context) => const DropDownButtonLearn(),
         Routes.extraPractice: (context) => const ExtraPractice(),
+        Routes.financeCalculator: (context) => const FinanceCalculator(),
         Routes.gesture: (context) => const GestureLearn(),
         Routes.hero: (context) => const HeroLearn(),
         Routes.light: (context) => const Light(),

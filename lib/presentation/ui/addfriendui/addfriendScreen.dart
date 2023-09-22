@@ -84,45 +84,36 @@ class AddFriendScreen extends ReactiveStateWidget<AddFriendController> {
                         text: '254'),
                   ],
                 ),
-                Observer2(
-                    listenable2: controller.name,
-                    listenable: controller.isTap,
-                    listener: (tap, name) {
+                Observer3(
+                    listenable: controller.buttonText,
+                    listenable2: controller.isTap,
+                    listenable3: controller.snackBarView,
+                    listener: (name, tap, snack) {
                       return Container(
                         padding: const EdgeInsets.symmetric(
                             horizontal: 60, vertical: 18),
                         decoration: BoxDecoration(
-                            color: controller.name.value == 'Cancel Request'
-                                ? Colors.red
-                                : Colors.blue.shade800,
+                            color:
+                                controller.buttonText.value == 'Cancel Request'
+                                    ? Colors.red
+                                    : Colors.blue.shade800,
                             borderRadius: BorderRadius.circular(12)),
-                        child: controller.isTap.value
+                        child: tap
                             ? const CircularProgressIndicator()
                             : GestureDetector(
-                                onTap: () async {
-                                  controller.toggle();
-
-                                  await Future.delayed(
-                                      const Duration(seconds: 3));
-
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                      const SnackBar(
-                                          behavior: SnackBarBehavior.floating,
-                                          content: Text(
-                                              'Friend Request Sent Successfully')));
-
-                                  controller.isTap.value = false;
-                                  controller.name.value = 'Cancel Request';
+                                onTap: () {
+                                  controller.tap(context);
+                                  controller.snackBarView.value =
+                                      !controller.snackBarView.value;
                                 },
                                 child: Text(
-                                  controller.name.value,
+                                  name,
                                   style: TextStyle(
                                       fontSize: 15,
                                       color: Colors.grey.shade200,
                                       fontWeight: FontWeight.bold,
                                       letterSpacing: 1),
-                                ),
-                              ),
+                                )),
                       );
                     })
               ],

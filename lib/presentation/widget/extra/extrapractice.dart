@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:practic/presentation/widget/extra/utils.dart';
+import 'package:practic/presentation/widget/finance_margin_calculator/finance.calculator.dart';
 import '../gesture_20/gesture.dart';
 
 class ExtraPractice extends StatefulWidget {
@@ -36,7 +37,7 @@ class _ExtraPracticeState extends State<ExtraPractice> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const GestureLearn()));
+                          builder: (context) => const FinanceCalculator()));
                 },
                 icon: const Icon(Icons.arrow_forward))
           ],
