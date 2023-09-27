@@ -38,6 +38,12 @@ class AddFriendScreen extends ReactiveStateWidget<AddFriendController> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
+                Text(
+                    'Date : ${DateTime.now().day} / ${DateTime.now().month} / ${DateTime.now().year}'),
+                GestureDetector(
+                  child: Text(
+                      'Time : ${DateTime.now().hour} : ${DateTime.now().minute} : ${DateTime.now().second}'),
+                ),
                 Container(
                   height: 100,
                   width: 100,
