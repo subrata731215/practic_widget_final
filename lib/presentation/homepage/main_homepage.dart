@@ -55,9 +55,13 @@ class MainHomePage extends ReactiveStateWidget<HomepageController> {
                               context, controller.contentList[index].routes);
                         },
                         child: Lottie.asset('assets/lottie/right-arrow.json',
-                            height: 100, width: 100),
+                            height: 200, width: 200),
                       ),
                     ),
+                    Flexible(
+                        child: Lottie.asset(
+                      'assets/lottie/hand.json',
+                    )),
                   ],
                 ),
               ),

@@ -27,7 +27,7 @@ class AddFriendScreen extends ReactiveStateWidget<AddFriendController> {
           dashPattern: const [4, 9],
           radius: const Radius.circular(30),
           borderType: BorderType.RRect,
-          strokeCap: StrokeCap.round,
+          strokeCap: StrokeCap.square,
           child: Container(
             height: 400,
             width: 300,

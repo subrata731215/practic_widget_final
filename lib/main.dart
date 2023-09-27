@@ -4,6 +4,9 @@ import 'package:practic/presentation/homepage/main_homepage.dart';
 import 'package:practic/presentation/ui/addfriendui/addfriendScreen.dart';
 import 'package:practic/presentation/ui/audio_screen_23/audio.screen.dart';
 import 'package:practic/presentation/ui/call_21/callsupriyo.dart';
+import 'package:practic/presentation/ui/loginui2/homePage.dart';
+import 'package:practic/presentation/ui/loginui2/loginPage.dart';
+import 'package:practic/presentation/ui/loginui2/registerPage.dart';
 import 'package:practic/presentation/ui/stopWatch/stopwatch.dart';
 import 'package:practic/presentation/ui/ui_homepage.dart';
 import 'package:practic/presentation/ui/loginui_24/loginui.dart';
@@ -75,7 +78,7 @@ class MyApp extends StatelessWidget {
       home: const Scaffold(
         body: MainHomePage(),
       ),
-      initialRoute: Routes.mainHomepage,
+      initialRoute: Routes.addFriendUi,
       routes: {
         /// Main PageRoutes
         Routes.mainHomepage: (context) => const MainHomePage(),
@@ -86,6 +89,9 @@ class MyApp extends StatelessWidget {
         Routes.addFriendUi: (context) => const AddFriendScreen(),
         Routes.audioScreen: (context) => const AudioPage(),
         Routes.callScreenSupriyo: (context) => const CallSupriyo(),
+        Routes.logInUi2: (context) => const LogInUi2(),
+        Routes.loginPage: (context) => const LogInPage(),
+        Routes.registerPage: (context) => const RegisterPage(),
         Routes.logInUi: (context) => const LoginUi(),
         Routes.messageScreen: (context) => const MessageScreen(),
         Routes.moneyTransferScreen: (context) => const MoneyTransfer(),
