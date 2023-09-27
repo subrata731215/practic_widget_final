@@ -22,7 +22,7 @@ class AddFriendController extends ReactiveController {
         behavior: SnackBarBehavior.floating,
         content: Text(snackBarView.value
             ? 'Cancel Friend Request'
-            :'Friend Request Sent Successfully' )));
+            : 'Friend Request Sent Successfully')));
 
     await Future.delayed(const Duration(seconds: 1), () {
       isTap.value = false;
