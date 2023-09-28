@@ -21,6 +21,7 @@ class Routes {
   static const classModel = 'classModel';
   static const contactAdd = 'contactAdd';
   static const dataTable = 'dataTable';
+  static const dismissible = 'dismissible';
   static const dropDownButton = 'dropDownButton';
   static const extraPractice = 'extraPractice';
   static const financeCalculator = 'financeCalculator';

@@ -18,6 +18,7 @@ class WidgetController extends ReactiveController {
     WidgetModel(title: 'ClassModel', routesName: Routes.classModel),
     WidgetModel(title: 'Contact Add', routesName: Routes.contactAdd),
     WidgetModel(title: 'DataTable', routesName: Routes.dataTable),
+    WidgetModel(title: 'Dismissible', routesName: Routes.dismissible),
     WidgetModel(title: 'DropDownButton', routesName: Routes.dropDownButton),
     WidgetModel(title: 'Extra', routesName: Routes.extraPractice),
     WidgetModel(title: 'FinanceCalculator', routesName: Routes.financeCalculator),

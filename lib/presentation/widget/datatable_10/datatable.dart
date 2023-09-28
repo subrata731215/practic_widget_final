@@ -12,7 +12,7 @@ class DataTableLearn extends StatelessWidget {
     return Scaffold(
       appBar: appbarWidget(context,
           appBarTitle: 'DataTable And DataTableList',
-          trailingRoutes: Routes.dropDownButton),
+          trailingRoutes: Routes.dismissible),
       body: const Screen1(),
     );
   }
