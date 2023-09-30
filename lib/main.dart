@@ -34,6 +34,7 @@ import 'package:practic/presentation/widget/class_model_31/class_model.dart';
 import 'package:practic/presentation/widget/contact_add_ui_with_language/contactadd.dart';
 import 'package:practic/presentation/widget/datatable_10/datatable.dart';
 import 'package:practic/presentation/widget/dismissiblelearn/dismissible_learn.dart';
+import 'package:practic/presentation/widget/drawerlearn/drawer_learn.dart';
 import 'package:practic/presentation/widget/dropdownbutton_3/dropDownButton.dart';
 import 'package:practic/presentation/widget/extra/extrapractice.dart';
 import 'package:practic/presentation/widget/finance_margin_calculator/finance.calculator.dart';
@@ -79,7 +80,7 @@ class MyApp extends StatelessWidget {
       home: const Scaffold(
         body: MainHomePage(),
       ),
-      initialRoute: Routes.dismissible,
+      initialRoute: Routes.mainHomepage,
       routes: {
         /// Main PageRoutes
         Routes.mainHomepage: (context) => const MainHomePage(),
@@ -121,6 +122,7 @@ class MyApp extends StatelessWidget {
         Routes.contactAdd: (context) => const ContactAdd(),
         Routes.dataTable: (context) => const DataTableLearn(),
         Routes.dismissible: (context) => const DismissibleLearn(),
+        Routes.drawer: (context) => const DrawerLearn(),
         Routes.dropDownButton: (context) => const DropDownButtonLearn(),
         Routes.extraPractice: (context) => const ExtraPractice(),
         Routes.financeCalculator: (context) => const FinanceCalculator(),

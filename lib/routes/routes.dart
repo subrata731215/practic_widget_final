@@ -22,6 +22,7 @@ class Routes {
   static const contactAdd = 'contactAdd';
   static const dataTable = 'dataTable';
   static const dismissible = 'dismissible';
+  static const drawer = 'drawer';
   static const dropDownButton = 'dropDownButton';
   static const extraPractice = 'extraPractice';
   static const financeCalculator = 'financeCalculator';

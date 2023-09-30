@@ -24,7 +24,7 @@ class _DismissibleLearnState extends State<DismissibleLearn> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: appbarWidget(context,
-            appBarTitle: 'Dismissible', trailingRoutes: Routes.dropDownButton),
+            appBarTitle: 'Dismissible', trailingRoutes: Routes.drawer),
         body: ListView.builder(
           itemCount: fruits.length,
           itemBuilder: (context, index) {
