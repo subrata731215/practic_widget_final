@@ -47,6 +47,7 @@ class Routes {
   static const addFriendUi = 'addFriendUi';
   static const audioScreen = 'audioScreen';
   static const callScreenSupriyo = 'callScreenSupriyo';
+  static const extraUi = 'extraUi';
   static const logInUi2 = 'logInUi2';
   static const loginPage = 'logInPage';
   static const registerPage = 'RegisterPage';

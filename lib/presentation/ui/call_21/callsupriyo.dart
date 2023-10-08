@@ -19,7 +19,7 @@ class _CallSupriyoState extends State<CallSupriyo> {
       home: SafeArea(
         child: Scaffold(
           appBar: appbarWidget(context,
-              appBarTitle: 'call', trailingRoutes: Routes.logInUi2),
+              appBarTitle: 'call', trailingRoutes: Routes.extraUi),
           backgroundColor: Colors.white10,
           body: Column(
             children: [

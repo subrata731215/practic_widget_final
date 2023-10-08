@@ -7,6 +7,7 @@ class UiController extends ReactiveController {
     UiModel(title: 'AddFriendUi', routesName: Routes.addFriendUi),
     UiModel(title: 'AudioUi', routesName: Routes.audioScreen),
     UiModel(title: 'CallUi', routesName: Routes.callScreenSupriyo),
+    UiModel(title: 'ExtraUi', routesName: Routes.extraUi),
     UiModel(title: 'LoginUi2', routesName: Routes.logInUi2),
     UiModel(title: 'LoginUi', routesName: Routes.logInUi),
     UiModel(title: 'MessageUi', routesName: Routes.messageScreen),
