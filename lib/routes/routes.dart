@@ -26,6 +26,7 @@ class Routes {
   static const dropDownButton = 'dropDownButton';
   static const extraPractice = 'extraPractice';
   static const financeCalculator = 'financeCalculator';
+  static const focusNode = 'focusNode';
   static const gesture = 'gesture';
   static const hero = 'hero';
   static const light = 'light';

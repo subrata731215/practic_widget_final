@@ -15,7 +15,7 @@ class FinanceCalculator extends ReactiveStateWidget<FinanceController> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: appbarWidget(context,
-          appBarTitle: 'Finance Calculator', trailingRoutes: Routes.gesture),
+          appBarTitle: 'Finance Calculator', trailingRoutes: Routes.focusNode),
       body: Column(
         children: [
           const SizedBox(height: 20),

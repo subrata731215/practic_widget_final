@@ -39,6 +39,7 @@ import 'package:practic/presentation/widget/drawerlearn/drawer_learn.dart';
 import 'package:practic/presentation/widget/dropdownbutton_3/dropDownButton.dart';
 import 'package:practic/presentation/widget/extra/extrapractice.dart';
 import 'package:practic/presentation/widget/finance_margin_calculator/finance.calculator.dart';
+import 'package:practic/presentation/widget/focusnode/focusnode.dart';
 import 'package:practic/presentation/widget/gesture_20/gesture.dart';
 import 'package:practic/presentation/widget/hero_18/hero_learn.dart';
 import 'package:practic/presentation/widget/light_12/light.dart';
@@ -81,7 +82,7 @@ class MyApp extends StatelessWidget {
       home: const Scaffold(
         body: MainHomePage(),
       ),
-      initialRoute: Routes.extraUi,
+      initialRoute: Routes.focusNode,
       routes: {
         /// Main PageRoutes
         Routes.mainHomepage: (context) => const MainHomePage(),
@@ -128,6 +129,7 @@ class MyApp extends StatelessWidget {
         Routes.dropDownButton: (context) => const DropDownButtonLearn(),
         Routes.extraPractice: (context) => const ExtraPractice(),
         Routes.financeCalculator: (context) => const FinanceCalculator(),
+        Routes.focusNode: (context) =>  FocusNodeLearn(),
         Routes.gesture: (context) => const GestureLearn(),
         Routes.hero: (context) => const HeroLearn(),
         Routes.light: (context) => const Light(),
