@@ -29,6 +29,8 @@ class WidgetController extends ReactiveController {
     WidgetModel(title: 'Light', routesName: Routes.light),
     WidgetModel(title: 'ListTile', routesName: Routes.listTile),
     WidgetModel(title: 'ListView.Builder', routesName: Routes.listViewBuilder),
+    WidgetModel(title: 'List.Generate', routesName: Routes.listGenerate),
+    WidgetModel(title: 'ListView.Separator', routesName: Routes.listSeparate),
     WidgetModel(title: 'Lottie', routesName: Routes.lottie),
     WidgetModel(title: 'MaterialTheme', routesName: Routes.materialTheme),
     WidgetModel(title: 'OtpInput', routesName: Routes.otpInputField),

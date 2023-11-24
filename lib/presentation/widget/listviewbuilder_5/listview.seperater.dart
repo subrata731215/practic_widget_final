@@ -1,25 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:reactiv/reactiv.dart';
+import '../../../constant.dart';
+import '../../../routes/routes.dart';
 import 'controller/controller.dart';
 
-void main() {
-  runApp(const MyApp());
-}
 
-class MyApp extends ReactiveStateWidget<ListViewController> {
+class ListSeparate extends ReactiveStateWidget<ListViewController> {
   @override
   ListViewController bindController() => ListViewController();
 
-  const MyApp({Key? key}) : super(key: key);
+  const ListSeparate({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('ListView.separator'),
-          centerTitle: true,
-        ),
+    return  Scaffold(
+        appBar: appbarWidget(context,
+            appBarTitle: 'ListView.Separate', trailingRoutes: Routes.lottie),
         body: ListView.separated(
             itemBuilder: (context, index) {
               return ListTile(
@@ -34,7 +30,6 @@ class MyApp extends ReactiveStateWidget<ListViewController> {
               );
             },
             itemCount: controller.name.length),
-      ),
     );
   }
 }

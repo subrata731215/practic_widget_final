@@ -1,16 +1,17 @@
 void main() {
-  Car myCar = Car(carStle: CarType.hero);
-  print(myCar.carStle);
+  Car myCar = Car(carStyle: CarType.hero);
+  print(myCar.carStyle);
 }
 
 enum CarType {
   suv,
-  bularo,
+  bolero,
   hero;
 }
 
 class Car {
-  Car({required this.carStle});
+  Car({required this.carStyle});
 
-  CarType carStle;
+  CarType carStyle;
 }
+

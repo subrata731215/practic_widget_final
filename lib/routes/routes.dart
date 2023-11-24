@@ -32,6 +32,8 @@ class Routes {
   static const light = 'light';
   static const listTile = 'listTile';
   static const listViewBuilder = 'listViewBuilder';
+  static const listGenerate = 'listGenerate';
+  static const listSeparate = 'listSeparate';
   static const lottie = 'lottie';
   static const materialTheme = 'materialTheme';
   static const otpInputField = 'otpInputField';
@@ -46,6 +48,7 @@ class Routes {
 
   ///Ui Routes
   static const addFriendUi = 'addFriendUi';
+  static const ageCalculator = 'ageCalculator';
   static const audioScreen = 'audioScreen';
   static const callScreenSupriyo = 'callScreenSupriyo';
   static const extraUi = 'extraUi';

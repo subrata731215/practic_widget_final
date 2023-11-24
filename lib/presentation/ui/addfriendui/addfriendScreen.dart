@@ -18,7 +18,7 @@ class AddFriendScreen extends ReactiveStateWidget<AddFriendController> {
       appBar: appbarWidget(
         context,
         appBarTitle: 'AddFriendUi',
-        trailingRoutes: Routes.audioScreen,
+        trailingRoutes: Routes.ageCalculator,
       ),
       body: Center(
         child: DottedBorder(

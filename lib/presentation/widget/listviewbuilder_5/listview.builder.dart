@@ -19,23 +19,36 @@ class _ListViewBuilderLearnState extends State<ListViewBuilderLearn> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appbarWidget(context,
-          appBarTitle: 'ListView.Builder', trailingRoutes: Routes.lottie),
-      body: ListView.builder(
-          itemCount: taskList.length,
-          itemBuilder: (BuildContext context, int index) {
-            return ListTile(
-              title: Text(taskList[index].text),
-              leading: const Icon(Icons.list),
-              trailing: Checkbox(
-                value: isItsChecked,
-                onChanged: (newValue) {
-                  setState(() {
-                    isItsChecked = newValue!;
-                  });
-                },
-              ),
-            );
-          }),
+          appBarTitle: 'ListView.Builder', trailingRoutes: Routes.listGenerate),
+      body: Column(
+        children: [
+          Expanded(
+              child: ListView.builder(
+                  itemCount: 20,
+                  itemBuilder: (context, index) => Text((index+1).toString(),style: TextStyle(fontWeight: FontWeight.w700,fontSize: 30),))),
+          Expanded(
+            child: Container(
+              color: Colors.teal,
+              child: ListView.builder(
+                  itemCount: taskList.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return ListTile(
+                      title: Text(taskList[index].text),
+                      leading: const Icon(Icons.list),
+                      trailing: Checkbox(
+                        value: isItsChecked,
+                        onChanged: (newValue) {
+                          setState(() {
+                            isItsChecked = newValue!;
+                          });
+                        },
+                      ),
+                    );
+                  }),
+            ),
+          ),
+        ],
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           showModalBottomSheet(

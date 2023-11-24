@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:practic/presentation/homepage/main_homepage.dart';
 import 'package:practic/presentation/ui/addfriendui/addfriendScreen.dart';
+import 'package:practic/presentation/ui/age_calculator/age_Calculator.dart';
 import 'package:practic/presentation/ui/audio_screen_23/audio.screen.dart';
 import 'package:practic/presentation/ui/call_21/callsupriyo.dart';
 import 'package:practic/presentation/ui/extra/extra.dart';
@@ -44,6 +45,8 @@ import 'package:practic/presentation/widget/gesture_20/gesture.dart';
 import 'package:practic/presentation/widget/hero_18/hero_learn.dart';
 import 'package:practic/presentation/widget/light_12/light.dart';
 import 'package:practic/presentation/widget/listtile_4/listtile.class.dart';
+import 'package:practic/presentation/widget/listviewbuilder_5/list.generate.dart';
+import 'package:practic/presentation/widget/listviewbuilder_5/listview.seperater.dart';
 import 'package:practic/presentation/widget/lottie_31/lottie_learn.dart';
 import 'package:practic/presentation/widget/materialTheme_14/materialTheme.dart';
 import 'package:practic/presentation/widget/otp_input_field/otpinputfield.dart';
@@ -82,7 +85,7 @@ class MyApp extends StatelessWidget {
       home: const Scaffold(
         body: MainHomePage(),
       ),
-      initialRoute: Routes.focusNode,
+      initialRoute: Routes.mainHomepage,
       routes: {
         /// Main PageRoutes
         Routes.mainHomepage: (context) => const MainHomePage(),
@@ -91,6 +94,7 @@ class MyApp extends StatelessWidget {
 
         /// UI PageRoutes
         Routes.addFriendUi: (context) => const AddFriendScreen(),
+        Routes.ageCalculator: (context) =>  AgeCalculator(),
         Routes.audioScreen: (context) => const AudioPage(),
         Routes.callScreenSupriyo: (context) => const CallSupriyo(),
         Routes.extraUi: (context) => const ExtraUi(),
@@ -135,6 +139,8 @@ class MyApp extends StatelessWidget {
         Routes.light: (context) => const Light(),
         Routes.listTile: (context) => const ListTileClass(),
         Routes.listViewBuilder: (context) => const ListViewBuilderLearn(),
+        Routes.listGenerate: (context) => const ListGenerate(),
+        Routes.listSeparate: (context) => const ListSeparate(),
         Routes.lottie: (context) => const LottieLearn(),
         Routes.materialTheme: (context) => const MaterialTheme(),
         Routes.otpInputField: (context) => const OtpInputField(),

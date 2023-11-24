@@ -51,19 +51,25 @@ class _CheckBoxState extends State<CheckBox> {
       ),
       appBar: appbarWidget(context,
           appBarTitle: 'CheckBox', trailingRoutes: Routes.classModel),
-      body: Center(
-        child: ListTile(
-          title: Text(
-            'Buy Milk',
-            style: TextStyle(
-              decoration: isChecked ? TextDecoration.lineThrough : null,
+      body: Column(
+        children: [
+          ListTile(
+            title: Text(
+              'Buy Milk',
+              style: TextStyle(
+                decoration: isChecked ? TextDecoration.lineThrough : null,
+              ),
+            ),
+            trailing: CheckBoxState(
+              checkBoxState: isChecked,
+              toggleCheckBoxState: checkBoxCallBack,
             ),
           ),
-          trailing: CheckBoxState(
-            checkBoxState: isChecked,
-            toggleCheckBoxState: checkBoxCallBack,
-          ),
-        ),
+          CheckboxListTile(
+              title: Text('This is CheckBox Listtile'),
+              value: isChecked,
+              onChanged: checkBoxCallBack),
+        ],
       ),
     );
   }

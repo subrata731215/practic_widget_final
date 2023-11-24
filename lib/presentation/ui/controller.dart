@@ -5,6 +5,7 @@ import '../../routes/routes.dart';
 class UiController extends ReactiveController {
   List<UiModel> uiList = ReactiveList([
     UiModel(title: 'AddFriendUi', routesName: Routes.addFriendUi),
+    UiModel(title: 'ageCalculator', routesName: Routes.ageCalculator),
     UiModel(title: 'AudioUi', routesName: Routes.audioScreen),
     UiModel(title: 'CallUi', routesName: Routes.callScreenSupriyo),
     UiModel(title: 'ExtraUi', routesName: Routes.extraUi),

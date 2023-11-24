@@ -25,7 +25,6 @@
 
 //}
 
-
 /// Try Angela Loop Example
 
 // void main() {
@@ -238,12 +237,43 @@
 ///       4 5
 ///       5
 
-void main() {
-  for (int i = 1; i <= 5; i++) {
-    for (int j = i; j <= i; j++) {
-      for (int k = j; k <= j; k++) {
-        print('i : $i  j : ${j+1}  k : ${k+1}');
-      }
-    }
+// void main() {
+//   for (int i = 1; i <= 5; i++) {
+//     for (int j = i; j <= i; j++) {
+//       for (int k = j; k <= j; k++) {
+//         print('i : $i  j : ${j+1}  k : ${k+1}');
+//       }
+//     }
+//   }
+// }
+
+// void main() {
+//   String name = 'Subrata';
+//
+//   for (int i = 1; i < 10; i++) {
+//     var k='$name '*i;
+//     print('$k ' '$i');
+//   }
+// }
+
+void main(){
+  String name ='Product No';
+
+
+  for(int i=0; i<=73;i++){
+    print('$name : $i');
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
