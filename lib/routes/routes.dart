@@ -50,6 +50,7 @@ class Routes {
   static const addFriendUi = 'addFriendUi';
   static const ageCalculator = 'ageCalculator';
   static const audioScreen = 'audioScreen';
+  static const calculatorUi = 'calculatorUi';
   static const callScreenSupriyo = 'callScreenSupriyo';
   static const extraUi = 'extraUi';
   static const logInUi2 = 'logInUi2';

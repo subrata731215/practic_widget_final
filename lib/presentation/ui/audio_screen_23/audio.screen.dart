@@ -20,7 +20,7 @@ class _AudioPageState extends State<AudioPage> {
       child: Scaffold(
         appBar: appbarWidget(context,
             appBarTitle: 'AudioPageScreen',
-            trailingRoutes: Routes.callScreenSupriyo),
+            trailingRoutes: Routes.calculatorUi),
         backgroundColor: const Color(0xffdee7fa),
         body: Stack(
           children: [
