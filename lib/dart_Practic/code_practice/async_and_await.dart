@@ -17,18 +17,28 @@ Future Data2()async{
 
 }*/
 
-void main() {
-  Test test = Test();
+// void main() {
+//   Test test = Test();
+//
+//   test.namePrint(age: 20,name: 'kala');
+// }
+//
+// class Test {
+//   void namePrint({required String name,required int age}) async {
+//     print('Subrata 1');
+//     await Future.delayed(const Duration(seconds: 3), () {
+//       print(name);
+//       print(age);
+//     });
+//   }
+// }
 
-  test.namePrint(age: 20,name: 'kala');
+void main() {
+  asyncAwait();
 }
 
-class Test {
-  void namePrint({required String name,required int age}) async {
-    print('Subrata 1');
-    await Future.delayed(const Duration(seconds: 3), () {
-      print(name);
-      print(age);
-    });
-  }
+asyncAwait() async {
+  Future.delayed(Duration(seconds: 4), () {
+    print('Subrata');
+  });
 }
