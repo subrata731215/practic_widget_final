@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practic/constant.dart';
+import 'package:practic/createdData/my_appbar_widget.dart';
 import '../../../../routes/routes.dart';
 import '../fadetransition.dart';
 
@@ -38,7 +38,7 @@ class _FlutterAnimationState extends State<FlutterAnimation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appbarWidget(context, appBarTitle: 'FlutterAnimation', trailingRoutes: Routes.oneTapAnimation),
+      appBar: myAppBarWidget(context, appBarTitle: 'FlutterAnimation', trailingRoutes: Routes.oneTapAnimation),
       body: ListView(
         padding:
             const EdgeInsets.only(top: 20, bottom: 10, left: 10, right: 10),

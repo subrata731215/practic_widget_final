@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practic/constant.dart';
+import 'package:practic/createdData/my_appbar_widget.dart';
 import '../../../routes/routes.dart';
 
 void main() => runApp(const CheckBox()); ////DoubleState
@@ -49,7 +49,7 @@ class _CheckBoxState extends State<CheckBox> {
               });
         },
       ),
-      appBar: appbarWidget(context,
+      appBar: myAppBarWidget(context,
           appBarTitle: 'CheckBox', trailingRoutes: Routes.classModel),
       body: Column(
         children: [

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../constant.dart';
+import '../../../createdData/my_appbar_widget.dart';
 import '../../../routes/routes.dart';
 
 class FocusNodeLearn extends StatelessWidget {
@@ -11,7 +11,7 @@ class FocusNodeLearn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appbarWidget(context,
+      appBar: myAppBarWidget(context,
           appBarTitle: 'FocusNode', trailingRoutes: Routes.gesture),
       body:  Padding(
         padding: EdgeInsets.all(18.0),

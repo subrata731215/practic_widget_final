@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practic/constant.dart';
+import 'package:practic/createdData/my_appbar_widget.dart';
 
 import '../../../routes/routes.dart';
 
@@ -18,7 +18,7 @@ class _AudioPageState extends State<AudioPage> {
 
     return SafeArea(
       child: Scaffold(
-        appBar: appbarWidget(context,
+        appBar: myAppBarWidget(context,
             appBarTitle: 'AudioPageScreen',
             trailingRoutes: Routes.calculatorUi),
         backgroundColor: const Color(0xffdee7fa),

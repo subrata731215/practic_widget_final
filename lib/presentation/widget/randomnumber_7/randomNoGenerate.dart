@@ -1,6 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:practic/constant.dart';
+import 'package:practic/createdData/my_appbar_widget.dart';
 import '../../../routes/routes.dart';
 
 class RandomNoGenerate extends StatefulWidget {
@@ -39,7 +39,7 @@ class _RandomNoGenerateState extends State<RandomNoGenerate> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          appBar: appbarWidget(context,
+          appBar: myAppBarWidget(context,
               appBarTitle: 'Random No Generate',
               trailingRoutes: Routes.scoreBoard),
           body: currentNumber == 100

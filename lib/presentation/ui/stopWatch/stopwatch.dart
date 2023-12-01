@@ -3,7 +3,7 @@ import 'dart:ffi';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:practic/constant.dart';
+import 'package:practic/createdData/my_appbar_widget.dart';
 import 'package:practic/presentation/ui/stopWatch/controller.dart';
 import 'package:reactiv/reactiv.dart';
 
@@ -79,7 +79,7 @@ class _StopWatchLearnState extends State<StopWatchLearn> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: const Color(0xff1c2757),
-        appBar: appbarWidget(context,
+        appBar: myAppBarWidget(context,
             appBarTitle: 'StopWatch', trailingRoutes: Routes.visvaBharatiUi),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

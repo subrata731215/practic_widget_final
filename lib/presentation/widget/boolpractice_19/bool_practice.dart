@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practic/constant.dart';
+import 'package:practic/createdData/my_appbar_widget.dart';
 import '../../../routes/routes.dart';
 
 void main() {
@@ -21,7 +21,7 @@ class _BoolPracticeState extends State<BoolPractice> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-        appBar: appbarWidget(context, appBarTitle: 'Bool', trailingRoutes: Routes.checkBox),
+        appBar: myAppBarWidget(context, appBarTitle: 'Bool', trailingRoutes: Routes.checkBox),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

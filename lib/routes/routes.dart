@@ -53,6 +53,7 @@ class Routes {
   static const calculatorUi = 'calculatorUi';
   static const callScreenSupriyo = 'callScreenSupriyo';
   static const extraUi = 'extraUi';
+  static const extra2 = 'extra2';
   static const logInUi2 = 'logInUi2';
   static const loginPage = 'logInPage';
   static const registerPage = 'RegisterPage';

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practic/constant.dart';
+import 'package:practic/createdData/my_appbar_widget.dart';
 import 'package:practic/presentation/ui/calculator/controller.dart';
 import 'package:reactiv/reactiv.dart';
 import '../../../routes/routes.dart';
@@ -15,7 +15,7 @@ class CalculatorUi extends ReactiveStateWidget<CalculatorController> {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      appBar: appbarWidget(context,
+      appBar: myAppBarWidget(context,
           appBarTitle: 'CalculatorUi',
           trailingRoutes: Routes.callScreenSupriyo),
       body: Center(

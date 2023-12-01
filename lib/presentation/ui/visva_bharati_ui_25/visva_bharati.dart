@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practic/constant.dart';
+import 'package:practic/createdData/my_appbar_widget.dart';
 import '../../../routes/routes.dart';
 import 'constatns.dart';
 
@@ -10,7 +10,7 @@ class VisvaBharati extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: appbarWidget(context,
+        appBar: myAppBarWidget(context,
             appBarTitle: 'Visva Bharati Ui',
             trailingRoutes: Routes.whatsApp),
         backgroundColor: Colors.white,

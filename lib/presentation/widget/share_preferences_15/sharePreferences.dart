@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practic/constant.dart';
+import 'package:practic/createdData/my_appbar_widget.dart';
 import 'package:reactiv/reactiv.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../../routes/routes.dart';
@@ -21,7 +21,7 @@ class SharePreferencesLearn extends ReactiveStateWidget<ShareController> {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-      appBar: appbarWidget(context,
+      appBar: myAppBarWidget(context,
           appBarTitle: 'Share Preference', trailingRoutes: Routes.slider),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 30),

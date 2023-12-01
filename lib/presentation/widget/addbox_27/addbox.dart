@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practic/constant.dart';
+import 'package:practic/createdData/my_appbar_widget.dart';
 import 'package:reactiv/reactiv.dart';
 import '../../../routes/routes.dart';
 import '../addcontainer_1/controller/controller.dart';
@@ -13,7 +13,7 @@ class AddBox extends ReactiveStateWidget<AddContainerController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: appbarWidget(context, appBarTitle: 'AddBox', trailingRoutes: Routes.addContainer),
+        appBar: myAppBarWidget(context, appBarTitle: 'AddBox', trailingRoutes: Routes.addContainer),
         body: Observer(
             listenable: controller.addBoxLIst,
             listener: (box) {

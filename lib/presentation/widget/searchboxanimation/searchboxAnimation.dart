@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../constant.dart';
+import '../../../createdData/my_appbar_widget.dart';
 import '../../../routes/routes.dart';
 
 class SearchBoxAnimationLearn extends StatefulWidget {
@@ -18,7 +18,7 @@ class _SearchBoxAnimationLearnState extends State<SearchBoxAnimationLearn> {
   Widget build(BuildContext context) {
     return Scaffold(
         //  backgroundColor: const Color(0xff0c0c0c),
-        appBar: appbarWidget(context,
+        appBar: myAppBarWidget(context,
             appBarTitle: 'SearchBoxAnimation',
             trailingRoutes: Routes.sharePreference),
         body: Column(

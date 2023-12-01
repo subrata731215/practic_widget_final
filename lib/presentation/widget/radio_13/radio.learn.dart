@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practic/constant.dart';
+import 'package:practic/createdData/my_appbar_widget.dart';
 import '../../../routes/routes.dart';
 
 class RadioLearn extends StatefulWidget {
@@ -17,7 +17,7 @@ class _RadioLearnState extends State<RadioLearn> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: appbarWidget(context,
+        appBar: myAppBarWidget(context,
             appBarTitle: 'RadioLearn', trailingRoutes: Routes.randomNo),
         body: Row(
           children: [0, 1, 2, 3, 4, 5, 6, 7]

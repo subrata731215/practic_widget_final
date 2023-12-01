@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../constant.dart';
+import '../../../createdData/my_appbar_widget.dart';
 import '../../../routes/routes.dart';
 
 class ListGenerate extends StatelessWidget {
@@ -8,7 +8,7 @@ class ListGenerate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appbarWidget(context,
+      appBar: myAppBarWidget(context,
           appBarTitle: 'ListView Generator',
           trailingRoutes: Routes.listSeparate),
       body: Column(

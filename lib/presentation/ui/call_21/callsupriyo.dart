@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practic/constant.dart';
+import 'package:practic/createdData/my_appbar_widget.dart';
 import '../../../routes/routes.dart';
 
 class CallSupriyo extends StatefulWidget {
@@ -18,7 +18,7 @@ class _CallSupriyoState extends State<CallSupriyo> {
       debugShowCheckedModeBanner: false,
       home: SafeArea(
         child: Scaffold(
-          appBar: appbarWidget(context,
+          appBar: myAppBarWidget(context,
               appBarTitle: 'call', trailingRoutes: Routes.extraUi),
           backgroundColor: Colors.white10,
           body: Column(

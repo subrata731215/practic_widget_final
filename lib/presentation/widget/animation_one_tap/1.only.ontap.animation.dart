@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practic/constant.dart';
+import 'package:practic/createdData/my_appbar_widget.dart';
 import '../../../routes/routes.dart';
 
 class OneTapAnimation extends StatefulWidget {
@@ -21,7 +21,7 @@ class _OneTapAnimationState extends State<OneTapAnimation> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-        appBar: appbarWidget(context, appBarTitle: 'OneTap Animation', trailingRoutes: Routes.api),
+        appBar: myAppBarWidget(context, appBarTitle: 'OneTap Animation', trailingRoutes: Routes.api),
         body: ListView(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
           children: [

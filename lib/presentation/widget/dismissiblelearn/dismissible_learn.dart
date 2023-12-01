@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../constant.dart';
+import '../../../createdData/my_appbar_widget.dart';
 import '../../../routes/routes.dart';
 
 class DismissibleLearn extends StatefulWidget {
@@ -23,7 +23,7 @@ class _DismissibleLearnState extends State<DismissibleLearn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: appbarWidget(context,
+        appBar: myAppBarWidget(context,
             appBarTitle: 'Dismissible', trailingRoutes: Routes.drawer),
         body: ListView.builder(
           itemCount: fruits.length,

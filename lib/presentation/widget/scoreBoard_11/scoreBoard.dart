@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practic/constant.dart';
+import 'package:practic/createdData/my_appbar_widget.dart';
 import 'package:reactiv/reactiv.dart';
 import '../../../routes/routes.dart';
 import 'controller/controller.dart';
@@ -15,7 +15,7 @@ class ScoreBoardLearn extends ReactiveStateWidget<ScoreController> {
     return MaterialApp(
       home: Scaffold(
           resizeToAvoidBottomInset: false,
-          appBar: appbarWidget(context,
+          appBar: myAppBarWidget(context,
               appBarTitle: 'Cricket Score', trailingRoutes: Routes.searchBoxAnimation),
           body: Center(
             child: Column(

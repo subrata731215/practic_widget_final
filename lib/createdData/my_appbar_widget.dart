@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:practic/routes/routes.dart';
 
-PreferredSizeWidget appbarWidget(
+PreferredSizeWidget myAppBarWidget(
   BuildContext context, {
   required String appBarTitle,
   required String trailingRoutes,
 }) {
   return AppBar(
     backgroundColor: Colors.brown,
-    title: Text(appBarTitle,textAlign: TextAlign.center,textScaleFactor: 0.9,),
+    title: Text(
+      appBarTitle,
+      textAlign: TextAlign.center,
+      textScaleFactor: 0.9,
+    ),
     centerTitle: true,
     leading: IconButton(
       onPressed: () {

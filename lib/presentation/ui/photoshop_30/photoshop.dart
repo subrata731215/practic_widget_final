@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practic/constant.dart';
+import 'package:practic/createdData/my_appbar_widget.dart';
 
 import '../../../routes/routes.dart';
 
@@ -12,7 +12,7 @@ class PhotoShop extends StatelessWidget {
     double screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      appBar: appbarWidget(context,
+      appBar: myAppBarWidget(context,
           appBarTitle: 'PhotoShop', trailingRoutes: Routes.priceRange),
       body: Stack(
         children: [

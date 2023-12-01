@@ -2,7 +2,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:practic/presentation/widget/animatedContainer/controller.dart';
 import 'package:reactiv/reactiv.dart';
-import '../../../constant.dart';
+import '../../../createdData/my_appbar_widget.dart';
 import '../../../routes/routes.dart';
 
 class AnimatedContainerLearn
@@ -15,7 +15,7 @@ class AnimatedContainerLearn
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appbarWidget(context,
+      appBar: myAppBarWidget(context,
           appBarTitle: 'AnimatedContainer',
           trailingRoutes: Routes.flutterAnimation),
       body: Center(

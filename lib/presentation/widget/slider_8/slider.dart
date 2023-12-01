@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practic/constant.dart';
+import 'package:practic/createdData/my_appbar_widget.dart';
 import '../../../routes/routes.dart';
 
 class SliderLearn extends StatefulWidget {
@@ -22,7 +22,7 @@ class _SliderLearnState extends State<SliderLearn> {
     return MaterialApp(
       home: Scaffold(
         appBar:
-            appbarWidget(context, appBarTitle: 'Slider', trailingRoutes: Routes.stepper),
+            myAppBarWidget(context, appBarTitle: 'Slider', trailingRoutes: Routes.stepper),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

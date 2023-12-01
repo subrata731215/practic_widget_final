@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practic/constant.dart';
+import 'package:practic/createdData/my_appbar_widget.dart';
 import 'package:practic/routes/routes.dart';
 
 class LogInUi2 extends StatefulWidget {
@@ -18,7 +18,7 @@ class _LogInUi2State extends State<LogInUi2> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xff4e6ed9),
-      appBar: appbarWidget(context,
+      appBar: myAppBarWidget(context,
           appBarTitle: 'LogInUi2', trailingRoutes: Routes.logInUi),
       body: Center(
         child: Column(

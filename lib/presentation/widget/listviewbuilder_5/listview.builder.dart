@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practic/constant.dart';
+import 'package:practic/createdData/my_appbar_widget.dart';
 import '../../../routes/routes.dart';
 
 class ListViewBuilderLearn extends StatefulWidget {
@@ -18,7 +18,7 @@ class _ListViewBuilderLearnState extends State<ListViewBuilderLearn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appbarWidget(context,
+      appBar: myAppBarWidget(context,
           appBarTitle: 'ListView.Builder', trailingRoutes: Routes.listGenerate),
       body: Column(
         children: [

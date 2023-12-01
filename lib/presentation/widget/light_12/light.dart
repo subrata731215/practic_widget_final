@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practic/constant.dart';
+import 'package:practic/createdData/my_appbar_widget.dart';
 import 'package:reactiv/reactiv.dart';
 import '../../../routes/routes.dart';
 import 'controller/lightController.dart';
@@ -13,7 +13,7 @@ class Light extends ReactiveStateWidget<LightController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appbarWidget(context,
+      appBar: myAppBarWidget(context,
           appBarTitle: 'Light', trailingRoutes: Routes.listTile),
       body: Observer(
         listenable: controller.backColorIndex,

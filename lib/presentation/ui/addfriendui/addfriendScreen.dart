@@ -1,6 +1,6 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
-import 'package:practic/constant.dart';
+import 'package:practic/createdData/my_appbar_widget.dart';
 import 'package:practic/presentation/ui/addfriendui/controller.dart';
 import 'package:reactiv/reactiv.dart';
 import '../../../routes/routes.dart';
@@ -15,7 +15,7 @@ class AddFriendScreen extends ReactiveStateWidget<AddFriendController> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey,
-      appBar: appbarWidget(
+      appBar: myAppBarWidget(
         context,
         appBarTitle: 'AddFriendUi',
         trailingRoutes: Routes.ageCalculator,

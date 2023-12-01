@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practic/constant.dart';
+import 'package:practic/createdData/my_appbar_widget.dart';
 import '../../../routes/routes.dart';
 
 class HeroLearn extends StatefulWidget {
@@ -17,7 +17,7 @@ class _HeroLearnState extends State<HeroLearn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appbarWidget(context,
+      appBar: myAppBarWidget(context,
           appBarTitle: 'Hero And Wrap', trailingRoutes: Routes.light),
       body: SafeArea(
         child: Center(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practic/constant.dart';
+import 'package:practic/createdData/my_appbar_widget.dart';
 import 'package:practic/presentation/ui/school_ui/utills.dart';
 
 import '../../../routes/routes.dart';
@@ -17,7 +17,7 @@ class _SchoolUiState extends State<SchoolUi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appbarWidget(context,
+      appBar: myAppBarWidget(context,
           appBarTitle: 'SchoolUi', trailingRoutes: Routes.stopwatch),
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),

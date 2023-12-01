@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:reactiv/reactiv.dart';
-import '../../../constant.dart';
+import '../../../createdData/my_appbar_widget.dart';
 import '../../../routes/routes.dart';
 import 'controller/controller.dart';
 
@@ -14,7 +14,7 @@ class ListSeparate extends ReactiveStateWidget<ListViewController> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-        appBar: appbarWidget(context,
+        appBar: myAppBarWidget(context,
             appBarTitle: 'ListView.Separate', trailingRoutes: Routes.lottie),
         body: ListView.separated(
             itemBuilder: (context, index) {

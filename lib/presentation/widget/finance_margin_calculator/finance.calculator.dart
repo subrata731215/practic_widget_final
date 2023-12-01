@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practic/constant.dart';
+import 'package:practic/createdData/my_appbar_widget.dart';
 import 'package:practic/presentation/widget/finance_margin_calculator/controller.dart';
 import 'package:reactiv/reactiv.dart';
 import '../../../routes/routes.dart';
@@ -14,7 +14,7 @@ class FinanceCalculator extends ReactiveStateWidget<FinanceController> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: appbarWidget(context,
+      appBar: myAppBarWidget(context,
           appBarTitle: 'Finance Calculator', trailingRoutes: Routes.focusNode),
       body: Column(
         children: [

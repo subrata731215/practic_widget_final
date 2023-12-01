@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practic/constant.dart';
+import 'package:practic/createdData/my_appbar_widget.dart';
 import '../../../routes/routes.dart';
 
 class MaterialTheme extends StatelessWidget {
@@ -22,7 +22,7 @@ class MaterialTheme extends StatelessWidget {
                 fontSize: 20,
               ))),
       home: Scaffold(
-        appBar: appbarWidget(context,
+        appBar: myAppBarWidget(context,
             appBarTitle: 'MaterialTheme',
             trailingRoutes: Routes.otpInputField),
         body: NameList(),

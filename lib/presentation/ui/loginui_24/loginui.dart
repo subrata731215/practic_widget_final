@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practic/constant.dart';
+import 'package:practic/createdData/my_appbar_widget.dart';
 import '../../../routes/routes.dart';
 
 class LoginUi extends StatelessWidget {
@@ -12,7 +12,7 @@ class LoginUi extends StatelessWidget {
 
     return SafeArea(
       child: Scaffold(
-        appBar: appbarWidget(context,
+        appBar: myAppBarWidget(context,
             appBarTitle: 'LogInUi', trailingRoutes: Routes.messageScreen),
         backgroundColor: const Color(0xff333333),
         body: Stack(

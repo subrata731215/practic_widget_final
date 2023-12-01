@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:practic/constant.dart';
+import 'package:practic/createdData/my_appbar_widget.dart';
 import '../../../routes/routes.dart';
 
 class LottieLearn extends StatelessWidget {
@@ -9,7 +9,7 @@ class LottieLearn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appbarWidget(context,
+      appBar: myAppBarWidget(context,
           appBarTitle: 'Lottie', trailingRoutes: Routes.materialTheme),
       body: ListView(
         scrollDirection: Axis.horizontal,

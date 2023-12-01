@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:practic/constant.dart';
+import 'package:practic/createdData/my_appbar_widget.dart';
 import 'package:reactiv/reactiv.dart';
 import '../../../routes/routes.dart';
 import 'controller/controller.dart';
@@ -14,7 +14,7 @@ class AddTwoNumbers extends ReactiveStateWidget<AddTwoNumberController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appbarWidget(context,
+      appBar: myAppBarWidget(context,
           appBarTitle: 'AddTwoNumbers', trailingRoutes: Routes.ageCheck),
       body: Padding(
         padding: const EdgeInsets.all(18.0),

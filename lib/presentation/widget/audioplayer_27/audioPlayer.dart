@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practic/constant.dart';
+import 'package:practic/createdData/my_appbar_widget.dart';
 import '../../../routes/routes.dart';
 
 class AudioPlayerLearn extends StatefulWidget {
@@ -13,7 +13,7 @@ class _AudioPlayerLearnState extends State<AudioPlayerLearn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appbarWidget(context, appBarTitle: 'AudioPlayer', trailingRoutes: Routes.bool),
+      appBar: myAppBarWidget(context, appBarTitle: 'AudioPlayer', trailingRoutes: Routes.bool),
       body: Center(
         child: ElevatedButton(
           onPressed: () {

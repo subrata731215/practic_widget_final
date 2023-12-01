@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../constant.dart';
+import '../../../createdData/my_appbar_widget.dart';
 import '../../../routes/routes.dart';
 import '../../widget/slider_8/slider.dart';
 
@@ -9,7 +9,7 @@ class PriceRange extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appbarWidget(context,
+      appBar: myAppBarWidget(context,
           appBarTitle: 'Price Range', trailingRoutes: Routes.schoolUi),
       body: Center(
         child: Container(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practic/constant.dart';
+import 'package:practic/createdData/my_appbar_widget.dart';
 import '../../../routes/routes.dart';
 
 class GestureLearn extends StatefulWidget {
@@ -14,7 +14,7 @@ class _GestureLearnState extends State<GestureLearn> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: appbarWidget(context, appBarTitle: 'Gesture', trailingRoutes: Routes.hero),
+        appBar: myAppBarWidget(context, appBarTitle: 'Gesture', trailingRoutes: Routes.hero),
         body: Center(
           child: GestureDetector(
             onTap: () {},
