@@ -435,8 +435,8 @@ import 'dart:math';
 //   return '$firstNAme $lastName';
 // }
 //
-// /// Write a Dart program which accepts the user's first and last name
-// /// and print them in reverse order with a space between them.
+/// Write a Dart program which accepts the user's first and last name
+/// and print them in reverse order with a space between them.
 // void main() {
 //   print(nameReversed('Subrata', ' Ghosh'));
 //   print(nameReversed('Kalachand', ' Bauri'));
