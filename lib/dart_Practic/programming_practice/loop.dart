@@ -199,4 +199,21 @@ import 'package:practic/dart_Practic/programming_practice/outside.dart';
 
 /// calculate the prime factors of input number. E.g. prime factor of 24 is 2, 2, 2 and 3.
 
+// void main() {
+//   int myNo = 24;
+//   for (int i = 1; i <= myNo; i++) {
+//     if (myNo % i == 0) {
+//
+//       print(i);
+//     }
+//   }
+// }
 
+
+void main() {
+  String str1='Subrata Ghosh';
+
+  var result=str1.splitMapJoin('').split(' ');
+  print(result);
+
+}

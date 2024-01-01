@@ -2,12 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:practic/presentation/homepage/main_homepage.dart';
 import 'package:practic/presentation/ui/addfriendui/addfriendScreen.dart';
+import 'package:practic/presentation/ui/adultCheck/checkAdultOrNot.dart';
 import 'package:practic/presentation/ui/age_calculator/age_Calculator.dart';
+import 'package:practic/presentation/ui/alcohol/alcohol.dart';
 import 'package:practic/presentation/ui/audio_screen_23/audio.screen.dart';
 import 'package:practic/presentation/ui/calculator/calculator_ui.dart';
 import 'package:practic/presentation/ui/call_21/callsupriyo.dart';
 import 'package:practic/presentation/ui/extra/extra.dart';
 import 'package:practic/presentation/ui/extra/extra2.dart';
+import 'package:practic/presentation/ui/logInUI_new_design/logIn_ui.dart';
 import 'package:practic/presentation/ui/loginui2/homePage.dart';
 import 'package:practic/presentation/ui/loginui2/loginPage.dart';
 import 'package:practic/presentation/ui/loginui2/registerPage.dart';
@@ -57,6 +60,7 @@ import 'package:practic/presentation/widget/randomnumber_7/randomNoGenerate.dart
 import 'package:practic/presentation/widget/scoreBoard_11/scoreBoard.dart';
 import 'package:practic/presentation/widget/searchboxanimation/searchboxAnimation.dart';
 import 'package:practic/presentation/widget/share_preferences_15/sharePreferences.dart';
+import 'package:practic/presentation/widget/share_preferences_15/share_pref2.dart';
 import 'package:practic/presentation/widget/slider_8/slider.dart';
 import 'package:practic/presentation/widget/stepper_learn_17/stepper.learn.dart';
 import 'package:practic/presentation/widget/widget_homepage.dart';
@@ -96,7 +100,9 @@ class MyApp extends StatelessWidget {
 
         /// UI PageRoutes
         Routes.addFriendUi: (context) => const AddFriendScreen(),
+        Routes.adultCheck: (context) => const CheckAdultorNot(),
         Routes.ageCalculator: (context) =>  AgeCalculator(),
+        Routes.alcohol: (context) =>  Alcohol(),
         Routes.audioScreen: (context) => const AudioPage(),
         Routes.calculatorUi: (context) =>  CalculatorUi(),
         Routes.callScreenSupriyo: (context) => const CallSupriyo(),
@@ -106,6 +112,7 @@ class MyApp extends StatelessWidget {
         Routes.loginPage: (context) => const LogInPage(),
         Routes.registerPage: (context) => const RegisterPage(),
         Routes.logInUi: (context) => const LoginUi(),
+        Routes.logInUiNew: (context) => const LogInUiNewScreen(),
         Routes.messageScreen: (context) => const MessageScreen(),
         Routes.moneyTransferScreen: (context) => const MoneyTransfer(),
         Routes.photoshop: (context) => const PhotoShop(),
@@ -153,6 +160,7 @@ class MyApp extends StatelessWidget {
         Routes.scoreBoard: (context) => const ScoreBoardLearn(),
         Routes.searchBoxAnimation: (context) => const SearchBoxAnimationLearn(),
         Routes.sharePreference: (context) => const SharePreferencesLearn(),
+        Routes.sharePref2: (context) =>  Share_Pref2(),
         Routes.slider: (context) => const SliderLearn(),
         Routes.stepper: (context) => const StepperLearn(),
         Routes.textField: (context) => const TextFieldLearn(),

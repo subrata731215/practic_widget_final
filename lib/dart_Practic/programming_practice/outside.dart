@@ -21,29 +21,37 @@ import 'dart:math';
 /// 4 - Divide two numbers
 /// 5 - Exit
 
+// void main() {
+//   Calculate cal=Calculate();
+//   cal.calculate(2);
+// }
+//
+// class Calculate {
+//   int no1 = 30;
+//   int no2 = 2;
+//
+//   calculate(i) {
+//     switch (i) {
+//       case 1:
+//         print(no1 + no2);
+//         break;
+//       case 2:
+//         print(no1 - no2);
+//         break;
+//       case 3:
+//         print(no1 * no2);
+//         break;
+//       case 4:
+//         print(no1 / no2);
+//         break;
+//     }
+//   }
+// }
 void main() {
-  Calculate cal=Calculate();
-  cal.calculate(3);
-}
+  String myName = 'Kala Chand Bauri';
+  var k = myName.split(' ');
+  String firstName = k.first[0].toUpperCase();
+  String lastName = k.last[0].toUpperCase();
 
-class Calculate {
-  int no1 = 30;
-  int no2 = 2;
-
-  calculate(i) {
-    switch (i) {
-      case 1:
-        print(no1 + no2);
-        break;
-      case 2:
-        print(no1 - no2);
-        break;
-      case 3:
-        print(no1 * no2);
-        break;
-      case 4:
-        print(no1 / no2);
-        break;
-    }
-  }
+  k.length > 1 ? print('${firstName}.${lastName}') : print(firstName);
 }

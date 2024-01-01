@@ -1,3 +1,47 @@
+// void main() {
+//   Calculate calculate = Calculate();
+//
+//   List<int> divisorCheck = calculate.divisorCheck(myNo: 64);
+//   List<int> checkLess25 = calculate.checkLess5();
+//
+//   print(checkLess25);
+// }
+//
+// class Calculate {
+//   // int? no1;
+//   // int? no2;
+//   //
+//   // Calculate({required this.no1, required this.no2});
+//
+//   /// Create a program that asks the user for a number and then prints out a list of all the divisors of that number.
+//
+//   List<int> divisorCheck({required int myNo}) {
+//     List<int> divisorList = [];
+//
+//     for (int i = 1; i <= myNo; i++) {
+//       if (myNo % i == 0) {
+//         divisorList.add(i);
+//       }
+//     }
+//
+//     return divisorList;
+//   }
+//
+//   ///   a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89] print less than 5 mo;
+//   List<int> checkLess5() {
+//     List<int> a = [1, 1, 2, 3, 5, 8, 13, 21, 4, 10, 9, 34, 55, 89];
+//     List<int> result = [];
+//     for (var noList in a) {
+//       if (noList < 5) {
+//         result.add(noList);
+//       }
+//     }
+//     return result;
+//   }
+// }
+
+import 'dart:math';
+
 /// Write a Dart programme to find the median of three value
 /// calculate list Values total
 // void main() {
@@ -186,38 +230,38 @@
 
 /// Input 5 subject marks of a student and find total marks and percentage obtained by the student.
 
-void main() {
-  StudentName akash =
-      StudentName(bengali: 30, english: 60, hist: 70, geo: 85, lsc: 84);
-  print(
-      'Total Score : ${akash.totalNo()} And Percentage : ${akash.percentage()}.');
-}
-
-class StudentName {
-  int fullMarks = 500;
-  int bengali;
-  int english;
-  int hist;
-  int geo;
-  int lsc;
-
-  StudentName(
-      {required this.bengali,
-      required this.english,
-      required this.hist,
-      required this.geo,
-      required this.lsc});
-
-  int totalNo() {
-    int total = bengali + english + hist + geo + lsc;
-    return total;
-  }
-
-  String percentage() {
-    double percentage = (totalNo() / fullMarks) * 100;
-    return percentage.toStringAsFixed(2);
-  }
-}
+// void main() {
+//   StudentName akash =
+//       StudentName(bengali: 30, english: 60, hist: 70, geo: 85, lsc: 84);
+//   print(
+//       'Total Score : ${akash.totalNo()} And Percentage : ${akash.percentage()}.');
+// }
+//
+// class StudentName {
+//   int fullMarks = 500;
+//   int bengali;
+//   int english;
+//   int hist;
+//   int geo;
+//   int lsc;
+//
+//   StudentName(
+//       {required this.bengali,
+//       required this.english,
+//       required this.hist,
+//       required this.geo,
+//       required this.lsc});
+//
+//   int totalNo() {
+//     int total = bengali + english + hist + geo + lsc;
+//     return total;
+//   }
+//
+//   String percentage() {
+//     double percentage = (totalNo() / fullMarks) * 100;
+//     return percentage.toStringAsFixed(2);
+//   }
+// }
 
 /// Swap to number
 // void main() {
@@ -275,10 +319,93 @@ class StudentName {
 //   return '$inputMinutes Minute\'s= $hours $myHours $minutes $myMinutes';
 // }
 
+/// input 10 numbers and find sum.
+// void main() {
+//   List<int> myNo = [12, 23, 34, 45, 56, 67, 78, 89, 90, 1];
+//   int sum = 0;
+//   for (int num in myNo) {
+//     sum += num;
+//   }
+//   print(sum);
+// }
+
+/// input 10 numbers and find average.
+
+// void main() {
+//   List<int> myNo = [474, 214, 123, 3251, 23, 54, 2134, 12, 26,20];
+//   int sum = 0;
+//
+//   for (int num in myNo) {
+//     sum += num;
+//   }
+//   print(sum);
+//   double average = sum / myNo.length;
+//
+//   print(average);
+// }
+
+///  input 10 numbers in array and find largest number.
+
+// void main() {
+//   List<int> myNo = [474, 214, 123, 3251, 23, 5677, 54, 2, 2134, 12, 26, 20];
+//
+//   int largestNo = myNo[0];
+//   int smallestNo = myNo[0];
+//
+//   for (int i = 0; i < myNo.length; i++) {
+//     if (myNo[i] > largestNo) {
+//       largestNo = myNo[i];
+//     }
+//     if (myNo[i] < smallestNo) {
+//       smallestNo = myNo[i];
+//     }
+//   }
+//   print('largestNo in the list : $largestNo');
+//   print('SmallestNo in the list : $smallestNo');
+// }
+
+/// a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100].
+/// Write a Dart code that takes this list and makes a new list that has only the even elements of this list in it.
+
+// void main() {
+//   List<int> a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100];
+//   List<int> evenList = [];
+//
+//   for (int i in a) {
+//     if (i.isOdd) {
+//       evenList.add(i);
+//     }
+//   }
+//   print(evenList);
+// }
+
+/// Write a program that asks the user how many Fibonnaci numbers to generate and
+/// then generates them. Take this opportunity to think about how you can use functions. 0,1,1,2,3,5,8...
+
+// void main() {
+//   int choosenNo = 20;
+//   List<int> fibonnaciList = [0,1];
+//
+//   for (int i = 0; i < choosenNo; i++) {
+//     fibonnaciList.add(fibonnaciList[i]+fibonnaciList[i+1]);
+//   }
+//   print(fibonnaciList);
+// }
+
+/// Write a program (using functions!) that asks the user for a long string containing multiple words.
+/// Print back to the user the same string, except with the words in backwards order.
+void main(){
+
+  String x='He Go To School';
+
+ String y= x.split('ds').reversed.toList().join();
+
+  print(y);
 
 
 
 
+}
 
 
 

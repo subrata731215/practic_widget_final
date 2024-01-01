@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'dart:math';
 
 /// Problem
@@ -768,16 +769,104 @@ import 'dart:math';
 // }
 
 /// Write a dart programme to calculate total average of five subject;
+// void main() {
+//   print(average(120, 29, 23, 56, 89));
+//   List<int> subjectNo = [30, 50, 20, 70, 50];
+//
+//   int total = subjectNo.fold(
+//       0, (previousValue, lastValue) => previousValue + lastValue);
+//   print('Average : ${total / subjectNo.length}');
+// }
+//
+// double average(int english, int bengali, int math, int geo, int hist) {
+//   int sum = english + bengali + math + geo + hist;
+//   return sum / 5;
+// }
+
+/// Write a Dart program which accepts a sequence of comma-separated numbers from user and generate a list and a tuple with those numbers.
+/// Sample data : 3, 5, 7, 23 Output : List : ['3', ' 5', ' 7', ' 23'] Set : ('3', ' 5', ' 7', ' 23')
+// void main() {
+//   String num = '35723';
+//
+//   var k = num.split('');
+//   List list=[];
+//   list.add(k);
+//  // print(k);
+//
+//
+//
+//
+//
+//   print(list);
+// }
+
+// void main() {
+//   int sum = 0;
+//   var myNo = '19';
+//   List<dynamic> noList = [];
+//
+//   if (int.parse(myNo) < 10) {
+//     for (int i = 1; i <= int.parse(myNo); i++) {
+//       noList.add(myNo * i);
+//       // print(noList);
+//     }
+//     for (var x in noList) {
+//       sum += int.parse(x);
+//     }
+//     print(sum);
+//   } else {
+//     print('No Must be Small to 10');
+//   }
+// }
+
+///  Write a Dart program to test whether a passed letter is a vowel or not.
+
+// void main() {
+//   String checkLetter = 'pp';
+//   checkLetter = checkLetter.substring(0, 1).toUpperCase();
+//   print(checkLetter);
+//   String? l;
+//
+//
+//
+//   List<String> vowelList = ['a', 'e', 'i', 'o', 'u'];
+//
+//   for(var k in vowelList){
+//     l=k;
+//   }
+//   print(l);
+//   String vowel = 'This is Vowel';
+//   String consonant = 'This is consonant';
+//
+//
+// }
+
+// void main() {
+//   String l = 'I Love U ,';
+//   String n = '';
+//   for (int i = 1; i <= 10; i++) {
+//     n = l * i;
+//   }
+//
+//   print(n);
+// }
+
+// void main(){
+//   int myNo=23;
+//
+//   for(int i=1;i<=100;i++){
+//     print('$myNo X $i = ${myNo*i}');
+//   }
+//
+//
+// }
+
 void main() {
-  print(average(120, 29, 23, 56, 89));
-  List<int> subjectNo = [30, 50, 20, 70, 50];
+  int myAge = 45;
+  if (myAge < 18 || myAge>40 ) {
+    print('You Can Not Buy Alcohol');
+  } else{
+    print('You Can Buy Alcohol');
 
-  int total = subjectNo.fold(
-      0, (previousValue, lastValue) => previousValue + lastValue);
-  print('Average : ${total / subjectNo.length}');
-}
-
-double average(int english, int bengali, int math, int geo, int hist) {
-  int sum = english + bengali + math + geo + hist;
-  return sum / 5;
+  }
 }

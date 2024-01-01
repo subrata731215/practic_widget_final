@@ -42,13 +42,16 @@ class Routes {
   static const scoreBoard = 'scoreBoard';
   static const searchBoxAnimation = 'searchBoxAnimation';
   static const sharePreference = 'sharePreference';
+  static const sharePref2 = 'sharePref2';
   static const slider = 'slider';
   static const stepper = 'stepper';
   static const textField = 'textField';
 
   ///Ui Routes
   static const addFriendUi = 'addFriendUi';
+  static const adultCheck = 'adultCheck';
   static const ageCalculator = 'ageCalculator';
+  static const alcohol = 'alcohol';
   static const audioScreen = 'audioScreen';
   static const calculatorUi = 'calculatorUi';
   static const callScreenSupriyo = 'callScreenSupriyo';
@@ -58,6 +61,7 @@ class Routes {
   static const loginPage = 'logInPage';
   static const registerPage = 'RegisterPage';
   static const logInUi = 'logInUi';
+  static const logInUiNew = 'logInUiNew';
   static const messageScreen = 'messageScreen';
   static const moneyTransferScreen = 'moneyTransferScreen';
   static const photoshop = 'photoshop';
