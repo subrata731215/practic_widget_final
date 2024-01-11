@@ -1,64 +1,55 @@
 import 'package:flutter/material.dart';
-import 'package:practic/createdData/my_appbar_widget.dart';
-import 'package:reactiv/reactiv.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../../../routes/routes.dart';
-import 'controller/controller.dart';
 
-class SharePreferencesLearn extends ReactiveStateWidget<ShareController> {
+class SharePreferencesLearn extends StatefulWidget {
+  const SharePreferencesLearn({super.key});
+
   @override
-  ShareController bindController() => ShareController();
+  State<SharePreferencesLearn> createState() => _SharePreferencesLearnState();
+}
 
-  const SharePreferencesLearn({Key? key}) : super(key: key);
-
+class _SharePreferencesLearnState extends State<SharePreferencesLearn> {
   @override
   void initState() {
-    super.initState();
-    controller.getValue();
+    // TODO: implement initState
+     gettValue();
+  }
+
+  gettValue() async {
+    SharedPreferences sp = await SharedPreferences.getInstance();
+    sp.setString('name', 'Subrata Ghosh');
+    sp.setStringList('nameList', ['Kala', 'Jaga', 'Mukto', 'Ratan']);
+    setState(() {});
   }
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Scaffold(
-      appBar: myAppBarWidget(context,
-          appBarTitle: 'Share Preference', trailingRoutes: Routes.slider),
-      body: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 30),
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.all(48.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TextField(
-              onChanged: (value) {
-                controller.name.value = value;
-              },
-              decoration: const InputDecoration(
-                hintText: 'Write Your Name',
-                enabledBorder: OutlineInputBorder(),
-                focusedBorder: OutlineInputBorder(),
-              ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            ElevatedButton(
-                onPressed: () async {
-                  var prefs = await SharedPreferences.getInstance();
-                  prefs.setString(
-                      controller.keyName.value, controller.name.value);
-                },
-                child: const Text('Add')),
-            const SizedBox(
-              height: 80,
-            ),
-            Observer(
-                listenable: controller.name,
-                listener: (value) {
-                  return Text(controller.name.value);
-                }),
+           
+            Expanded(
+              child: FutureBuilder(
+                  future: SharedPreferences.getInstance(),
+                  builder: (context, AsyncSnapshot<SharedPreferences> snapshot) =>
+                      Column(
+                        children: [
+                          Text(snapshot.data!.getString('name').toString())
+                        ],
+                      )),
+            )
           ],
         ),
       ),
-    ));
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          gettValue();
+        },
+        child: const Icon(Icons.add),
+      ),
+    );
   }
 }
