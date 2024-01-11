@@ -43,9 +43,6 @@
 import 'dart:io';
 import 'dart:math';
 
-import 'package:fraction/fraction.dart';
-import 'package:rational/rational.dart';
-
 /// Write a Dart programme to find the median of three value
 /// calculate list Values total
 // void main() {
