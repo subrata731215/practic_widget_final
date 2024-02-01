@@ -68,7 +68,7 @@ import 'package:practic/routes/routes.dart';
 import 'presentation/widget/listviewbuilder_5/listview.builder.dart';
 import 'presentation/widget/textField_6/textField.dart';
 
-void main() {
+void main() async {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
     systemNavigationBarColor: Colors.pink,
@@ -91,7 +91,7 @@ class MyApp extends StatelessWidget {
       home: const Scaffold(
         body: MainHomePage(),
       ),
-      initialRoute: Routes.extraUi,
+      initialRoute: Routes.extra2,
       routes: {
         /// Main PageRoutes
         Routes.mainHomepage: (context) => const MainHomePage(),
@@ -101,10 +101,10 @@ class MyApp extends StatelessWidget {
         /// UI PageRoutes
         Routes.addFriendUi: (context) => const AddFriendScreen(),
         Routes.adultCheck: (context) => const CheckAdultorNot(),
-        Routes.ageCalculator: (context) =>  AgeCalculator(),
-        Routes.alcohol: (context) =>  Alcohol(),
+        Routes.ageCalculator: (context) => AgeCalculator(),
+        Routes.alcohol: (context) => Alcohol(),
         Routes.audioScreen: (context) => const AudioPage(),
-        Routes.calculatorUi: (context) =>  CalculatorUi(),
+        Routes.calculatorUi: (context) => CalculatorUi(),
         Routes.callScreenSupriyo: (context) => const CallSupriyo(),
         Routes.extraUi: (context) => const ExtraUi(),
         Routes.extra2: (context) => const Extra2(),
@@ -144,7 +144,7 @@ class MyApp extends StatelessWidget {
         Routes.dropDownButton: (context) => const DropDownButtonLearn(),
         Routes.extraPractice: (context) => const ExtraPractice(),
         Routes.financeCalculator: (context) => const FinanceCalculator(),
-        Routes.focusNode: (context) =>  FocusNodeLearn(),
+        Routes.focusNode: (context) => FocusNodeLearn(),
         Routes.gesture: (context) => const GestureLearn(),
         Routes.hero: (context) => const HeroLearn(),
         Routes.light: (context) => const Light(),
@@ -159,8 +159,8 @@ class MyApp extends StatelessWidget {
         Routes.randomNo: (context) => const RandomNoGenerate(),
         Routes.scoreBoard: (context) => const ScoreBoardLearn(),
         Routes.searchBoxAnimation: (context) => const SearchBoxAnimationLearn(),
-        Routes.sharePreference: (context) => const SharePreferencesLearn(),
-        Routes.sharePref2: (context) =>  Share_Pref2(),
+        Routes.sharePreference: (context) => SharePreferencesLearn(),
+        Routes.sharePref2: (context) => Share_Pref2(),
         Routes.slider: (context) => const SliderLearn(),
         Routes.stepper: (context) => const StepperLearn(),
         Routes.textField: (context) => const TextFieldLearn(),
